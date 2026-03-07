@@ -84,10 +84,6 @@
     "hostUri": "https://provider.h6i-dedicated.eu-se-1.digitalfrontier.so:8443"
   },
   {
-    "owner": "akash1j3tg4vp2nlw5tly3rmptjq8p6dzm8vqhk2tfch",
-    "hostUri": "https://provider.ouroboroz.tech:8443"
-  },
-  {
     "owner": "akash1sjwuwre4qprcaa34f6324yz7m8nn0awvc75gp5",
     "hostUri": "https://provider.quanglong.org:8443"
   },
@@ -190,10 +186,6 @@
   {
     "owner": "akash1yvj7nqqzk9v850x60933xhlk2ql5upp5344sla",
     "hostUri": "https://provider.zepmoriq.ru:8443"
-  },
-  {
-    "owner": "akash1fmcu0zn0mf8r3zpvk007qrud36d8q8lexsj2uz",
-    "hostUri": "https://provider.slimin.cloud:8443"
   },
   {
     "owner": "akash1e9g3gehfld9zec3qdj25dcvme87x34veptxdvj",
