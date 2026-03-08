@@ -84,12 +84,20 @@
     "hostUri": "https://provider.h6i-dedicated.eu-se-1.digitalfrontier.so:8443"
   },
   {
+    "owner": "akash1j3tg4vp2nlw5tly3rmptjq8p6dzm8vqhk2tfch",
+    "hostUri": "https://provider.ouroboroz.tech:8443"
+  },
+  {
     "owner": "akash1sjwuwre4qprcaa34f6324yz7m8nn0awvc75gp5",
     "hostUri": "https://provider.quanglong.org:8443"
   },
   {
     "owner": "akash15axxrf84ajvqrg265fm27wsxyu7cvv25yqa5dk",
     "hostUri": "https://provider.pro6000.hou.aesservices.net:8443"
+  },
+  {
+    "owner": "akash1cvcfyadrm6gcghzspyhacw924c90lwnjkhcglm",
+    "hostUri": "https://provider.proxyua.top:8443"
   },
   {
     "owner": "akash1r2yz5fzkk9gt0r3mk9u2c29q5mmtef050cryak",
@@ -120,10 +128,6 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash1adyrcsp2ptwd83txgv555eqc0vhfufc37wx040",
-    "hostUri": "https://provider.airitdecomp.net:8443"
-  },
-  {
     "owner": "akash1f94p0afkwzjlna83493hfx9fm3guqce2asqfxu",
     "hostUri": "https://provider.provider.quocminh.net:8443"
   },
@@ -138,6 +142,10 @@
   {
     "owner": "akash1hcu596l97rqkcllcwundclhgkvurld6grecjgy",
     "hostUri": "https://provider.ai.iotnetpro.com:8443"
+  },
+  {
+    "owner": "akash104xxqjrd48457w8ghjze7rqv7scf4t9gfs75gr",
+    "hostUri": "https://provider.akash.gctech.tw:8443"
   },
   {
     "owner": "akash1vg3gk6dynh9ys45tzjyedp0dl52s93kap75x3n",
@@ -206,5 +214,13 @@
   {
     "owner": "akash19zzh7whjt4vfwxd5wtj3tjtyatnpntfhldshd8",
     "hostUri": "https://provider.cpu.dal.aes.akash.pub:8443"
+  },
+  {
+    "owner": "akash1jze8sjyuekc9y6knj33edntr3d5lhhsadfdyma",
+    "hostUri": "https://provider.100steps.ai:8443"
+  },
+  {
+    "owner": "akash1ren2x0nv8lns7hwgfmty2dgsq5kmflascqctvj",
+    "hostUri": "https://provider.ak1.logikuist.com:8443"
   }
 ]
