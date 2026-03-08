@@ -1,8 +1,10 @@
 # aktop
 
-A terminal UI for monitoringconsensus and provider operations.
+A terminal UI for monitoring consensus and provider operations.
 
 Displays real-time consensus data, validator voting status, and provider upgrade status with CPU/memory stats.
+
+![DE1BDA77-C915-41D6-9018-E351D1204F58_1_105_c](https://github.com/user-attachments/assets/5e9aca6e-c4d1-47d2-b795-41e8417a1c3b)
 
 ## Features
 
