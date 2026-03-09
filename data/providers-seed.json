@@ -88,10 +88,6 @@
     "hostUri": "https://provider.ouroboroz.tech:8443"
   },
   {
-    "owner": "akash1sjwuwre4qprcaa34f6324yz7m8nn0awvc75gp5",
-    "hostUri": "https://provider.quanglong.org:8443"
-  },
-  {
     "owner": "akash15axxrf84ajvqrg265fm27wsxyu7cvv25yqa5dk",
     "hostUri": "https://provider.pro6000.hou.aesservices.net:8443"
   },
@@ -132,12 +128,12 @@
     "hostUri": "https://provider.provider.quocminh.net:8443"
   },
   {
-    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
-    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
-  },
-  {
     "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
     "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
+    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
   },
   {
     "owner": "akash1hcu596l97rqkcllcwundclhgkvurld6grecjgy",
@@ -170,6 +166,10 @@
   {
     "owner": "akash1vmy54rfhpxcjvemltv5vkjfxfdyf2nya4l7027",
     "hostUri": "https://provider.akash.teksupportservices.com:8443"
+  },
+  {
+    "owner": "akash106626l57hlnumm8cpkq2jhcd5y5ljvk4xqh6f7",
+    "hostUri": "https://provider.bzzzick174.duckdns.org:8443"
   },
   {
     "owner": "akash10tgqesyq4ehchhzh224vy9h33c9mvpq7gws4at",
@@ -218,9 +218,5 @@
   {
     "owner": "akash1jze8sjyuekc9y6knj33edntr3d5lhhsadfdyma",
     "hostUri": "https://provider.100steps.ai:8443"
-  },
-  {
-    "owner": "akash1ren2x0nv8lns7hwgfmty2dgsq5kmflascqctvj",
-    "hostUri": "https://provider.ak1.logikuist.com:8443"
   }
 ]
