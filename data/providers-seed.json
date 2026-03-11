@@ -140,12 +140,12 @@
     "hostUri": "https://provider.provider.quocminh.net:8443"
   },
   {
-    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
-    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
-  },
-  {
     "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
     "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
+    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
   },
   {
     "owner": "akash1hcu596l97rqkcllcwundclhgkvurld6grecjgy",
