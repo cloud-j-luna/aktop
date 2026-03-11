@@ -88,6 +88,10 @@
     "hostUri": "https://provider.h6i-dedicated.eu-se-1.digitalfrontier.so:8443"
   },
   {
+    "owner": "akash1j3tg4vp2nlw5tly3rmptjq8p6dzm8vqhk2tfch",
+    "hostUri": "https://provider.ouroboroz.tech:8443"
+  },
+  {
     "owner": "akash1sjwuwre4qprcaa34f6324yz7m8nn0awvc75gp5",
     "hostUri": "https://provider.quanglong.org:8443"
   },
@@ -102,6 +106,10 @@
   {
     "owner": "akash1sevd2ymtty3dpq9ycxgkhuzzk4fe6mchqdwd4e",
     "hostUri": "https://provider.jjozzietech.com.au:8443"
+  },
+  {
+    "owner": "akash1r2yz5fzkk9gt0r3mk9u2c29q5mmtef050cryak",
+    "hostUri": "https://provider.gpu.subangle.com:8443"
   },
   {
     "owner": "akash1kwk94hufvl0n0r47w8jalszmv4s0wxq99z0hkd",
@@ -138,6 +146,10 @@
   {
     "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
     "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash1hcu596l97rqkcllcwundclhgkvurld6grecjgy",
+    "hostUri": "https://provider.ai.iotnetpro.com:8443"
   },
   {
     "owner": "akash104xxqjrd48457w8ghjze7rqv7scf4t9gfs75gr",
@@ -178,10 +190,6 @@
   {
     "owner": "akash1xnvhgmnvg8q9wugpc5vt7zch7dg73685e37chc",
     "hostUri": "https://provider.cores.it.com:8443"
-  },
-  {
-    "owner": "akash1chnhnu50f6hv98xl0m7xm95vel457ysp32uwpj",
-    "hostUri": "https://provider.akash.sthlm-host.top:8443"
   },
   {
     "owner": "akash192z48wsjwteectlrhg7rndl0gks3f89up8w03z",
@@ -230,5 +238,9 @@
   {
     "owner": "akash1ggfvyhr9sar4uxjs4hth3p4kzrwk7lysnenj3g",
     "hostUri": "https://provider.cpu.phl.aes.akash.pub:8443"
+  },
+  {
+    "owner": "akash1352zqf8ecckffmgq2xdyu7tjmq60fawxg82yaa",
+    "hostUri": "https://provider.sheldonsakash.net:8443"
   }
 ]
