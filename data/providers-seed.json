@@ -208,14 +208,6 @@
     "hostUri": "https://provider.provider.tesseris.cloud:8443"
   },
   {
-    "owner": "akash1nyg5eftq6ttpm594gg4kynjaneh2n507v26w7g",
-    "hostUri": "https://provider.dpcloud.online:8443"
-  },
-  {
-    "owner": "akash10pz64fnwtumpyukzj32kfvgyzygrcmg5nqa7w2",
-    "hostUri": "https://provider.4090.theworkpc.com:8443"
-  },
-  {
     "owner": "akash19zzh7whjt4vfwxd5wtj3tjtyatnpntfhldshd8",
     "hostUri": "https://provider.cpu.dal.aes.akash.pub:8443"
   },
