@@ -12,20 +12,66 @@ import (
 // Column width constants for provider list
 const (
 	colWidthIndex    = 4
-	colWidthProvider = 32
-	colWidthVersion  = 12
-	colWidthCPU      = 14
-	colWidthMem      = 14
+	colWidthProvider = 28
+	colWidthVersion  = 10
+	colWidthCPU      = 12
+	colWidthMem      = 12
+	colWidthGPU      = 18
 	colWidthCountry  = 4
+	colWidthNodeName = 20
 )
 
 // Layout constants
 const (
 	providerListOverhead = 25 // header, tabs, status bar, scroll indicator, etc.
+	nodeListOverhead     = 14 // header for detail view with node list
+	minVisibleNodes      = 3  // minimum visible rows for node list
+	minVisibleProviders  = 5  // minimum visible rows for provider list
 )
 
+// Address display constants
+const (
+	addrPrefixLen = 8 // characters to show at start of truncated address
+	addrSuffixLen = 4 // characters to show at end of truncated address
+)
+
+// ProviderDetailState holds the state for provider detail view
+type ProviderDetailState struct {
+	Showing     bool
+	Provider    *rpc.Provider
+	Nodes       []rpc.ProviderNodeWithGPU
+	Loading     bool
+	Error       error
+	ScrollPos   int
+	SelectedIdx int
+}
+
+// ProviderViewState holds the state for the providers tab
+type ProviderViewState struct {
+	Providers []rpc.Provider
+	Versions  []string
+	Selected  string
+	ScrollPos int
+	Loading   bool
+	Loaded    int
+	Total     int
+	Detail    ProviderDetailState
+}
+
+// ViewContext holds all data needed to render the view
+type ViewContext struct {
+	State     *consensus.State
+	Endpoint  string
+	Width     int
+	Height    int
+	ActiveTab Tab
+	Monikers  map[string]string
+	ScrollPos int
+	Providers ProviderViewState
+}
+
 // RenderView renders the complete view
-func RenderView(state *consensus.State, endpoint string, width, height int, activeTab Tab, monikers map[string]string, scrollPos int, providers []rpc.Provider, providerVersions []string, selectedVersion string, providerScrollPos int, providersLoading bool, providersLoaded, providersTotal int) string {
+func RenderView(ctx ViewContext) string {
 	var b strings.Builder
 
 	// Title and tabs
@@ -34,41 +80,45 @@ func RenderView(state *consensus.State, endpoint string, width, height int, acti
 	b.WriteString("\n")
 
 	// Tab bar
-	b.WriteString(renderTabBar(activeTab))
+	b.WriteString(renderTabBar(ctx.ActiveTab))
 	b.WriteString("\n\n")
 
 	// Error state
-	if state == nil {
+	if ctx.State == nil {
 		b.WriteString(errorStyle.Render("Connecting to RPC endpoint..."))
 		b.WriteString("\n")
-		b.WriteString(renderStatusBar(endpoint, activeTab))
+		b.WriteString(renderStatusBar(ctx.Endpoint, ctx.ActiveTab, ctx.Providers.Detail.Showing))
 		return b.String()
 	}
 
-	if state.Error != nil {
-		b.WriteString(errorStyle.Render(fmt.Sprintf("Error: %v", state.Error)))
+	if ctx.State.Error != nil {
+		b.WriteString(errorStyle.Render(fmt.Sprintf("Error: %v", ctx.State.Error)))
 		b.WriteString("\n\n")
 		// Still show last known state if available
-		if state.Height == 0 {
-			b.WriteString(renderStatusBar(endpoint, activeTab))
+		if ctx.State.Height == 0 {
+			b.WriteString(renderStatusBar(ctx.Endpoint, ctx.ActiveTab, ctx.Providers.Detail.Showing))
 			return b.String()
 		}
 	}
 
 	// Render based on active tab
-	switch activeTab {
+	switch ctx.ActiveTab {
 	case TabOverview:
-		b.WriteString(renderOverviewTab(state, width))
+		b.WriteString(renderOverviewTab(ctx.State, ctx.Width))
 	case TabValidators:
-		b.WriteString(renderValidatorsTab(state, monikers, height, scrollPos))
+		b.WriteString(renderValidatorsTab(ctx.State, ctx.Monikers, ctx.Height, ctx.ScrollPos))
 	case TabProviders:
-		b.WriteString(renderProvidersTab(providers, providerVersions, selectedVersion, height, providerScrollPos, providersLoading, providersLoaded, providersTotal))
+		if ctx.Providers.Detail.Showing {
+			b.WriteString(renderProviderDetailView(ctx.Providers.Detail, ctx.Height))
+		} else {
+			b.WriteString(renderProvidersTab(ctx.Providers, ctx.Height))
+		}
 	}
 
 	b.WriteString("\n")
 
 	// Help & status
-	b.WriteString(renderStatusBar(endpoint, activeTab))
+	b.WriteString(renderStatusBar(ctx.Endpoint, ctx.ActiveTab, ctx.Providers.Detail.Showing))
 
 	return b.String()
 }
@@ -149,7 +199,7 @@ func truncateAddress(addr string, maxLen int) string {
 	if len(addr) <= maxLen {
 		return addr
 	}
-	return addr[:8] + "..." + addr[len(addr)-4:]
+	return addr[:addrPrefixLen] + "..." + addr[len(addr)-addrSuffixLen:]
 }
 
 func renderVoteSection(state *consensus.State) string {
@@ -271,27 +321,20 @@ func scrollRange(scrollPos, visibleRows, totalItems int) (start, end int) {
 	return
 }
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
-func renderProvidersTab(providers []rpc.Provider, providerVersions []string, selectedVersion string, termHeight, scrollPos int, loading bool, loaded, total int) string {
+func renderProvidersTab(pv ProviderViewState, termHeight int) string {
 	var b strings.Builder
 
-	if loading && total > 0 {
-		progress := fmt.Sprintf("Scanning providers... %d/%d checked, %d online", loaded, total, len(providers))
-		b.WriteString(ProgressBar(float64(loaded)/float64(total), 40))
+	if pv.Loading && pv.Total > 0 {
+		progress := fmt.Sprintf("Scanning providers... %d/%d checked, %d online", pv.Loaded, pv.Total, len(pv.Providers))
+		b.WriteString(ProgressBar(float64(pv.Loaded)/float64(pv.Total), 40))
 		b.WriteString(" ")
 		b.WriteString(mutedStyle.Render(progress))
 		b.WriteString("\n\n")
 	}
 
-	b.WriteString(renderVersionDistribution(providers, providerVersions, selectedVersion))
+	b.WriteString(renderVersionDistribution(pv.Providers, pv.Versions, pv.Selected))
 	b.WriteString("\n\n")
-	b.WriteString(renderProviderList(providers, selectedVersion, termHeight, scrollPos))
+	b.WriteString(renderProviderList(pv.Providers, pv.Selected, termHeight, pv.ScrollPos, pv.Detail.SelectedIdx))
 
 	return b.String()
 }
@@ -343,13 +386,6 @@ func renderVersionLine(version string, count, total int, selectedVersion string)
 	return fmt.Sprintf("%s%-12s %s %3d (%5.1f%%)", marker, version, dots, count, percentage)
 }
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func isLocalhost(hostURI string) bool {
 	return strings.Contains(hostURI, "localhost") || strings.Contains(hostURI, "127.0.0.1")
 }
@@ -364,7 +400,7 @@ func filterNonLocalProviders(providers []rpc.Provider) []rpc.Provider {
 	return filtered
 }
 
-func renderProviderList(providers []rpc.Provider, selectedVersion string, termHeight, scrollPos int) string {
+func renderProviderList(providers []rpc.Provider, selectedVersion string, termHeight, scrollPos, selectedIdx int) string {
 	filtered := filterNonLocalProviders(providers)
 	if len(filtered) == 0 {
 		return mutedStyle.Render("No providers found")
@@ -378,12 +414,13 @@ func renderProviderList(providers []rpc.Provider, selectedVersion string, termHe
 	matchCount := countVersionMatches(filtered, selectedVersion)
 	header := headerStyle.Render(fmt.Sprintf("Providers (%d total, %d on %s)", len(filtered), matchCount, selectedVersion))
 
-	colHeader := fmt.Sprintf("  %s  %s  %s  %s  %s  %s",
+	colHeader := fmt.Sprintf("  %s  %s  %s  %s  %s  %s  %s",
 		mutedStyle.Render(fmt.Sprintf("%-*s", colWidthIndex, "#")),
 		mutedStyle.Render(fmt.Sprintf("%-*s", colWidthProvider, "Provider")),
 		mutedStyle.Render(fmt.Sprintf("%-*s", colWidthVersion, "Version")),
 		mutedStyle.Render(fmt.Sprintf("%*s", colWidthCPU, "CPU")),
 		mutedStyle.Render(fmt.Sprintf("%*s", colWidthMem, "Memory")),
+		mutedStyle.Render(fmt.Sprintf("%-*s", colWidthGPU, "GPU")),
 		mutedStyle.Render(fmt.Sprintf("%-*s", colWidthCountry, "Loc")))
 
 	var lines []string
@@ -392,12 +429,13 @@ func renderProviderList(providers []rpc.Provider, selectedVersion string, termHe
 	startIdx, endIdx := scrollRange(scrollPos, visibleRows, len(filtered))
 
 	for i := startIdx; i < endIdx; i++ {
-		lines = append(lines, renderProviderRow(filtered[i], i+1, selectedVersion))
+		isRowSelected := i == selectedIdx
+		lines = append(lines, renderProviderRow(filtered[i], i+1, selectedVersion, isRowSelected))
 	}
 
 	if len(filtered) > visibleRows {
 		lines = append(lines, "", mutedStyle.Render(fmt.Sprintf(
-			"Showing %d-%d of %d (↑/↓ or j/k to scroll)", startIdx+1, endIdx, len(filtered))))
+			"Showing %d-%d of %d (↑/↓ or j/k to scroll, Enter for details)", startIdx+1, endIdx, len(filtered))))
 	}
 
 	return header + "\n" + strings.Join(lines, "\n")
@@ -413,12 +451,12 @@ func countVersionMatches(providers []rpc.Provider, version string) int {
 	return count
 }
 
-func renderProviderRow(p rpc.Provider, index int, selectedVersion string) string {
+func renderProviderRow(p rpc.Provider, index int, selectedVersion string, isRowSelected bool) string {
 	displayURL := formatProviderURL(p.HostURI, colWidthProvider-2)
 
-	isSelected := p.AkashVersion == selectedVersion
-	versionDisplay := formatVersionDisplay(p.AkashVersion, isSelected)
-	marker := versionMarker(isSelected)
+	isVersionMatch := p.AkashVersion == selectedVersion
+	versionDisplay := formatVersionDisplay(p.AkashVersion, isVersionMatch)
+	marker := versionMarker(isVersionMatch)
 
 	country := p.Country
 	if country == "" {
@@ -427,15 +465,74 @@ func renderProviderRow(p rpc.Provider, index int, selectedVersion string) string
 
 	cpuStr := formatResourceRatio(p.CPUAvailable/1000, p.CPUTotal/1000)
 	memStr := formatMemoryRatio(p.MemAvailable, p.MemTotal)
+	gpuStr := formatProviderGPU(p)
 
-	return fmt.Sprintf("%s%s  %s  %s  %s  %s  %s",
+	// Selection cursor
+	cursor := "  "
+	if isRowSelected {
+		cursor = proposerStyle.Render("> ")
+	}
+
+	indexStr := fmt.Sprintf("%-*d", colWidthIndex, index)
+	urlStr := fmt.Sprintf("%-*s", colWidthProvider, displayURL)
+	cpuFmt := fmt.Sprintf("%*s", colWidthCPU, cpuStr)
+	memFmt := fmt.Sprintf("%*s", colWidthMem, memStr)
+
+	if isRowSelected {
+		// Highlight the entire row
+		return fmt.Sprintf("%s%s%s  %s  %s  %s  %s  %s  %s",
+			cursor,
+			marker,
+			highlightStyle.Render(indexStr),
+			highlightStyle.Render(urlStr),
+			versionDisplay,
+			highlightStyle.Render(cpuFmt),
+			highlightStyle.Render(memFmt),
+			formatProviderGPUStyled(gpuStr, true),
+			highlightStyle.Render(country))
+	}
+
+	return fmt.Sprintf("%s%s%s  %s  %s  %s  %s  %s  %s",
+		cursor,
 		marker,
-		mutedStyle.Render(fmt.Sprintf("%-*d", colWidthIndex, index)),
-		monikerStyle.Render(fmt.Sprintf("%-*s", colWidthProvider, displayURL)),
+		mutedStyle.Render(indexStr),
+		monikerStyle.Render(urlStr),
 		versionDisplay,
-		mutedStyle.Render(fmt.Sprintf("%*s", colWidthCPU, cpuStr)),
-		mutedStyle.Render(fmt.Sprintf("%*s", colWidthMem, memStr)),
+		mutedStyle.Render(cpuFmt),
+		mutedStyle.Render(memFmt),
+		formatProviderGPUStyled(gpuStr, false),
 		mutedStyle.Render(country))
+}
+
+// formatProviderGPU formats GPU info for the provider list.
+func formatProviderGPU(p rpc.Provider) string {
+	if p.GPUTotal == 0 {
+		return "-"
+	}
+
+	countStr := fmt.Sprintf("%d/%d", p.GPUAvailable, p.GPUTotal)
+
+	// Add first model name if available
+	if len(p.GPUModels) > 0 {
+		model := p.GPUModels[0]
+		// Truncate model name if needed
+		maxModelLen := colWidthGPU - len(countStr) - 2
+		if len(model) > maxModelLen && maxModelLen > 3 {
+			model = model[:maxModelLen-2] + ".."
+		}
+		return fmt.Sprintf("%s %s", countStr, model)
+	}
+
+	return countStr
+}
+
+// formatProviderGPUStyled applies styling to GPU display in provider list.
+func formatProviderGPUStyled(gpuStr string, isSelected bool) string {
+	formatted := fmt.Sprintf("%-*s", colWidthGPU, gpuStr)
+	if isSelected {
+		return highlightStyle.Render(formatted)
+	}
+	return mutedStyle.Render(formatted)
 }
 
 func formatProviderURL(hostURI string, maxLen int) string {
@@ -465,14 +562,194 @@ func versionMarker(isSelected bool) string {
 	return gridNotVotedStyle.Render("○ ")
 }
 
+// renderProviderDetailView renders the provider detail view with node list
+func renderProviderDetailView(state ProviderDetailState, termHeight int) string {
+	var b strings.Builder
+
+	if state.Provider == nil {
+		return errorStyle.Render("No provider selected")
+	}
+
+	p := state.Provider
+
+	// Header
+	b.WriteString(detailHeaderStyle.Render("Provider Details"))
+	b.WriteString("\n\n")
+
+	// Provider info
+	displayURL := formatProviderURL(p.HostURI, 50)
+	b.WriteString(fmt.Sprintf("%s %s\n", detailLabelStyle.Render("Name:"), detailValueStyle.Render(p.Name)))
+	b.WriteString(fmt.Sprintf("%s %s\n", detailLabelStyle.Render("URL:"), detailValueStyle.Render(displayURL)))
+	b.WriteString(fmt.Sprintf("%s %s\n", detailLabelStyle.Render("Version:"), gridVotedStyle.Render(p.AkashVersion)))
+
+	country := p.Country
+	if country == "" {
+		country = "--"
+	}
+	b.WriteString(fmt.Sprintf("%s %s\n", detailLabelStyle.Render("Location:"), detailValueStyle.Render(country)))
+
+	// Total resources
+	cpuStr := formatResourceRatio(p.CPUAvailable/1000, p.CPUTotal/1000)
+	memStr := formatMemoryRatio(p.MemAvailable, p.MemTotal)
+	b.WriteString(fmt.Sprintf("%s CPU %s | Memory %s\n", detailLabelStyle.Render("Total:"), detailValueStyle.Render(cpuStr), detailValueStyle.Render(memStr)))
+	b.WriteString("\n")
+
+	// Loading state
+	if state.Loading {
+		b.WriteString(mutedStyle.Render("Fetching node details via gRPC..."))
+		return b.String()
+	}
+
+	// Error state
+	if state.Error != nil {
+		b.WriteString(errorStyle.Render(fmt.Sprintf("Error: %v", state.Error)))
+		return b.String()
+	}
+
+	// Node list
+	if len(state.Nodes) == 0 {
+		b.WriteString(mutedStyle.Render("No node information available"))
+		return b.String()
+	}
+
+	// Count total GPUs across all nodes
+	totalGPUAvail, totalGPUTotal := uint64(0), uint64(0)
+	for _, node := range state.Nodes {
+		totalGPUAvail += node.GPUAvailable
+		totalGPUTotal += node.GPUAllocatable
+	}
+
+	nodeHeaderText := fmt.Sprintf("Nodes (%d total)", len(state.Nodes))
+	if totalGPUTotal > 0 {
+		nodeHeaderText = fmt.Sprintf("Nodes (%d total, %d/%d GPUs avail)", len(state.Nodes), totalGPUAvail, totalGPUTotal)
+	}
+	b.WriteString(detailHeaderStyle.Render(nodeHeaderText))
+	b.WriteString("\n")
+
+	// Node table header - include GPU column
+	nodeHeader := fmt.Sprintf("  %s  %s  %s  %s",
+		mutedStyle.Render(fmt.Sprintf("%-20s", "Name")),
+		mutedStyle.Render(fmt.Sprintf("%14s", "CPU")),
+		mutedStyle.Render(fmt.Sprintf("%16s", "Memory")),
+		mutedStyle.Render(fmt.Sprintf("%-30s", "GPU")))
+	b.WriteString(nodeHeader)
+	b.WriteString("\n")
+
+	// Calculate visible rows for nodes
+	visibleRows := max(termHeight-nodeListOverhead, minVisibleNodes)
+
+	startIdx := state.ScrollPos
+	endIdx := min(startIdx+visibleRows, len(state.Nodes))
+
+	for i := startIdx; i < endIdx; i++ {
+		node := state.Nodes[i]
+		cpuNodeStr := formatResourceRatio(node.CPUAvailable/1000, node.CPUAllocatable/1000)
+		memNodeStr := formatMemoryRatio(node.MemAvailable, node.MemAllocatable)
+
+		nodeName := node.Name
+		if nodeName == "" {
+			nodeName = fmt.Sprintf("node-%d", i+1)
+		}
+		if len(nodeName) > colWidthNodeName {
+			nodeName = nodeName[:colWidthNodeName-3] + "..."
+		}
+
+		// Format GPU info
+		gpuStr := formatNodeGPU(node)
+
+		line := fmt.Sprintf("  %s  %s  %s  %s",
+			monikerStyle.Render(fmt.Sprintf("%-*s", colWidthNodeName, nodeName)),
+			detailValueStyle.Render(fmt.Sprintf("%14s", cpuNodeStr)),
+			detailValueStyle.Render(fmt.Sprintf("%16s", memNodeStr)),
+			formatGPUDisplay(gpuStr, node.GPUAllocatable > 0))
+		b.WriteString(line)
+		b.WriteString("\n")
+	}
+
+	// Scroll indicator
+	if len(state.Nodes) > visibleRows {
+		b.WriteString("\n")
+		b.WriteString(mutedStyle.Render(fmt.Sprintf("Showing %d-%d of %d nodes", startIdx+1, endIdx, len(state.Nodes))))
+	}
+
+	return b.String()
+}
+
+// formatNodeGPU formats GPU information for a node.
+func formatNodeGPU(node rpc.ProviderNodeWithGPU) string {
+	if node.GPUAllocatable == 0 {
+		return "-"
+	}
+
+	// Show GPU count and model info
+	countStr := fmt.Sprintf("%d/%d", node.GPUAvailable, node.GPUAllocatable)
+
+	if len(node.GPUs) == 0 {
+		return countStr
+	}
+
+	// Get first GPU model info (typically nodes have homogeneous GPUs)
+	gpu := node.GPUs[0]
+	modelStr := formatGPUModel(gpu)
+
+	return fmt.Sprintf("%s %s", countStr, modelStr)
+}
+
+// formatGPUModel formats a single GPU's model information.
+func formatGPUModel(gpu rpc.GPUInfo) string {
+	// Prefer showing: Vendor Name (Memory)
+	// e.g., "NVIDIA A100 (80Gi)" or "NVIDIA H100"
+	name := gpu.Name
+	if name == "" {
+		name = "Unknown"
+	}
+
+	// Shorten common vendor names
+	vendor := gpu.Vendor
+	switch vendor {
+	case "nvidia":
+		vendor = "NVIDIA"
+	case "amd":
+		vendor = "AMD"
+	}
+
+	result := name
+	if vendor != "" && !strings.HasPrefix(strings.ToUpper(name), strings.ToUpper(vendor)) {
+		result = vendor + " " + name
+	}
+
+	if gpu.MemorySize != "" {
+		result += " (" + gpu.MemorySize + ")"
+	}
+
+	// Truncate if too long
+	if len(result) > 28 {
+		result = result[:25] + "..."
+	}
+
+	return result
+}
+
+// formatGPUDisplay applies styling to GPU display string.
+func formatGPUDisplay(gpuStr string, hasGPU bool) string {
+	if hasGPU {
+		return gridVotedStyle.Render(gpuStr)
+	}
+	return mutedStyle.Render(gpuStr)
+}
+
 // renderStatusBar renders the bottom status bar
-func renderStatusBar(endpoint string, activeTab Tab) string {
+func renderStatusBar(endpoint string, activeTab Tab, showingDetail bool) string {
 	var helpText string
 	switch activeTab {
 	case TabValidators:
 		helpText = "q: quit | r: refresh | Tab/1/2/3: switch tabs | j/k or ↑/↓: scroll"
 	case TabProviders:
-		helpText = "q: quit | r: refresh | Tab/1/2/3: switch tabs | h/l or ←/→: version | j/k or ↑/↓: scroll"
+		if showingDetail {
+			helpText = "Esc/Backspace: back to list | j/k or ↑/↓: scroll nodes | q: quit"
+		} else {
+			helpText = "q: quit | r: refresh | Tab/1/2/3: switch | h/l: version | j/k: scroll | Enter: details"
+		}
 	default:
 		helpText = "q: quit | r: refresh | Tab/1/2/3: switch tabs"
 	}

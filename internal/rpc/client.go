@@ -1,6 +1,7 @@
 package rpc
 
 import (
+	"context"
 	"crypto/tls"
 	"encoding/json"
 	"fmt"
@@ -54,10 +55,15 @@ func NewClient(rpcEndpoint, restEndpoint string) *Client {
 }
 
 // GetConsensusState fetches the current consensus state from the RPC endpoint
-func (c *Client) GetConsensusState() (*consensus.ConsensusResponse, error) {
-	url := fmt.Sprintf("%s/consensus_state", c.rpcEndpoint)
+func (c *Client) GetConsensusState(ctx context.Context) (*consensus.ConsensusResponse, error) {
+	reqURL := fmt.Sprintf("%s/consensus_state", c.rpcEndpoint)
 
-	resp, err := c.httpClient.Get(url)
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, reqURL, nil)
+	if err != nil {
+		return nil, fmt.Errorf("failed to create request: %w", err)
+	}
+
+	resp, err := c.httpClient.Do(req)
 	if err != nil {
 		return nil, fmt.Errorf("failed to fetch consensus state: %w", err)
 	}
@@ -89,41 +95,22 @@ func (c *Client) GetValidators() ([]consensus.Validator, error) {
 	return c.validators, c.validatorsErr
 }
 
-// fetchValidators does the actual fetch
+// fetchValidators does the actual fetch (uses background context since it's called from sync.Once)
 func (c *Client) fetchValidators() ([]consensus.Validator, error) {
+	ctx := context.Background()
 	var allValidators []consensus.Validator
 	page := 1
 	perPage := 100
 
 	for {
-		url := fmt.Sprintf("%s/validators?per_page=%d&page=%d", c.rpcEndpoint, perPage, page)
-
-		resp, err := c.httpClient.Get(url)
+		validators, total, err := c.fetchValidatorsPage(ctx, page, perPage)
 		if err != nil {
-			return nil, fmt.Errorf("failed to fetch validators: %w", err)
+			return nil, err
 		}
 
-		body, err := io.ReadAll(resp.Body)
-		resp.Body.Close()
+		allValidators = append(allValidators, validators...)
 
-		if err != nil {
-			return nil, fmt.Errorf("failed to read response body: %w", err)
-		}
-
-		if resp.StatusCode != http.StatusOK {
-			return nil, fmt.Errorf("unexpected status code: %d", resp.StatusCode)
-		}
-
-		var result consensus.ValidatorsResponse
-		if err := json.Unmarshal(body, &result); err != nil {
-			return nil, fmt.Errorf("failed to parse validators: %w", err)
-		}
-
-		allValidators = append(allValidators, result.Result.Validators...)
-
-		total := 0
-		fmt.Sscanf(result.Result.Total, "%d", &total)
-		if len(allValidators) >= total || len(result.Result.Validators) == 0 {
+		if len(allValidators) >= total || len(validators) == 0 {
 			break
 		}
 
@@ -133,15 +120,51 @@ func (c *Client) fetchValidators() ([]consensus.Validator, error) {
 	return allValidators, nil
 }
 
+func (c *Client) fetchValidatorsPage(ctx context.Context, page, perPage int) ([]consensus.Validator, int, error) {
+	reqURL := fmt.Sprintf("%s/validators?per_page=%d&page=%d", c.rpcEndpoint, perPage, page)
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, reqURL, nil)
+	if err != nil {
+		return nil, 0, fmt.Errorf("failed to create request: %w", err)
+	}
+
+	resp, err := c.httpClient.Do(req)
+	if err != nil {
+		return nil, 0, fmt.Errorf("failed to fetch validators: %w", err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		return nil, 0, fmt.Errorf("unexpected status code: %d", resp.StatusCode)
+	}
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, 0, fmt.Errorf("failed to read response body: %w", err)
+	}
+
+	var result consensus.ValidatorsResponse
+	if err := json.Unmarshal(body, &result); err != nil {
+		return nil, 0, fmt.Errorf("failed to parse validators: %w", err)
+	}
+
+	total := 0
+	if _, err := fmt.Sscanf(result.Result.Total, "%d", &total); err != nil {
+		return nil, 0, fmt.Errorf("failed to parse total validators: %w", err)
+	}
+
+	return result.Result.Validators, total, nil
+}
+
 // GetConsensusStateWithValidators fetches consensus state and parses it with cached validators
-func (c *Client) GetConsensusStateWithValidators() (*consensus.State, error) {
+func (c *Client) GetConsensusStateWithValidators(ctx context.Context) (*consensus.State, error) {
 	// Ensure validators are loaded
 	validators, err := c.GetValidators()
 	if err != nil {
 		return nil, err
 	}
 
-	resp, err := c.GetConsensusState()
+	resp, err := c.GetConsensusState(ctx)
 	if err != nil {
 		return nil, err
 	}
@@ -178,50 +201,68 @@ type LCDValidatorsResponse struct {
 
 // GetValidatorMonikers fetches validator monikers from the REST endpoint
 // Returns a map of consensus pubkey (base64) -> moniker
-func (c *Client) GetValidatorMonikers() (map[string]string, error) {
+func (c *Client) GetValidatorMonikers(ctx context.Context) (map[string]string, error) {
 	monikers := make(map[string]string)
 	nextKey := ""
 
 	for {
-		url := fmt.Sprintf("%s/cosmos/staking/v1beta1/validators?pagination.limit=100", c.restEndpoint)
-		if nextKey != "" {
-			url += "&pagination.key=" + nextKey
-		}
-
-		resp, err := c.httpClient.Get(url)
+		pageMonikers, newNextKey, err := c.fetchMonikersPage(ctx, nextKey)
 		if err != nil {
-			return nil, fmt.Errorf("failed to fetch validators from LCD: %w", err)
+			return nil, err
 		}
 
-		body, err := io.ReadAll(resp.Body)
-		resp.Body.Close()
-
-		if err != nil {
-			return nil, fmt.Errorf("failed to read LCD response: %w", err)
+		for k, v := range pageMonikers {
+			monikers[k] = v
 		}
 
-		if resp.StatusCode != http.StatusOK {
-			return nil, fmt.Errorf("LCD returned status %d", resp.StatusCode)
-		}
-
-		var result LCDValidatorsResponse
-		if err := json.Unmarshal(body, &result); err != nil {
-			return nil, fmt.Errorf("failed to parse LCD validators: %w", err)
-		}
-
-		for _, v := range result.Validators {
-			if v.ConsensusPubkey.Key != "" && v.Description.Moniker != "" {
-				monikers[v.ConsensusPubkey.Key] = v.Description.Moniker
-			}
-		}
-
-		if result.Pagination.NextKey == "" {
+		if newNextKey == "" {
 			break
 		}
-		nextKey = result.Pagination.NextKey
+		nextKey = newNextKey
 	}
 
 	return monikers, nil
+}
+
+func (c *Client) fetchMonikersPage(ctx context.Context, nextKey string) (map[string]string, string, error) {
+	reqURL := fmt.Sprintf("%s/cosmos/staking/v1beta1/validators?pagination.limit=100", c.restEndpoint)
+	if nextKey != "" {
+		reqURL += "&pagination.key=" + nextKey
+	}
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, reqURL, nil)
+	if err != nil {
+		return nil, "", fmt.Errorf("failed to create request: %w", err)
+	}
+
+	resp, err := c.httpClient.Do(req)
+	if err != nil {
+		return nil, "", fmt.Errorf("failed to fetch validators from LCD: %w", err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		return nil, "", fmt.Errorf("LCD returned status %d", resp.StatusCode)
+	}
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, "", fmt.Errorf("failed to read LCD response: %w", err)
+	}
+
+	var result LCDValidatorsResponse
+	if err := json.Unmarshal(body, &result); err != nil {
+		return nil, "", fmt.Errorf("failed to parse LCD validators: %w", err)
+	}
+
+	monikers := make(map[string]string)
+	for _, v := range result.Validators {
+		if v.ConsensusPubkey.Key != "" && v.Description.Moniker != "" {
+			monikers[v.ConsensusPubkey.Key] = v.Description.Moniker
+		}
+	}
+
+	return monikers, result.Pagination.NextKey, nil
 }
 
 // Provider represents an Akash provider with version info
@@ -236,6 +277,9 @@ type Provider struct {
 	CPUTotal     uint64
 	MemAvailable uint64
 	MemTotal     uint64
+	GPUAvailable uint64
+	GPUTotal     uint64
+	GPUModels    []string // unique GPU model names (e.g., "NVIDIA H100")
 }
 
 // ResourceStats represents CPU/memory/storage stats
@@ -250,18 +294,50 @@ type ProviderStatusResponse struct {
 		Inventory struct {
 			Available struct {
 				Nodes []struct {
+					Name        string `json:"name"`
 					Allocatable struct {
 						CPU    uint64 `json:"cpu"`
+						GPU    uint64 `json:"gpu"`
 						Memory uint64 `json:"memory"`
 					} `json:"allocatable"`
 					Available struct {
 						CPU    uint64 `json:"cpu"`
+						GPU    uint64 `json:"gpu"`
 						Memory uint64 `json:"memory"`
 					} `json:"available"`
 				} `json:"nodes"`
 			} `json:"available"`
 		} `json:"inventory"`
 	} `json:"cluster"`
+}
+
+// ProviderNode represents a single node's resource information
+type ProviderNode struct {
+	Name           string
+	CPUAllocatable uint64
+	CPUAvailable   uint64
+	MemAllocatable uint64
+	MemAvailable   uint64
+	GPUAllocatable uint64
+	GPUAvailable   uint64
+}
+
+// GetNodes extracts node information from the status response
+func (r *ProviderStatusResponse) GetNodes() []ProviderNode {
+	rawNodes := r.Cluster.Inventory.Available.Nodes
+	nodes := make([]ProviderNode, 0, len(rawNodes))
+	for _, n := range rawNodes {
+		nodes = append(nodes, ProviderNode{
+			Name:           n.Name,
+			CPUAllocatable: n.Allocatable.CPU,
+			CPUAvailable:   n.Available.CPU,
+			MemAllocatable: n.Allocatable.Memory,
+			MemAvailable:   n.Available.Memory,
+			GPUAllocatable: n.Allocatable.GPU,
+			GPUAvailable:   n.Available.GPU,
+		})
+	}
+	return nodes
 }
 
 // ProviderVersionResponse represents the response from provider's /version endpoint
@@ -336,13 +412,15 @@ func GetProviderVersions(providers []Provider) []string {
 
 const ProviderQueryTimeout = 5 * time.Second
 
-// NewProviderHTTPClient creates an HTTP client configured for querying providers
-func NewProviderHTTPClient() *http.Client {
+// NewProviderHTTPClient creates an HTTP client configured for querying providers.
+// If insecureSkipVerify is true, TLS certificate verification is disabled.
+// This is often needed for providers with self-signed certificates.
+func NewProviderHTTPClient(insecureSkipVerify bool) *http.Client {
 	return &http.Client{
 		Timeout: ProviderQueryTimeout,
 		Transport: &http.Transport{
 			TLSClientConfig: &tls.Config{
-				InsecureSkipVerify: true,
+				InsecureSkipVerify: insecureSkipVerify,
 			},
 			MaxIdleConns:        100,
 			MaxIdleConnsPerHost: 10,
@@ -353,12 +431,12 @@ func NewProviderHTTPClient() *http.Client {
 }
 
 // QueryProviderStatus queries a provider's /status endpoint
-func QueryProviderStatus(httpClient *http.Client, hostURI string) (*ProviderStatusResponse, error) {
-	url := strings.TrimSuffix(hostURI, "/") + "/status"
+func QueryProviderStatus(ctx context.Context, httpClient *http.Client, hostURI string) (*ProviderStatusResponse, error) {
+	reqURL := strings.TrimSuffix(hostURI, "/") + "/status"
 
-	req, err := http.NewRequest("GET", url, nil)
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, reqURL, nil)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("failed to create request: %w", err)
 	}
 
 	resp, err := httpClient.Do(req)
@@ -385,12 +463,12 @@ func QueryProviderStatus(httpClient *http.Client, hostURI string) (*ProviderStat
 }
 
 // QueryProviderVersion queries a provider's /version endpoint
-func QueryProviderVersion(httpClient *http.Client, hostURI string) (*ProviderVersionResponse, error) {
-	url := strings.TrimSuffix(hostURI, "/") + "/version"
+func QueryProviderVersion(ctx context.Context, httpClient *http.Client, hostURI string) (*ProviderVersionResponse, error) {
+	reqURL := strings.TrimSuffix(hostURI, "/") + "/version"
 
-	req, err := http.NewRequest("GET", url, nil)
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, reqURL, nil)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("failed to create request: %w", err)
 	}
 
 	resp, err := httpClient.Do(req)

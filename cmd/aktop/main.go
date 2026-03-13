@@ -27,11 +27,12 @@ const (
 )
 
 var (
-	rpcEndpoint  string
-	restEndpoint string
-	refreshRate  time.Duration
-	fastMode     bool
-	cleanCache   bool
+	rpcEndpoint        string
+	restEndpoint       string
+	refreshRate        time.Duration
+	fastMode           bool
+	cleanCache         bool
+	insecureSkipVerify bool
 )
 
 var rootCmd = &cobra.Command{
@@ -59,6 +60,7 @@ func init() {
 	rootCmd.Flags().DurationVar(&refreshRate, "refresh", defaultRefreshRate, "Refresh interval")
 	rootCmd.Flags().BoolVar(&fastMode, "fast", false, "Fast polling mode (250ms interval)")
 	rootCmd.Flags().BoolVar(&cleanCache, "clean-cache", false, "Delete provider cache and start fresh")
+	rootCmd.Flags().BoolVar(&insecureSkipVerify, "insecure", true, "Skip TLS certificate verification for providers")
 
 	// Custom help template with keyboard controls
 	rootCmd.SetHelpTemplate(`{{.Long}}
@@ -121,7 +123,13 @@ func run(cmd *cobra.Command, args []string) error {
 	client := rpc.NewClient(rpcEndpoint, restEndpoint)
 	rpcProviderClient := rpc.NewRPCProviderClient(rpcEndpoint)
 
-	model := ui.NewModel(client, rpcProviderClient, providerCache, refreshRate)
+	model := ui.NewModel(ui.ModelConfig{
+		Client:             client,
+		RPCClient:          rpcProviderClient,
+		Cache:              providerCache,
+		RefreshRate:        refreshRate,
+		InsecureSkipVerify: insecureSkipVerify,
+	})
 	p := tea.NewProgram(model)
 
 	if _, err := p.Run(); err != nil {

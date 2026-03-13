@@ -9,6 +9,8 @@ import (
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/cloud-j-luna/aktop/internal/rpc"
 )
 
 const (
@@ -37,6 +39,9 @@ type CachedProvider struct {
 	CPUTotal            uint64            `json:"cpu_total"`
 	MemAvailable        uint64            `json:"mem_available"`
 	MemTotal            uint64            `json:"mem_total"`
+	GPUAvailable        uint64            `json:"gpu_available"`
+	GPUTotal            uint64            `json:"gpu_total"`
+	GPUModels           []string          `json:"gpu_models,omitempty"`
 	LastSeenOnline      time.Time         `json:"last_seen_online"`
 	LastChecked         time.Time         `json:"last_checked"`
 	ConsecutiveFailures int               `json:"consecutive_failures"`
@@ -48,6 +53,26 @@ type ProviderCacheData struct {
 	LastChainSync time.Time                  `json:"last_chain_sync"`
 	Providers     map[string]*CachedProvider `json:"providers"`
 }
+
+// ProviderStore defines the interface for provider caching operations.
+// This interface enables testing with mock implementations.
+type ProviderStore interface {
+	HasProviders() bool
+	GetProvider(owner string) (*CachedProvider, bool)
+	GetAllProviders() map[string]*CachedProvider
+	GetOnlineProviders() []*CachedProvider
+	MarkProviderOnline(owner, version string, cpuAvail, cpuTotal, memAvail, memTotal, gpuAvail, gpuTotal uint64, gpuModels []string)
+	MarkProviderOffline(owner string)
+	SyncWithChain(onChainProviders []rpc.OnChainProvider) []string
+	GetProvidersDueForCheck() []string
+	GetProvidersByPriority() []string
+	ProviderCount() int
+	OnlineCount() int
+	Save() error
+}
+
+// Ensure ProviderCache implements ProviderStore
+var _ ProviderStore = (*ProviderCache)(nil)
 
 // ProviderCache manages the provider cache with thread-safe access
 type ProviderCache struct {
@@ -133,8 +158,8 @@ func (c *ProviderCache) GetProvider(owner string) (*CachedProvider, bool) {
 	if !ok {
 		return nil, false
 	}
-	copy := *p
-	return &copy, true
+	cp := *p
+	return &cp, true
 }
 
 // GetAllProviders returns a copy of all cached providers
@@ -144,8 +169,8 @@ func (c *ProviderCache) GetAllProviders() map[string]*CachedProvider {
 
 	result := make(map[string]*CachedProvider, len(c.data.Providers))
 	for k, v := range c.data.Providers {
-		copy := *v
-		result[k] = &copy
+		cp := *v
+		result[k] = &cp
 	}
 	return result
 }
@@ -158,8 +183,8 @@ func (c *ProviderCache) GetOnlineProviders() []*CachedProvider {
 	var online []*CachedProvider
 	for _, p := range c.data.Providers {
 		if p.IsOnline {
-			copy := *p
-			online = append(online, &copy)
+			cp := *p
+			online = append(online, &cp)
 		}
 	}
 	return online
@@ -197,7 +222,7 @@ func (c *ProviderCache) AddNewProvider(owner, hostURI string, attributes map[str
 }
 
 // MarkProviderOnline marks a provider as online with updated stats
-func (c *ProviderCache) MarkProviderOnline(owner string, version string, cpuAvail, cpuTotal, memAvail, memTotal uint64) {
+func (c *ProviderCache) MarkProviderOnline(owner string, version string, cpuAvail, cpuTotal, memAvail, memTotal, gpuAvail, gpuTotal uint64, gpuModels []string) {
 	c.mu.Lock()
 	defer c.mu.Unlock()
 
@@ -212,6 +237,9 @@ func (c *ProviderCache) MarkProviderOnline(owner string, version string, cpuAvai
 	p.CPUTotal = cpuTotal
 	p.MemAvailable = memAvail
 	p.MemTotal = memTotal
+	p.GPUAvailable = gpuAvail
+	p.GPUTotal = gpuTotal
+	p.GPUModels = gpuModels
 	p.LastSeenOnline = time.Now()
 	p.LastChecked = time.Now()
 	p.ConsecutiveFailures = 0
@@ -248,7 +276,7 @@ func (c *ProviderCache) GetLastChainSync() time.Time {
 
 // SyncWithChain syncs the cache with on-chain providers
 // Returns a list of new provider owners that weren't in the cache
-func (c *ProviderCache) SyncWithChain(onChainProviders []OnChainProvider) []string {
+func (c *ProviderCache) SyncWithChain(onChainProviders []rpc.OnChainProvider) []string {
 	c.mu.Lock()
 	defer c.mu.Unlock()
 
@@ -400,14 +428,6 @@ func (c *ProviderCache) OnlineCount() int {
 		}
 	}
 	return count
-}
-
-// OnChainProvider represents a provider from the chain
-type OnChainProvider struct {
-	Owner      string
-	HostURI    string
-	Attributes map[string]string
-	IsOnline   bool
 }
 
 // extractHostname extracts the hostname from a URL
