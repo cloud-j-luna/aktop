@@ -36,12 +36,6 @@ var (
 			PaddingBottom(1).
 			MarginBottom(1)
 
-	// Box style for containers
-	boxStyle = lipgloss.NewStyle().
-			Border(lipgloss.RoundedBorder()).
-			BorderForeground(primaryColor).
-			Padding(1, 2)
-
 	// Label style for field labels
 	labelStyle = lipgloss.NewStyle().
 			Foreground(mutedColor).
@@ -114,6 +108,23 @@ var (
 	// Moniker style
 	monikerStyle = lipgloss.NewStyle().
 			Foreground(textColor)
+
+	// Highlight style for selected rows
+	highlightStyle = lipgloss.NewStyle().
+			Foreground(brightText).
+			Bold(true)
+
+	// Detail view styles
+	detailHeaderStyle = lipgloss.NewStyle().
+				Bold(true).
+				Foreground(primaryColor)
+
+	detailLabelStyle = lipgloss.NewStyle().
+				Foreground(mutedColor).
+				Width(10)
+
+	detailValueStyle = lipgloss.NewStyle().
+				Foreground(textColor)
 )
 
 // ProgressBar renders a progress bar with the given percentage (0-1)

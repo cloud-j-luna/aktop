@@ -1,6 +1,7 @@
 package rpc
 
 import (
+	"context"
 	"encoding/base64"
 	"encoding/hex"
 	"encoding/json"
@@ -65,86 +66,108 @@ func (c *RPCProviderClient) Close() error {
 }
 
 // GetProvidersOnChain fetches all providers from the chain via RPC ABCI query
-func (c *RPCProviderClient) GetProvidersOnChain() ([]OnChainProvider, error) {
+func (c *RPCProviderClient) GetProvidersOnChain(ctx context.Context) ([]OnChainProvider, error) {
 	var providers []OnChainProvider
 	var nextKey []byte
 
 	for {
-		queryURL := fmt.Sprintf("%s/abci_query?path=%s",
-			c.rpcEndpoint,
-			url.QueryEscape(fmt.Sprintf("%q", ProvidersQueryPath)),
-		)
-
-		if len(nextKey) > 0 {
-			req := &providerv1beta4.QueryProvidersRequest{
-				Pagination: &querytypes.PageRequest{
-					Key:   nextKey,
-					Limit: 100,
-				},
-			}
-			reqData, err := req.Marshal()
-			if err != nil {
-				return nil, fmt.Errorf("failed to marshal pagination request: %w", err)
-			}
-			queryURL += "&data=0x" + hex.EncodeToString(reqData)
-		}
-
-		resp, err := c.httpClient.Get(queryURL)
+		pageProviders, newNextKey, err := c.fetchProvidersPage(ctx, nextKey)
 		if err != nil {
-			return nil, fmt.Errorf("failed to query providers: %w", err)
+			return nil, err
 		}
 
-		body, err := io.ReadAll(resp.Body)
-		resp.Body.Close()
+		providers = append(providers, pageProviders...)
 
-		if err != nil {
-			return nil, fmt.Errorf("failed to read response: %w", err)
-		}
-
-		if resp.StatusCode != http.StatusOK {
-			return nil, fmt.Errorf("ABCI query failed with status %d: %s", resp.StatusCode, string(body))
-		}
-
-		var abciResp ABCIQueryResponse
-		if err := json.Unmarshal(body, &abciResp); err != nil {
-			return nil, fmt.Errorf("failed to parse ABCI response: %w", err)
-		}
-
-		if abciResp.Result.Response.Code != 0 {
-			return nil, fmt.Errorf("ABCI query error: code=%d log=%s",
-				abciResp.Result.Response.Code, abciResp.Result.Response.Log)
-		}
-
-		valueBytes, err := base64.StdEncoding.DecodeString(abciResp.Result.Response.Value)
-		if err != nil {
-			return nil, fmt.Errorf("failed to decode base64 value: %w", err)
-		}
-
-		var providersResp providerv1beta4.QueryProvidersResponse
-		if err := providersResp.Unmarshal(valueBytes); err != nil {
-			return nil, fmt.Errorf("failed to unmarshal providers response: %w", err)
-		}
-
-		for _, p := range providersResp.Providers {
-			attrs := make(map[string]string)
-			for _, attr := range p.Attributes {
-				attrs[attr.Key] = attr.Value
-			}
-
-			providers = append(providers, OnChainProvider{
-				Owner:      p.Owner,
-				HostURI:    p.HostURI,
-				Attributes: attrs,
-			})
-		}
-
-		if providersResp.Pagination == nil || len(providersResp.Pagination.NextKey) == 0 {
+		if len(newNextKey) == 0 {
 			break
 		}
-		nextKey = providersResp.Pagination.NextKey
+		nextKey = newNextKey
 	}
 
 	return providers, nil
+}
+
+func (c *RPCProviderClient) fetchProvidersPage(ctx context.Context, nextKey []byte) ([]OnChainProvider, []byte, error) {
+	queryURL := fmt.Sprintf("%s/abci_query?path=%s",
+		c.rpcEndpoint,
+		url.QueryEscape(fmt.Sprintf("%q", ProvidersQueryPath)),
+	)
+
+	if len(nextKey) > 0 {
+		req := &providerv1beta4.QueryProvidersRequest{
+			Pagination: &querytypes.PageRequest{
+				Key:   nextKey,
+				Limit: 100,
+			},
+		}
+		reqData, err := req.Marshal()
+		if err != nil {
+			return nil, nil, fmt.Errorf("failed to marshal pagination request: %w", err)
+		}
+		queryURL += "&data=0x" + hex.EncodeToString(reqData)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, queryURL, nil)
+	if err != nil {
+		return nil, nil, fmt.Errorf("failed to create request: %w", err)
+	}
+
+	resp, err := c.httpClient.Do(req)
+	if err != nil {
+		return nil, nil, fmt.Errorf("failed to query providers: %w", err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		body, _ := io.ReadAll(resp.Body)
+		return nil, nil, fmt.Errorf("ABCI query failed with status %d: %s", resp.StatusCode, string(body))
+	}
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, nil, fmt.Errorf("failed to read response: %w", err)
+	}
+
+	var abciResp ABCIQueryResponse
+	if err := json.Unmarshal(body, &abciResp); err != nil {
+		return nil, nil, fmt.Errorf("failed to parse ABCI response: %w", err)
+	}
+
+	if abciResp.Result.Response.Code != 0 {
+		return nil, nil, fmt.Errorf("ABCI query error: code=%d log=%s",
+			abciResp.Result.Response.Code, abciResp.Result.Response.Log)
+	}
+
+	valueBytes, err := base64.StdEncoding.DecodeString(abciResp.Result.Response.Value)
+	if err != nil {
+		return nil, nil, fmt.Errorf("failed to decode base64 value: %w", err)
+	}
+
+	var providersResp providerv1beta4.QueryProvidersResponse
+	if err := providersResp.Unmarshal(valueBytes); err != nil {
+		return nil, nil, fmt.Errorf("failed to unmarshal providers response: %w", err)
+	}
+
+	var providers []OnChainProvider
+	for _, p := range providersResp.Providers {
+		attrs := make(map[string]string)
+		for _, attr := range p.Attributes {
+			attrs[attr.Key] = attr.Value
+		}
+
+		providers = append(providers, OnChainProvider{
+			Owner:      p.Owner,
+			HostURI:    p.HostURI,
+			Attributes: attrs,
+		})
+	}
+
+	var newNextKey []byte
+	if providersResp.Pagination != nil {
+		newNextKey = providersResp.Pagination.NextKey
+	}
+
+	return providers, newNextKey, nil
 }
 
 // GRPCClient is kept for backward compatibility but now uses RPC
@@ -174,8 +197,8 @@ func (c *GRPCClient) Close() error {
 }
 
 // GetProvidersOnChain fetches all providers from the chain
-func (c *GRPCClient) GetProvidersOnChain() ([]OnChainProvider, error) {
-	return c.rpcClient.GetProvidersOnChain()
+func (c *GRPCClient) GetProvidersOnChain(ctx context.Context) ([]OnChainProvider, error) {
+	return c.rpcClient.GetProvidersOnChain(ctx)
 }
 
 // ActiveLeasesResponse represents the REST response for active leases
@@ -194,55 +217,71 @@ type ActiveLeasesResponse struct {
 }
 
 // GetActiveLeaseProviders returns a set of provider addresses that have active leases
-func (c *RPCProviderClient) GetActiveLeaseProviders(restEndpoint string) (map[string]bool, error) {
+func (c *RPCProviderClient) GetActiveLeaseProviders(ctx context.Context, restEndpoint string) (map[string]bool, error) {
 	providers := make(map[string]bool)
 	nextKey := ""
 
 	for {
-		// Build REST query URL
-		queryURL := fmt.Sprintf("%s/akash/market/v1beta5/leases/list?filters.state=active&pagination.limit=500",
-			restEndpoint,
-		)
-		if nextKey != "" {
-			queryURL += "&pagination.key=" + url.QueryEscape(nextKey)
-		}
-
-		// Make the request
-		resp, err := c.httpClient.Get(queryURL)
+		pageProviders, newNextKey, err := c.fetchLeasesPage(ctx, restEndpoint, nextKey)
 		if err != nil {
-			return nil, fmt.Errorf("failed to query active leases: %w", err)
+			return nil, err
 		}
 
-		body, err := io.ReadAll(resp.Body)
-		resp.Body.Close()
-
-		if err != nil {
-			return nil, fmt.Errorf("failed to read response: %w", err)
+		for provider := range pageProviders {
+			providers[provider] = true
 		}
 
-		if resp.StatusCode != http.StatusOK {
-			return nil, fmt.Errorf("leases query failed with status %d: %s", resp.StatusCode, string(body))
-		}
-
-		// Parse response
-		var leasesResp ActiveLeasesResponse
-		if err := json.Unmarshal(body, &leasesResp); err != nil {
-			return nil, fmt.Errorf("failed to parse leases response: %w", err)
-		}
-
-		for _, l := range leasesResp.Leases {
-			if l.Lease.ID.Provider != "" {
-				providers[l.Lease.ID.Provider] = true
-			}
-		}
-
-		if leasesResp.Pagination.NextKey == "" {
+		if newNextKey == "" {
 			break
 		}
-		nextKey = leasesResp.Pagination.NextKey
+		nextKey = newNextKey
 	}
 
 	return providers, nil
+}
+
+func (c *RPCProviderClient) fetchLeasesPage(ctx context.Context, restEndpoint, nextKey string) (map[string]bool, string, error) {
+	queryURL := fmt.Sprintf("%s/akash/market/v1beta5/leases/list?filters.state=active&pagination.limit=500",
+		restEndpoint,
+	)
+	if nextKey != "" {
+		queryURL += "&pagination.key=" + url.QueryEscape(nextKey)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, queryURL, nil)
+	if err != nil {
+		return nil, "", fmt.Errorf("failed to create request: %w", err)
+	}
+
+	resp, err := c.httpClient.Do(req)
+	if err != nil {
+		return nil, "", fmt.Errorf("failed to query active leases: %w", err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		body, _ := io.ReadAll(resp.Body)
+		return nil, "", fmt.Errorf("leases query failed with status %d: %s", resp.StatusCode, string(body))
+	}
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, "", fmt.Errorf("failed to read response: %w", err)
+	}
+
+	var leasesResp ActiveLeasesResponse
+	if err := json.Unmarshal(body, &leasesResp); err != nil {
+		return nil, "", fmt.Errorf("failed to parse leases response: %w", err)
+	}
+
+	providers := make(map[string]bool)
+	for _, l := range leasesResp.Leases {
+		if l.Lease.ID.Provider != "" {
+			providers[l.Lease.ID.Provider] = true
+		}
+	}
+
+	return providers, leasesResp.Pagination.NextKey, nil
 }
 
 // SeedURL is the URL for the provider seed file used for fast bootstrapping
@@ -255,8 +294,13 @@ type SeedProviderInfo struct {
 }
 
 // GetProvidersFromSeed fetches providers from the seed file for fast bootstrapping
-func (c *RPCProviderClient) GetProvidersFromSeed() ([]OnChainProvider, error) {
-	resp, err := c.httpClient.Get(SeedURL)
+func (c *RPCProviderClient) GetProvidersFromSeed(ctx context.Context) ([]OnChainProvider, error) {
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, SeedURL, nil)
+	if err != nil {
+		return nil, fmt.Errorf("failed to create request: %w", err)
+	}
+
+	resp, err := c.httpClient.Do(req)
 	if err != nil {
 		return nil, fmt.Errorf("failed to fetch from seed: %w", err)
 	}
