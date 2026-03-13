@@ -88,10 +88,6 @@
     "hostUri": "https://provider.h6i-dedicated.eu-se-1.digitalfrontier.so:8443"
   },
   {
-    "owner": "akash1j3tg4vp2nlw5tly3rmptjq8p6dzm8vqhk2tfch",
-    "hostUri": "https://provider.ouroboroz.tech:8443"
-  },
-  {
     "owner": "akash1sjwuwre4qprcaa34f6324yz7m8nn0awvc75gp5",
     "hostUri": "https://provider.quanglong.org:8443"
   },
@@ -128,16 +124,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash1f94p0afkwzjlna83493hfx9fm3guqce2asqfxu",
-    "hostUri": "https://provider.provider.quocminh.net:8443"
+    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
+    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
   },
   {
     "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
     "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
-  },
-  {
-    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
-    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
   },
   {
     "owner": "akash1hcu596l97rqkcllcwundclhgkvurld6grecjgy",
@@ -200,14 +192,6 @@
     "hostUri": "https://provider.computehoster.dk:8443"
   },
   {
-    "owner": "akash1p0p0kwegjnuudxqvnv8rq3nkvq5esdhlrh544v",
-    "hostUri": "https://provider.provider.tesseris.cloud:8443"
-  },
-  {
-    "owner": "akash1nyg5eftq6ttpm594gg4kynjaneh2n507v26w7g",
-    "hostUri": "https://provider.dpcloud.online:8443"
-  },
-  {
     "owner": "akash19zzh7whjt4vfwxd5wtj3tjtyatnpntfhldshd8",
     "hostUri": "https://provider.cpu.dal.aes.akash.pub:8443"
   },
@@ -224,11 +208,7 @@
     "hostUri": "https://provider.cpu.phl.aes.akash.pub:8443"
   },
   {
-    "owner": "akash1352zqf8ecckffmgq2xdyu7tjmq60fawxg82yaa",
-    "hostUri": "https://provider.sheldonsakash.net:8443"
-  },
-  {
-    "owner": "akash1kx00fck528ydyv5gvvkec7mfrfja2eejz7ls5m",
-    "hostUri": "https://provider.bk2t.co:8443"
+    "owner": "akash1my3mawsdf2sv54hg0u4szz9u8wlk2pleptk8h3",
+    "hostUri": "https://provider.orbitnode88.duckdns.org:8443"
   }
 ]
