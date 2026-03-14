@@ -124,12 +124,16 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
-    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
+    "owner": "akash1f94p0afkwzjlna83493hfx9fm3guqce2asqfxu",
+    "hostUri": "https://provider.provider.quocminh.net:8443"
   },
   {
     "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
     "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
+    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
   },
   {
     "owner": "akash1hcu596l97rqkcllcwundclhgkvurld6grecjgy",
@@ -176,6 +180,10 @@
     "hostUri": "https://provider.cores.it.com:8443"
   },
   {
+    "owner": "akash1chnhnu50f6hv98xl0m7xm95vel457ysp32uwpj",
+    "hostUri": "https://provider.akash.sthlm-host.top:8443"
+  },
+  {
     "owner": "akash192z48wsjwteectlrhg7rndl0gks3f89up8w03z",
     "hostUri": "https://provider.onenet.stream:8443"
   },
@@ -208,7 +216,7 @@
     "hostUri": "https://provider.cpu.phl.aes.akash.pub:8443"
   },
   {
-    "owner": "akash1my3mawsdf2sv54hg0u4szz9u8wlk2pleptk8h3",
-    "hostUri": "https://provider.orbitnode88.duckdns.org:8443"
+    "owner": "akash1kx00fck528ydyv5gvvkec7mfrfja2eejz7ls5m",
+    "hostUri": "https://provider.bk2t.co:8443"
   }
 ]
