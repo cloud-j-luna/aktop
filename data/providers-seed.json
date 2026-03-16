@@ -88,6 +88,10 @@
     "hostUri": "https://provider.h6i-dedicated.eu-se-1.digitalfrontier.so:8443"
   },
   {
+    "owner": "akash1j3tg4vp2nlw5tly3rmptjq8p6dzm8vqhk2tfch",
+    "hostUri": "https://provider.ouroboroz.tech:8443"
+  },
+  {
     "owner": "akash1sjwuwre4qprcaa34f6324yz7m8nn0awvc75gp5",
     "hostUri": "https://provider.quanglong.org:8443"
   },
@@ -134,10 +138,6 @@
   {
     "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
     "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
-  },
-  {
-    "owner": "akash1hcu596l97rqkcllcwundclhgkvurld6grecjgy",
-    "hostUri": "https://provider.ai.iotnetpro.com:8443"
   },
   {
     "owner": "akash104xxqjrd48457w8ghjze7rqv7scf4t9gfs75gr",
@@ -218,6 +218,10 @@
   {
     "owner": "akash1kx00fck528ydyv5gvvkec7mfrfja2eejz7ls5m",
     "hostUri": "https://provider.bk2t.co:8443"
+  },
+  {
+    "owner": "akash10tchxa9u9wr3asv7frvfgtmfu2qd4thuqvcjm7",
+    "hostUri": "https://provider.susanbhattarai.info.np:8443"
   },
   {
     "owner": "akash153s0n2dz2dny25jv7rc3t79j8e8wjg9usuh3pd",
