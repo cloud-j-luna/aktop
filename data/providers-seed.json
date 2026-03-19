@@ -88,6 +88,10 @@
     "hostUri": "https://provider.h6i-dedicated.eu-se-1.digitalfrontier.so:8443"
   },
   {
+    "owner": "akash1j3tg4vp2nlw5tly3rmptjq8p6dzm8vqhk2tfch",
+    "hostUri": "https://provider.ouroboroz.tech:8443"
+  },
+  {
     "owner": "akash1sjwuwre4qprcaa34f6324yz7m8nn0awvc75gp5",
     "hostUri": "https://provider.quanglong.org:8443"
   },
@@ -188,10 +192,6 @@
     "hostUri": "https://provider.zepmoriq.ru:8443"
   },
   {
-    "owner": "akash1ctcyyuzhnzfqh363xymns36yf9w22pqul6rp2p",
-    "hostUri": "https://provider.creative-projects.es:8443"
-  },
-  {
     "owner": "akash1e9g3gehfld9zec3qdj25dcvme87x34veptxdvj",
     "hostUri": "https://provider.computehoster.dk:8443"
   },
@@ -202,6 +202,10 @@
   {
     "owner": "akash1svu5esr3l2wjjf28ky7zster0t6t5a6zhj7g39",
     "hostUri": "https://provider.akash.profszone.xyz:8443"
+  },
+  {
+    "owner": "akash1ren2x0nv8lns7hwgfmty2dgsq5kmflascqctvj",
+    "hostUri": "https://provider.ak1.logikuist.com:8443"
   },
   {
     "owner": "akash1q3qgaq33qu2spkrl6nk47ukz9mzpvm00drf00v",
@@ -218,5 +222,21 @@
   {
     "owner": "akash153s0n2dz2dny25jv7rc3t79j8e8wjg9usuh3pd",
     "hostUri": "https://provider.kingpap.com:8443"
+  },
+  {
+    "owner": "akash1x2g8wfa429fukudgkclaag00d00z4rn846j7wq",
+    "hostUri": "https://provider.161.97.85.20.nip.io:8443"
+  },
+  {
+    "owner": "akash1gudpxhhc9md4lz6e3g8gj0jmukaahxap6ucw9p",
+    "hostUri": "https://provider.akash.serod.io:8443"
+  },
+  {
+    "owner": "akash1mydvq4q4auyxp8qm5yl4hhg2lpzq6a28uqd2r9",
+    "hostUri": "https://provider.adigmak.eu:8443"
+  },
+  {
+    "owner": "akash1e3zkcpjlc0pfwmzph3udtz5aegxdmg5r5rxc0t",
+    "hostUri": "https://provider.sstopup.store:8443"
   }
 ]
