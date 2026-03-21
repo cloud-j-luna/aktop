@@ -60,10 +60,6 @@
     "hostUri": "https://provider.paradigmapolitico.online:8443"
   },
   {
-    "owner": "akash1q9h8uut63w4wnzn73hctahn39pg9hml9sexgl6",
-    "hostUri": "https://provider.akash01.mrt3.it:8443"
-  },
-  {
     "owner": "akash1v4mngfecem3xz0lqyr054na5g49andmyvnyykk",
     "hostUri": "https://provider.cap-test-compute.com:8443"
   },
@@ -86,6 +82,10 @@
   {
     "owner": "akash1aaul837r7en7hpk9wv2svg8u78fdq0t2j2e82z",
     "hostUri": "https://provider.h6i-dedicated.eu-se-1.digitalfrontier.so:8443"
+  },
+  {
+    "owner": "akash1j3tg4vp2nlw5tly3rmptjq8p6dzm8vqhk2tfch",
+    "hostUri": "https://provider.ouroboroz.tech:8443"
   },
   {
     "owner": "akash1sjwuwre4qprcaa34f6324yz7m8nn0awvc75gp5",
@@ -192,10 +192,6 @@
     "hostUri": "https://provider.cpu.dal.aes.akash.pub:8443"
   },
   {
-    "owner": "akash1svu5esr3l2wjjf28ky7zster0t6t5a6zhj7g39",
-    "hostUri": "https://provider.akash.profszone.xyz:8443"
-  },
-  {
     "owner": "akash1ren2x0nv8lns7hwgfmty2dgsq5kmflascqctvj",
     "hostUri": "https://provider.ak1.logikuist.com:8443"
   },
@@ -230,5 +226,9 @@
   {
     "owner": "akash15fqlng4l9dmyrr2m57mkgm57ylhtuc8aeq54uc",
     "hostUri": "https://provider.akashprovdl.duckdns.org:8443"
+  },
+  {
+    "owner": "akash14w36hwrtuqqa3j92fa8ctcxlhjgvr3a0zpp7cj",
+    "hostUri": "https://provider.akash.antonaccimattia.it:8443"
   }
 ]
