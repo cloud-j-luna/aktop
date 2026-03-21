@@ -63,6 +63,10 @@ aktop --refresh 2s
 
 # Clear cache and start fresh
 aktop --clean-cache
+
+# Run on sandbox
+
+aktop --rest https://api.sandbox-2.aksh.pw:443 --rpc https://rpc.sandbox-2.aksh.pw:443
 ```
 
 ### Command Line Options

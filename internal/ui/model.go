@@ -11,6 +11,7 @@ import (
 
 	"github.com/cloud-j-luna/aktop/internal/cache"
 	"github.com/cloud-j-luna/aktop/internal/consensus"
+	"github.com/cloud-j-luna/aktop/internal/governance"
 	"github.com/cloud-j-luna/aktop/internal/rpc"
 )
 
@@ -21,13 +22,15 @@ const (
 	TabOverview Tab = iota
 	TabValidators
 	TabProviders
+	TabGovernance
 )
 
 const (
-	ChainSyncInterval     = 10 * time.Minute
-	ProviderCheckInterval = 200 * time.Millisecond
-	CacheSaveInterval     = 30 * time.Second
-	MaxConcurrentChecks   = 10
+	ChainSyncInterval      = 10 * time.Minute
+	ProviderCheckInterval  = 200 * time.Millisecond
+	CacheSaveInterval      = 30 * time.Second
+	GovernanceSyncInterval = 5 * time.Minute
+	MaxConcurrentChecks    = 10
 )
 
 // Model represents the application state
@@ -55,6 +58,11 @@ type Model struct {
 	providers ProviderList
 	loader    ProviderLoader
 	detail    ProviderDetail
+
+	// Governance state
+	governanceParams   *governance.AllParams
+	governanceSelected int
+	governanceScroll   int
 }
 
 // Message types
@@ -103,6 +111,12 @@ type (
 		nodes []rpc.ProviderNodeWithGPU
 		err   error
 	}
+
+	// governanceParamsMsg is sent when governance params fetch completes
+	governanceParamsMsg struct {
+		params *governance.AllParams
+		err    error
+	}
 )
 
 // ModelConfig holds configuration options for creating a new Model
@@ -138,10 +152,12 @@ func (m Model) Init() tea.Cmd {
 	cmds := []tea.Cmd{
 		m.fetchState,
 		m.fetchMonikers,
+		m.fetchGovernanceParams,
 		m.tick(),
 		m.providerCheckTick(),
 		m.chainSyncTick(),
 		m.cacheSaveTick(),
+		m.governanceSyncTick(),
 	}
 
 	if m.cache.HasProviders() {
@@ -368,6 +384,21 @@ func (m Model) cacheSaveTick() tea.Cmd {
 	})
 }
 
+func (m Model) governanceSyncTick() tea.Cmd {
+	return tea.Tick(GovernanceSyncInterval, func(t time.Time) tea.Msg {
+		return m.fetchGovernanceParams()
+	})
+}
+
+func (m Model) fetchGovernanceParams() tea.Msg {
+	ctx := context.Background()
+	params, err := m.client.GetAllGovernanceParams(ctx)
+	if err != nil {
+		return governanceParamsMsg{err: err}
+	}
+	return governanceParamsMsg{params: params}
+}
+
 // rebuildProviderList rebuilds the provider list from cache
 func (m *Model) rebuildProviderList() {
 	cached := m.cache.GetAllProviders()
@@ -533,6 +564,8 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		return m.handleProviderCheckedMsg(msg)
 	case providerDetailMsg:
 		return m.handleProviderDetailMsg(msg)
+	case governanceParamsMsg:
+		return m.handleGovernanceParamsMsg(msg)
 	}
 	return m, nil
 }
@@ -552,6 +585,9 @@ func (m *Model) handleKeyMsg(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 		if m.activeTab == TabProviders {
 			return m, m.syncChain
 		}
+		if m.activeTab == TabGovernance {
+			return m, m.fetchGovernanceParams
+		}
 		return m, m.fetchState
 	case "1":
 		m.activeTab = TabOverview
@@ -562,23 +598,67 @@ func (m *Model) handleKeyMsg(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 		m.activeTab = TabProviders
 		m.providers.ScrollPos = 0
 		m.providers.SelectedIdx = 0
+	case "4":
+		m.activeTab = TabGovernance
 	case "tab":
-		m.activeTab = (m.activeTab + 1) % 3
+		m.activeTab = (m.activeTab + 1) % 4
 		m.resetScrollForTab()
 	case "up", "k":
-		m.scrollUp()
+		if m.activeTab == TabGovernance {
+			if m.governanceSelected > 0 {
+				m.governanceSelected--
+				m.governanceScroll = 0
+			}
+		} else {
+			m.scrollUp()
+		}
 	case "down", "j":
-		m.scrollDown()
+		if m.activeTab == TabGovernance {
+			if m.governanceSelected < len(governance.ModuleOrder)-1 {
+				m.governanceSelected++
+				m.governanceScroll = 0
+			}
+		} else {
+			m.scrollDown()
+		}
 	case "home", "g":
 		m.scrollPos = 0
 		m.providers.ScrollPos = 0
 		m.providers.SelectedIdx = 0
+		if m.activeTab == TabGovernance {
+			m.governanceSelected = 0
+			m.governanceScroll = 0
+		}
 	case "end", "G":
 		m.scrollToEnd()
+		if m.activeTab == TabGovernance {
+			m.governanceSelected = len(governance.ModuleOrder) - 1
+			m.governanceScroll = 0
+		}
 	case "left", "h":
-		m.selectPreviousVersion()
+		if m.activeTab == TabGovernance {
+			if m.governanceScroll > 0 {
+				m.governanceScroll--
+			}
+		} else {
+			m.selectPreviousVersion()
+		}
 	case "right", "l":
-		m.selectNextVersion()
+		if m.activeTab == TabGovernance {
+			// Only allow scrolling if params don't fit in window
+			if m.governanceParams != nil && m.governanceSelected < len(governance.ModuleOrder) {
+				module := governance.ModuleOrder[m.governanceSelected]
+				if modParams, ok := m.governanceParams.Modules[module]; ok && modParams != nil && modParams.Error == nil {
+					paramLines := governance.CountJSONLines(modParams.RawJSON)
+					maxVisible := m.height - 6
+					if paramLines > maxVisible {
+						m.governanceScroll++
+					}
+				}
+			}
+		} else {
+			m.selectNextVersion()
+		}
 	case "enter":
 		if m.activeTab == TabProviders {
 			return m.enterProviderDetail()
@@ -637,6 +717,8 @@ func (m *Model) scrollUp() {
 		m.scrollPos--
 	} else if m.activeTab == TabProviders {
 		m.moveProviderSelection(-1)
+	} else if m.activeTab == TabGovernance {
+		// j/k moves module selection, h/l moves parameter scroll
 	}
 }
 
@@ -648,6 +730,8 @@ func (m *Model) scrollDown() {
 		}
 	} else if m.activeTab == TabProviders {
 		m.moveProviderSelection(1)
+	} else if m.activeTab == TabGovernance {
+		// j/k moves module selection, h/l moves parameter scroll
 	}
 }
 
@@ -772,6 +856,13 @@ func (m *Model) handleProviderDetailMsg(msg providerDetailMsg) (tea.Model, tea.C
 	return m, nil
 }
 
+func (m *Model) handleGovernanceParamsMsg(msg governanceParamsMsg) (tea.Model, tea.Cmd) {
+	if msg.err == nil {
+		m.governanceParams = msg.params
+	}
+	return m, nil
+}
+
 func (m *Model) handleStateMsg(msg stateMsg) (tea.Model, tea.Cmd) {
 	m.lastUpdate = time.Now()
 	if msg.err != nil {
@@ -838,13 +929,16 @@ func (m Model) View() tea.View {
 	}
 
 	ctx := ViewContext{
-		State:     m.state,
-		Endpoint:  m.client.Endpoint(),
-		Width:     m.width,
-		Height:    m.height,
-		ActiveTab: m.activeTab,
-		Monikers:  m.monikers,
-		ScrollPos: m.scrollPos,
+		State:              m.state,
+		Endpoint:           m.client.Endpoint(),
+		Width:              m.width,
+		Height:             m.height,
+		ActiveTab:          m.activeTab,
+		Monikers:           m.monikers,
+		ScrollPos:          m.scrollPos,
+		GovernanceParams:   m.governanceParams,
+		GovernanceSelected: m.governanceSelected,
+		GovernanceScroll:   m.governanceScroll,
 		Providers: ProviderViewState{
 			Providers: m.providers.Items,
 			Versions:  m.providers.Versions,

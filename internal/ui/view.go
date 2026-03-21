@@ -6,6 +6,7 @@ import (
 	"time"
 
 	"github.com/cloud-j-luna/aktop/internal/consensus"
+	"github.com/cloud-j-luna/aktop/internal/governance"
 	"github.com/cloud-j-luna/aktop/internal/rpc"
 )
 
@@ -60,14 +61,17 @@ type ProviderViewState struct {
 
 // ViewContext holds all data needed to render the view
 type ViewContext struct {
-	State     *consensus.State
-	Endpoint  string
-	Width     int
-	Height    int
-	ActiveTab Tab
-	Monikers  map[string]string
-	ScrollPos int
-	Providers ProviderViewState
+	State              *consensus.State
+	Endpoint           string
+	Width              int
+	Height             int
+	ActiveTab          Tab
+	Monikers           map[string]string
+	ScrollPos          int
+	Providers          ProviderViewState
+	GovernanceParams   *governance.AllParams
+	GovernanceSelected int
+	GovernanceScroll   int
 }
 
 // RenderView renders the complete view
@@ -113,6 +117,8 @@ func RenderView(ctx ViewContext) string {
 		} else {
 			b.WriteString(renderProvidersTab(ctx.Providers, ctx.Height))
 		}
+	case TabGovernance:
+		b.WriteString(renderGovernanceTab(ctx.GovernanceParams, ctx.Height, ctx.GovernanceSelected, ctx.GovernanceScroll))
 	}
 
 	b.WriteString("\n")
@@ -128,23 +134,32 @@ func renderTabBar(activeTab Tab) string {
 	tab1 := " 1: Overview "
 	tab2 := " 2: Validators "
 	tab3 := " 3: Providers "
+	tab4 := " 4: Governance "
 
 	switch activeTab {
 	case TabOverview:
 		tab1 = tabActiveStyle.Render(tab1)
 		tab2 = tabInactiveStyle.Render(tab2)
 		tab3 = tabInactiveStyle.Render(tab3)
+		tab4 = tabInactiveStyle.Render(tab4)
 	case TabValidators:
 		tab1 = tabInactiveStyle.Render(tab1)
 		tab2 = tabActiveStyle.Render(tab2)
 		tab3 = tabInactiveStyle.Render(tab3)
+		tab4 = tabInactiveStyle.Render(tab4)
 	case TabProviders:
 		tab1 = tabInactiveStyle.Render(tab1)
 		tab2 = tabInactiveStyle.Render(tab2)
 		tab3 = tabActiveStyle.Render(tab3)
+		tab4 = tabInactiveStyle.Render(tab4)
+	case TabGovernance:
+		tab1 = tabInactiveStyle.Render(tab1)
+		tab2 = tabInactiveStyle.Render(tab2)
+		tab3 = tabInactiveStyle.Render(tab3)
+		tab4 = tabActiveStyle.Render(tab4)
 	}
 
-	return tab1 + " " + tab2 + " " + tab3
+	return tab1 + " " + tab2 + " " + tab3 + " " + tab4
 }
 
 func renderOverviewTab(state *consensus.State, width int) string {
@@ -743,15 +758,17 @@ func renderStatusBar(endpoint string, activeTab Tab, showingDetail bool) string 
 	var helpText string
 	switch activeTab {
 	case TabValidators:
-		helpText = "q: quit | r: refresh | Tab/1/2/3: switch tabs | j/k or ↑/↓: scroll"
+		helpText = "q: quit | r: refresh | Tab/1-4: switch tabs | j/k or ↑/↓: scroll"
+	case TabGovernance:
+		helpText = "q: quit | r: refresh params | Tab/1-4: switch tabs"
 	case TabProviders:
 		if showingDetail {
 			helpText = "Esc/Backspace: back to list | j/k or ↑/↓: scroll nodes | q: quit"
 		} else {
-			helpText = "q: quit | r: refresh | Tab/1/2/3: switch | h/l: version | j/k: scroll | Enter: details"
+			helpText = "q: quit | r: refresh | Tab/1-4: switch | h/l: version | j/k: scroll | Enter: details"
 		}
 	default:
-		helpText = "q: quit | r: refresh | Tab/1/2/3: switch tabs"
+		helpText = "q: quit | r: refresh | Tab/1-4: switch tabs"
 	}
 	help := helpStyle.Render(helpText)
 	status := statusBarStyle.Render(fmt.Sprintf("RPC: %s", endpoint))
@@ -830,4 +847,109 @@ func formatBytes(bytes uint64) string {
 		return fmt.Sprintf("%.0fGi", float64(bytes)/float64(Gi))
 	}
 	return fmt.Sprintf("%dMi", bytes/Mi)
+}
+
+func renderGovernanceTab(params *governance.AllParams, height int, selectedModule int, scrollPos int) string {
+	var b strings.Builder
+
+	if params == nil {
+		b.WriteString(errorStyle.Render("Loading governance parameters..."))
+		return b.String()
+	}
+
+	b.WriteString("Governance Parameters (j/k: select module, h/l: scroll params)\n")
+
+	moduleList := governance.ModuleOrder
+	moduleColWidth := 20
+	visibleRows := height - 3
+	if visibleRows < 5 {
+		visibleRows = 5
+	}
+
+	// Calculate which modules are visible (center selection)
+	startModule := 0
+	if len(moduleList) > visibleRows-1 {
+		startModule = selectedModule - (visibleRows-1)/2
+		if startModule < 0 {
+			startModule = 0
+		}
+		if startModule+(visibleRows-1) > len(moduleList) {
+			startModule = len(moduleList) - (visibleRows - 1)
+		}
+	}
+
+	// Get parameters for selected module
+	var paramLines []string
+	if selectedModule >= 0 && selectedModule < len(moduleList) {
+		module := moduleList[selectedModule]
+		modParams := params.Modules[module]
+		if modParams != nil && modParams.Error == nil {
+			jsonStr, _ := governance.FormatJSON(modParams.RawJSON)
+			paramLines = strings.Split(jsonStr, "\n")
+		}
+	}
+
+	// Apply scroll to parameters
+	if scrollPos < 0 {
+		scrollPos = 0
+	}
+	if len(paramLines) > 0 && scrollPos >= len(paramLines) {
+		scrollPos = len(paramLines) - 1
+	}
+
+	// Render each row
+	for row := 0; row < visibleRows; row++ {
+		moduleIdx := startModule + row
+		leftCol := ""
+
+		// Left column - module list
+		if moduleIdx < len(moduleList) {
+			module := moduleList[moduleIdx]
+			displayName := governance.GetModuleDisplayName(module)
+			modParams := params.Modules[module]
+
+			if moduleIdx == selectedModule {
+				leftCol = "▶ " + displayName
+			} else {
+				leftCol = "  " + displayName
+			}
+
+			if modParams != nil && modParams.Error != nil {
+				leftCol += " (err)"
+			}
+
+			// Pad to column width
+			if len(leftCol) < moduleColWidth {
+				leftCol += strings.Repeat(" ", moduleColWidth-len(leftCol))
+			}
+		} else {
+			leftCol = strings.Repeat(" ", moduleColWidth)
+		}
+
+		// Right column - ALL parameters (scrolled from top)
+		rightCol := ""
+		paramLineIdx := row + scrollPos
+
+		if selectedModule >= 0 && selectedModule < len(moduleList) {
+			modParams := params.Modules[moduleList[selectedModule]]
+
+			if modParams == nil {
+				rightCol = "(no data)"
+			} else if modParams.Error != nil {
+				rightCol = fmt.Sprintf("Error: %v", modParams.Error)
+			} else if paramLineIdx >= 0 && paramLineIdx < len(paramLines) {
+				rightCol = paramLines[paramLineIdx]
+			}
+		}
+
+		b.WriteString(leftCol + rightCol + "\n")
+	}
+
+	// Add scroll indicator only when params don't fit and user has scrolled
+	if len(paramLines) > visibleRows-3 && scrollPos > 0 {
+		b.WriteString(strings.Repeat(" ", moduleColWidth))
+		b.WriteString(fmt.Sprintf("[%d/%d lines]", scrollPos+visibleRows-2, len(paramLines)))
+	}
+
+	return b.String()
 }

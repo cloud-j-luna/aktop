@@ -78,11 +78,12 @@ Tabs:
   1: Overview      Consensus state, vote progress, validator grid
   2: Validators    Detailed validator list with vote status
   3: Providers     Provider version distribution and list
+  4: Governance    On-chain governance and module parameters
 
 Keyboard Controls:
   q, Ctrl+C        Quit
   r                Manual refresh
-  Tab, 1, 2, 3     Switch between tabs
+  Tab, 1-4         Switch between tabs
   j/k, Up/Down     Scroll lists
   h/l, Left/Right  Cycle through provider versions
   g, G             Jump to top/bottom of list

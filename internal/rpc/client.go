@@ -13,6 +13,7 @@ import (
 	"time"
 
 	"github.com/cloud-j-luna/aktop/internal/consensus"
+	"github.com/cloud-j-luna/aktop/internal/governance"
 )
 
 const (
@@ -506,4 +507,198 @@ func ExtractHostname(hostURI string) string {
 	}
 
 	return host
+}
+
+// GetModuleParams fetches parameters for a specific module from a REST endpoint
+func (c *Client) GetModuleParams(ctx context.Context, module, endpoint string) (json.RawMessage, error) {
+	reqURL := c.restEndpoint + endpoint
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, reqURL, nil)
+	if err != nil {
+		return nil, fmt.Errorf("failed to create request for %s: %w", module, err)
+	}
+
+	resp, err := c.httpClient.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("failed to fetch %s params: %w", module, err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("%s params returned status %d", module, resp.StatusCode)
+	}
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, fmt.Errorf("failed to read %s params response: %w", module, err)
+	}
+
+	return json.RawMessage(body), nil
+}
+
+// GetGenericParams fetches generic parameters for a subspace
+func (c *Client) GetGenericParams(ctx context.Context, subspace string) ([]governance.GenericParam, error) {
+	// First get the list of keys for this subspace
+	reqURL := c.restEndpoint + "/cosmos/params/v1beta1/subspaces"
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, reqURL, nil)
+	if err != nil {
+		return nil, fmt.Errorf("failed to create subspaces request: %w", err)
+	}
+
+	resp, err := c.httpClient.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("failed to fetch subspaces: %w", err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("subspaces returned status %d", resp.StatusCode)
+	}
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, fmt.Errorf("failed to read subspaces response: %w", err)
+	}
+
+	var subspacesResp struct {
+		Subspaces []struct {
+			Subspace string   `json:"subspace"`
+			Keys     []string `json:"keys"`
+		} `json:"subspaces"`
+	}
+
+	if err := json.Unmarshal(body, &subspacesResp); err != nil {
+		return nil, fmt.Errorf("failed to parse subspaces: %w", err)
+	}
+
+	// Find the subspace
+	var keys []string
+	for _, s := range subspacesResp.Subspaces {
+		if s.Subspace == subspace {
+			keys = s.Keys
+			break
+		}
+	}
+
+	if keys == nil {
+		return nil, fmt.Errorf("subspace %s not found", subspace)
+	}
+
+	// Fetch each key
+	var params []governance.GenericParam
+	for _, key := range keys {
+		param, err := c.GetGenericParam(ctx, subspace, key)
+		if err != nil {
+			// Log but continue with other keys
+			continue
+		}
+		params = append(params, *param)
+	}
+
+	return params, nil
+}
+
+// GetGenericParam fetches a single generic parameter
+func (c *Client) GetGenericParam(ctx context.Context, subspace, key string) (*governance.GenericParam, error) {
+	reqURL := fmt.Sprintf("%s/cosmos/params/v1beta1/params?subspace=%s&key=%s", c.restEndpoint, subspace, key)
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, reqURL, nil)
+	if err != nil {
+		return nil, fmt.Errorf("failed to create param request: %w", err)
+	}
+
+	resp, err := c.httpClient.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("failed to fetch param %s/%s: %w", subspace, key, err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("param %s/%s returned status %d", subspace, key, resp.StatusCode)
+	}
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, fmt.Errorf("failed to read param response: %w", err)
+	}
+
+	var paramResp struct {
+		Param governance.GenericParam `json:"param"`
+	}
+
+	if err := json.Unmarshal(body, &paramResp); err != nil {
+		return nil, fmt.Errorf("failed to parse param: %w", err)
+	}
+
+	return &paramResp.Param, nil
+}
+
+// GetAllGovernanceParams fetches all governance parameters
+func (c *Client) GetAllGovernanceParams(ctx context.Context) (*governance.AllParams, error) {
+	allParams := governance.NewAllParams()
+	allParams.LastUpdated = time.Now()
+
+	// Fetch standard module params
+	for module, endpoint := range governance.StandardModuleEndpoints {
+		rawJSON, err := c.GetModuleParams(ctx, module, endpoint)
+		if err != nil {
+			// Log but continue with other modules
+			allParams.Modules[module] = &governance.ModuleParams{
+				Module:      module,
+				Source:      "direct",
+				Error:       err,
+				LastFetched: time.Now(),
+			}
+			continue
+		}
+
+		allParams.Modules[module] = &governance.ModuleParams{
+			Module:      module,
+			Source:      "direct",
+			RawJSON:     rawJSON,
+			LastFetched: time.Now(),
+		}
+	}
+
+	// Fetch generic params for each subspace
+	for _, subspace := range governance.GenericModuleSubspaces {
+		params, err := c.GetGenericParams(ctx, subspace)
+		if err != nil {
+			// Log but continue with other subspaces
+			allParams.Modules[subspace] = &governance.ModuleParams{
+				Module:      subspace,
+				Source:      "generic",
+				Error:       err,
+				LastFetched: time.Now(),
+			}
+			continue
+		}
+
+		// Combine params into a single JSON object
+		paramMap := make(map[string]json.RawMessage)
+		for _, param := range params {
+			paramMap[param.Key] = param.Value
+		}
+
+		rawJSON, err := json.Marshal(paramMap)
+		if err != nil {
+			allParams.Modules[subspace] = &governance.ModuleParams{
+				Module:      subspace,
+				Source:      "generic",
+				Error:       err,
+				LastFetched: time.Now(),
+			}
+			continue
+		}
+
+		allParams.Modules[subspace] = &governance.ModuleParams{
+			Module:      subspace,
+			Source:      "generic",
+			RawJSON:     json.RawMessage(rawJSON),
+			LastFetched: time.Now(),
+		}
+	}
+
+	return allParams, nil
 }
