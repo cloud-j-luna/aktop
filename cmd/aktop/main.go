@@ -109,16 +109,25 @@ func run(cmd *cobra.Command, args []string) error {
 	cacheDir := filepath.Join(homeDir, ".aktop")
 
 	if cleanCache {
-		cachePath := filepath.Join(cacheDir, "providers.json")
-		if err := os.Remove(cachePath); err != nil && !os.IsNotExist(err) {
-			return fmt.Errorf("failed to delete cache: %w", err)
+		providersPath := filepath.Join(cacheDir, "providers.json")
+		if err := os.Remove(providersPath); err != nil && !os.IsNotExist(err) {
+			return fmt.Errorf("failed to delete provider cache: %w", err)
+		}
+		monikersPath := filepath.Join(cacheDir, "monikers.json")
+		if err := os.Remove(monikersPath); err != nil && !os.IsNotExist(err) {
+			return fmt.Errorf("failed to delete moniker cache: %w", err)
 		}
 		fmt.Println("Cache cleared")
 	}
 
 	providerCache, err := cache.LoadOrCreate(cacheDir)
 	if err != nil {
-		return fmt.Errorf("failed to initialize cache: %w", err)
+		return fmt.Errorf("failed to initialize provider cache: %w", err)
+	}
+
+	monikerCache, err := cache.LoadMonikerCache(cacheDir)
+	if err != nil {
+		return fmt.Errorf("failed to initialize moniker cache: %w", err)
 	}
 
 	client := rpc.NewClient(rpcEndpoint, restEndpoint)
@@ -128,6 +137,7 @@ func run(cmd *cobra.Command, args []string) error {
 		Client:             client,
 		RPCClient:          rpcProviderClient,
 		Cache:              providerCache,
+		MonikerCache:       monikerCache,
 		RefreshRate:        refreshRate,
 		InsecureSkipVerify: insecureSkipVerify,
 	})

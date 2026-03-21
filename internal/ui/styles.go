@@ -125,6 +125,13 @@ var (
 
 	detailValueStyle = lipgloss.NewStyle().
 				Foreground(textColor)
+
+	// Vote indicator styles
+	voteYesStyle = lipgloss.NewStyle().
+			Foreground(successColor)
+
+	voteNoStyle = lipgloss.NewStyle().
+			Foreground(errorColor)
 )
 
 // ProgressBar renders a progress bar with the given percentage (0-1)

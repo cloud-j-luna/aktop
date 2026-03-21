@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"strings"
 	"time"
+	"unicode"
 
 	"github.com/cloud-j-luna/aktop/internal/consensus"
 	"github.com/cloud-j-luna/aktop/internal/governance"
@@ -13,8 +14,8 @@ import (
 // Column width constants for provider list
 const (
 	colWidthIndex    = 4
-	colWidthProvider = 28
-	colWidthVersion  = 10
+	colWidthProvider = 36
+	colWidthVersion  = 14
 	colWidthCPU      = 12
 	colWidthMem      = 12
 	colWidthGPU      = 18
@@ -262,10 +263,11 @@ func renderValidatorList(state *consensus.State, monikers map[string]string, ter
 	visibleRows := max(termHeight-18, 5)
 	header := headerStyle.Render(fmt.Sprintf("Validators (%d)", len(state.Validators)))
 
-	colHeader := fmt.Sprintf("  %s  %s  %s  %s  %s",
+	colHeader := fmt.Sprintf("%s  %s  %s  %s  %s  %s",
+		mutedStyle.Render(fmt.Sprintf("%-2s", "")),
 		mutedStyle.Render(fmt.Sprintf("%-4s", "#")),
-		mutedStyle.Render(fmt.Sprintf("%-24s", "Validator")),
-		mutedStyle.Render(fmt.Sprintf("%10s", "Power")),
+		mutedStyle.Render(fmt.Sprintf("%-40s", "Validator")),
+		mutedStyle.Render(fmt.Sprintf("%-10s", "Power")),
 		mutedStyle.Render(fmt.Sprintf("%-8s", "Prevote")),
 		mutedStyle.Render(fmt.Sprintf("%-10s", "Precommit")))
 
@@ -288,43 +290,96 @@ func renderValidatorList(state *consensus.State, monikers map[string]string, ter
 
 func renderValidatorRow(v consensus.ValidatorStatus, monikers map[string]string) string {
 	displayName := getValidatorDisplayName(v, monikers)
-
-	prevoteStatus := voteIndicator(v.Prevoted, "  ")
-	precommitStatus := voteIndicator(v.Precommited, "    ")
-
-	proposerMark := "  "
-	if v.IsProposer {
-		proposerMark = proposerStyle.Render("★ ")
+	if len(displayName) > 40 {
+		displayName = displayName[:37] + "..."
 	}
 
-	return fmt.Sprintf("%s%s  %s  %10s  %s     %s",
-		proposerMark,
+	power := formatPower(v.VotingPower)
+	if len(power) > 10 {
+		power = power[:10]
+	}
+
+	proposerCol := fmt.Sprintf("%-2s", "")
+	if v.IsProposer {
+		proposerCol = proposerStyle.Render(fmt.Sprintf("%-2s", "*"))
+	}
+
+	prevote := voteIndicator(v.Prevoted)
+	precommit := voteIndicator(v.Precommited)
+
+	return fmt.Sprintf("%s  %s  %s  %s  %s  %s",
+		proposerCol,
 		mutedStyle.Render(fmt.Sprintf("%-4d", v.Index)),
-		monikerStyle.Render(fmt.Sprintf("%-24s", displayName)),
-		mutedStyle.Render(formatPower(v.VotingPower)),
-		prevoteStatus,
-		precommitStatus)
+		monikerStyle.Render(fmt.Sprintf("%-40s", displayName)),
+		mutedStyle.Render(fmt.Sprintf("%-12s", power)),
+		centerAlign(prevote, 8),
+		centerAlign(precommit, 10))
+}
+
+func centerAlign(s string, width int) string {
+	// s is an ANSI-styled string; measure the raw content (1 char)
+	raw := stripANSI(s)
+	sw := len(raw)
+	if sw >= width {
+		return s
+	}
+	left := (width - sw) / 2
+	right := width - sw - left
+	return strings.Repeat(" ", left) + s + strings.Repeat(" ", right)
+}
+
+func stripANSI(s string) string {
+	var b strings.Builder
+	inEsc := false
+	for _, r := range s {
+		if r == '\x1b' {
+			inEsc = true
+			continue
+		}
+		if inEsc {
+			if (r >= 'a' && r <= 'z') || (r >= 'A' && r <= 'Z') {
+				inEsc = false
+			}
+			continue
+		}
+		b.WriteRune(r)
+	}
+	return b.String()
 }
 
 func getValidatorDisplayName(v consensus.ValidatorStatus, monikers map[string]string) string {
 	displayName := ""
 	if monikers != nil && v.PubKey != "" {
-		displayName = monikers[v.PubKey]
+		displayName = stripEmojis(strings.TrimSpace(monikers[v.PubKey]))
 	}
 	if displayName == "" {
 		displayName = truncateAddress(v.Address, 12)
 	}
-	if len(displayName) > 20 {
-		displayName = displayName[:17] + "..."
-	}
 	return displayName
 }
 
-func voteIndicator(voted bool, prefix string) string {
-	if voted {
-		return gridVotedStyle.Render(prefix + "✓")
+// stripEmojis removes emoji and symbol characters, keeping only letters, numbers,
+// punctuation, and basic whitespace.
+func stripEmojis(s string) string {
+	var b strings.Builder
+	for _, r := range s {
+		if r > 0x7F && unicode.Is(unicode.So, r) {
+			continue
+		}
+		if r == '\uFE0E' || r == '\uFE0F' {
+			continue
+		}
+		b.WriteRune(r)
 	}
-	return gridNotVotedStyle.Render(prefix + "○")
+	// Collapse multiple spaces from removed emojis
+	return strings.Join(strings.Fields(b.String()), " ")
+}
+
+func voteIndicator(voted bool) string {
+	if voted {
+		return voteYesStyle.Render("✓")
+	}
+	return voteNoStyle.Render("✗")
 }
 
 func scrollRange(scrollPos, visibleRows, totalItems int) (start, end int) {
@@ -429,7 +484,7 @@ func renderProviderList(providers []rpc.Provider, selectedVersion string, termHe
 	matchCount := countVersionMatches(filtered, selectedVersion)
 	header := headerStyle.Render(fmt.Sprintf("Providers (%d total, %d on %s)", len(filtered), matchCount, selectedVersion))
 
-	colHeader := fmt.Sprintf("  %s  %s  %s  %s  %s  %s  %s",
+	colHeader := fmt.Sprintf("    %s  %s  %s  %s  %s  %s  %s",
 		mutedStyle.Render(fmt.Sprintf("%-*s", colWidthIndex, "#")),
 		mutedStyle.Render(fmt.Sprintf("%-*s", colWidthProvider, "Provider")),
 		mutedStyle.Render(fmt.Sprintf("%-*s", colWidthVersion, "Version")),
@@ -857,7 +912,8 @@ func renderGovernanceTab(params *governance.AllParams, height int, selectedModul
 		return b.String()
 	}
 
-	b.WriteString("Governance Parameters (j/k: select module, h/l: scroll params)\n")
+	b.WriteString(headerStyle.Render("Governance Parameters") + "\n")
+	b.WriteString(mutedStyle.Render("j/k: select module, h/l: scroll params") + "\n\n")
 
 	moduleList := governance.ModuleOrder
 	moduleColWidth := 20

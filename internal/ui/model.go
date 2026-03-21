@@ -36,10 +36,11 @@ const (
 // Model represents the application state
 type Model struct {
 	// Core dependencies
-	client     *rpc.Client
-	rpcClient  *rpc.RPCProviderClient
-	httpClient *http.Client
-	cache      cache.ProviderStore
+	client       *rpc.Client
+	rpcClient    *rpc.RPCProviderClient
+	httpClient   *http.Client
+	cache        cache.ProviderStore
+	monikerCache *cache.MonikerCache
 
 	// Consensus state
 	state       *consensus.State
@@ -124,22 +125,25 @@ type ModelConfig struct {
 	Client             *rpc.Client
 	RPCClient          *rpc.RPCProviderClient
 	Cache              cache.ProviderStore
+	MonikerCache       *cache.MonikerCache
 	RefreshRate        time.Duration
 	InsecureSkipVerify bool
 }
 
 // NewModel creates a new UI model
 func NewModel(cfg ModelConfig) Model {
+	monikers := cfg.MonikerCache.Get()
 	return Model{
-		client:      cfg.Client,
-		rpcClient:   cfg.RPCClient,
-		httpClient:  rpc.NewProviderHTTPClient(cfg.InsecureSkipVerify),
-		cache:       cfg.Cache,
-		refreshRate: cfg.RefreshRate,
-		monikers:    make(map[string]string),
-		width:       80,
-		height:      24,
-		activeTab:   TabOverview,
+		client:       cfg.Client,
+		rpcClient:    cfg.RPCClient,
+		httpClient:   rpc.NewProviderHTTPClient(cfg.InsecureSkipVerify),
+		cache:        cfg.Cache,
+		monikerCache: cfg.MonikerCache,
+		refreshRate:  cfg.RefreshRate,
+		monikers:     monikers,
+		width:        80,
+		height:       24,
+		activeTab:    TabOverview,
 		loader: ProviderLoader{
 			FirstRun: !cfg.Cache.HasProviders(),
 			InFlight: make(map[string]bool),
@@ -349,13 +353,23 @@ func (m Model) fetchState() tea.Msg {
 	return stateMsg{state: state}
 }
 
-// fetchMonikers fetches validator monikers
+// fetchMonikers fetches validator monikers only if cache is empty
 func (m Model) fetchMonikers() tea.Msg {
+	if m.monikerCache != nil && m.monikerCache.HasMonikers() {
+		return monikersMsg{monikers: m.monikers}
+	}
+
 	ctx := context.Background()
 	monikers, err := m.client.GetValidatorMonikers(ctx)
 	if err != nil {
 		return monikersMsg{err: err}
 	}
+
+	if m.monikerCache != nil {
+		m.monikerCache.Set(monikers)
+		_ = m.monikerCache.Save()
+	}
+
 	return monikersMsg{monikers: monikers}
 }
 

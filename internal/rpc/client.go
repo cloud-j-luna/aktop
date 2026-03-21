@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"net/url"
 	"sort"
 	"strings"
 	"sync"
@@ -228,7 +229,7 @@ func (c *Client) GetValidatorMonikers(ctx context.Context) (map[string]string, e
 func (c *Client) fetchMonikersPage(ctx context.Context, nextKey string) (map[string]string, string, error) {
 	reqURL := fmt.Sprintf("%s/cosmos/staking/v1beta1/validators?pagination.limit=100", c.restEndpoint)
 	if nextKey != "" {
-		reqURL += "&pagination.key=" + nextKey
+		reqURL += "&pagination.key=" + url.QueryEscape(nextKey)
 	}
 
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet, reqURL, nil)
