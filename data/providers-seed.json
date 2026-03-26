@@ -25,7 +25,7 @@
   },
   {
     "owner": "akash175llqyjvxfle9qwt740vm46772dzaznpzgm576",
-    "hostUri": "https://provider.akashprovid.com:8443"
+    "hostUri": "https://provider.cpu.aesservices.net:8443"
   },
   {
     "owner": "akash1sjlhg0ax9kff3x3j98u59tujnu766cf3gclqek",
@@ -54,6 +54,10 @@
   {
     "owner": "akash1v4mngfecem3xz0lqyr054na5g49andmyvnyykk",
     "hostUri": "https://provider.cap-test-compute.com:8443"
+  },
+  {
+    "owner": "akash1st7fqtuqk6hj06fkkavq0fxtw0w9sm4zzt3r5g",
+    "hostUri": "https://provider.rtgroup.com:8443"
   },
   {
     "owner": "akash1xmjzu9dczlg9fa4v3pfvwzn7ty89r003laj4ac",
@@ -138,6 +142,10 @@
   {
     "owner": "akash104xxqjrd48457w8ghjze7rqv7scf4t9gfs75gr",
     "hostUri": "https://provider.akash.gctech.tw:8443"
+  },
+  {
+    "owner": "akash1vg3gk6dynh9ys45tzjyedp0dl52s93kap75x3n",
+    "hostUri": "https://provider.zanthem.cloud:8443"
   },
   {
     "owner": "akash1csnxgjhxse9atc7c5k52d6nnkmearsmm9kdxxy",
@@ -234,5 +242,9 @@
   {
     "owner": "akash193s6e6qz3fsgn4l27n6qq9ycckkkruvzqtet7c",
     "hostUri": "https://provider.host-01.woolwichtech.com:8443"
+  },
+  {
+    "owner": "akash1ku7t22lhz3c25yke3stxqeuxqp6f0z3rnfe4za",
+    "hostUri": "https://provider.melniks.org:8443"
   }
 ]
