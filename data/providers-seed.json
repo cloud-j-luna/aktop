@@ -72,6 +72,10 @@
     "hostUri": "https://provider.h6i-dedicated.eu-se-1.digitalfrontier.so:8443"
   },
   {
+    "owner": "akash1j3tg4vp2nlw5tly3rmptjq8p6dzm8vqhk2tfch",
+    "hostUri": "https://provider.ouroboroz.tech:8443"
+  },
+  {
     "owner": "akash15axxrf84ajvqrg265fm27wsxyu7cvv25yqa5dk",
     "hostUri": "https://provider.pro6000.hou.aesservices.net:8443"
   },
@@ -116,12 +120,12 @@
     "hostUri": "https://provider.provider.quocminh.net:8443"
   },
   {
-    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
-    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
-  },
-  {
     "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
     "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
+    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
   },
   {
     "owner": "akash104xxqjrd48457w8ghjze7rqv7scf4t9gfs75gr",
@@ -164,10 +168,6 @@
     "hostUri": "https://provider.onenet.stream:8443"
   },
   {
-    "owner": "akash1pusn8r5hts4mrfuvpe9ns6hnfakc02xc57axt8",
-    "hostUri": "https://provider.dedi-unix-0028a-sg1.simplercloud.com:8443"
-  },
-  {
     "owner": "akash1yvj7nqqzk9v850x60933xhlk2ql5upp5344sla",
     "hostUri": "https://provider.zepmoriq.ru:8443"
   },
@@ -178,10 +178,6 @@
   {
     "owner": "akash1e9g3gehfld9zec3qdj25dcvme87x34veptxdvj",
     "hostUri": "https://provider.computehoster.dk:8443"
-  },
-  {
-    "owner": "akash10pz64fnwtumpyukzj32kfvgyzygrcmg5nqa7w2",
-    "hostUri": "https://provider.4090.theworkpc.com:8443"
   },
   {
     "owner": "akash19zzh7whjt4vfwxd5wtj3tjtyatnpntfhldshd8",
@@ -214,10 +210,6 @@
   {
     "owner": "akash14w36hwrtuqqa3j92fa8ctcxlhjgvr3a0zpp7cj",
     "hostUri": "https://provider.akash.antonaccimattia.it:8443"
-  },
-  {
-    "owner": "akash1uyvmssxwrukzsj2sczkuchj87awpt347mfx0tj",
-    "hostUri": "https://provider.server1.mpachos.gr:8443"
   },
   {
     "owner": "akash193s6e6qz3fsgn4l27n6qq9ycckkkruvzqtet7c",
