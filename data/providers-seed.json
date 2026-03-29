@@ -92,10 +92,6 @@
     "hostUri": "https://provider.djs232-compute.com:8443"
   },
   {
-    "owner": "akash15uc29tz7l7umw77rh7l5mh90jzq4h8kqc36vu0",
-    "hostUri": "https://provider.metz.live:8443"
-  },
-  {
     "owner": "akash1d97kkwrhhxyqpr8k7rj0360jtnsw6dftmslvuq",
     "hostUri": "https://provider.wx-spot.de:8443"
   },
@@ -214,5 +210,9 @@
   {
     "owner": "akash193s6e6qz3fsgn4l27n6qq9ycckkkruvzqtet7c",
     "hostUri": "https://provider.host-01.woolwichtech.com:8443"
+  },
+  {
+    "owner": "akash1kq7jaqp8e02295gux84572pmrvgu0eap000h2p",
+    "hostUri": "https://provider.team-michel.com:8443"
   }
 ]
