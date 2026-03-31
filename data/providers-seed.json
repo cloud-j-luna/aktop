@@ -76,10 +76,6 @@
     "hostUri": "https://provider.ouroboroz.tech:8443"
   },
   {
-    "owner": "akash1sjwuwre4qprcaa34f6324yz7m8nn0awvc75gp5",
-    "hostUri": "https://provider.quanglong.org:8443"
-  },
-  {
     "owner": "akash15axxrf84ajvqrg265fm27wsxyu7cvv25yqa5dk",
     "hostUri": "https://provider.pro6000.hou.aesservices.net:8443"
   },
@@ -206,6 +202,10 @@
   {
     "owner": "akash1x2g8wfa429fukudgkclaag00d00z4rn846j7wq",
     "hostUri": "https://provider.161.97.85.20.nip.io:8443"
+  },
+  {
+    "owner": "akash15fqlng4l9dmyrr2m57mkgm57ylhtuc8aeq54uc",
+    "hostUri": "https://provider.akashprovdl.duckdns.org:8443"
   },
   {
     "owner": "akash14w36hwrtuqqa3j92fa8ctcxlhjgvr3a0zpp7cj",
