@@ -112,20 +112,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash1adyrcsp2ptwd83txgv555eqc0vhfufc37wx040",
-    "hostUri": "https://provider.airitdecomp.net:8443"
-  },
-  {
-    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
-    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
-  },
-  {
     "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
     "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
   },
   {
-    "owner": "akash104xxqjrd48457w8ghjze7rqv7scf4t9gfs75gr",
-    "hostUri": "https://provider.akash.gctech.tw:8443"
+    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
+    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
   },
   {
     "owner": "akash1vg3gk6dynh9ys45tzjyedp0dl52s93kap75x3n",
@@ -221,6 +213,6 @@
   },
   {
     "owner": "akash1flhr9uvnn88mfk4gaq0udmvl4q96s6kups2gup",
-    "hostUri": "https://akash.skavenger.co.uk:8443"
+    "hostUri": "https://provider.akash.skavenger.co.uk:8443"
   }
 ]
