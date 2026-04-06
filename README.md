@@ -1,3 +1,7 @@
+> [!IMPORTANT]  
+> This functionality will be migrated to the official CLI. It will stop being maintained here and instead be part of the official CLI feature set.
+> Thank you for the support.
+
 # aktop
 
 A terminal UI for monitoring consensus and provider operations.
