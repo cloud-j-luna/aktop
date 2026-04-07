@@ -32,6 +32,10 @@
     "hostUri": "https://provider.dal.leet.haus:8443"
   },
   {
+    "owner": "akash1ut3m97h62tty06qdq9lds85r34dxe3snjj0xfe",
+    "hostUri": "https://provider.4090.aesservices.net:8443"
+  },
+  {
     "owner": "akash1k94uya5rhrtj9rfw850az9aq2d6vdpjmtnlgd0",
     "hostUri": "https://provider.boogle.cloud:8443"
   },
@@ -80,6 +84,10 @@
     "hostUri": "https://provider.pro6000.hou.aesservices.net:8443"
   },
   {
+    "owner": "akash1j65g8pwr8j2cxt5rkldnh8w84hyhkqysputjsd",
+    "hostUri": "https://provider.proxyua.top:8443"
+  },
+  {
     "owner": "akash1sevd2ymtty3dpq9ycxgkhuzzk4fe6mchqdwd4e",
     "hostUri": "https://provider.jjozzietech.com.au:8443"
   },
@@ -112,12 +120,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
-    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
-  },
-  {
     "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
     "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
+    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
   },
   {
     "owner": "akash1n9u6dy42mca4wqdwuul460qr49dvdd25u4tw9h",
@@ -152,10 +160,6 @@
     "hostUri": "https://provider.akt.engineer:8443"
   },
   {
-    "owner": "akash1xnvhgmnvg8q9wugpc5vt7zch7dg73685e37chc",
-    "hostUri": "https://provider.cores.it.com:8443"
-  },
-  {
     "owner": "akash1yvj7nqqzk9v850x60933xhlk2ql5upp5344sla",
     "hostUri": "https://provider.zepmoriq.ru:8443"
   },
@@ -188,16 +192,8 @@
     "hostUri": "https://provider.cpu.phl.aes.akash.pub:8443"
   },
   {
-    "owner": "akash1kx00fck528ydyv5gvvkec7mfrfja2eejz7ls5m",
-    "hostUri": "https://provider.bk2t.co:8443"
-  },
-  {
     "owner": "akash1x2g8wfa429fukudgkclaag00d00z4rn846j7wq",
     "hostUri": "https://provider.161.97.85.20.nip.io:8443"
-  },
-  {
-    "owner": "akash15fqlng4l9dmyrr2m57mkgm57ylhtuc8aeq54uc",
-    "hostUri": "https://provider.akashprovdl.duckdns.org:8443"
   },
   {
     "owner": "akash14w36hwrtuqqa3j92fa8ctcxlhjgvr3a0zpp7cj",
@@ -216,12 +212,20 @@
     "hostUri": "https://provider.myakashaiserver.com:8443"
   },
   {
+    "owner": "akash1evr5r8r8zgxddvhru3t0l8q079a94ew8hcgwdd",
+    "hostUri": "https://provider.videokiska.ru:8443"
+  },
+  {
     "owner": "akash1flhr9uvnn88mfk4gaq0udmvl4q96s6kups2gup",
     "hostUri": "https://provider.akash.skavenger.co.uk:8443"
   },
   {
     "owner": "akash17rayzkjq60revgwnh0kr8q9vh2egutzykp7e5s",
     "hostUri": "https://provider.emissaire-numerique.com:8443"
+  },
+  {
+    "owner": "akash1gzszd3xyf293l4cwq2pnys7j8elxpnmqpgl8sr",
+    "hostUri": "https://provider.93.172.91.44.nip.io:8443"
   },
   {
     "owner": "akash1p5qkxeu3hcxzx9nvfvva93pyvxcyqduly9udz9",
