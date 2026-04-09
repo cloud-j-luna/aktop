@@ -68,6 +68,10 @@
     "hostUri": "https://provider.orionx.one:8443"
   },
   {
+    "owner": "akash1nj9fetqyf6cxpprv0gvc2k3rvnqlx9jjx0arus",
+    "hostUri": "https://provider.pulse.testcoders.com:8443"
+  },
+  {
     "owner": "akash1l9fumzf7f0shvl8vag9v3mkwgexn7agpx40elv",
     "hostUri": "https://58.111.97.208:8443"
   },
@@ -82,6 +86,10 @@
   {
     "owner": "akash1sjwuwre4qprcaa34f6324yz7m8nn0awvc75gp5",
     "hostUri": "https://provider.quanglong.org:8443"
+  },
+  {
+    "owner": "akash16yr3wxt97ae045a06kr3ycde9srcgpg8syjxxm",
+    "hostUri": "https://provider.zencloud.eu:8443"
   },
   {
     "owner": "akash15axxrf84ajvqrg265fm27wsxyu7cvv25yqa5dk",
@@ -160,6 +168,10 @@
     "hostUri": "https://provider.akash.teksupportservices.com:8443"
   },
   {
+    "owner": "akash106626l57hlnumm8cpkq2jhcd5y5ljvk4xqh6f7",
+    "hostUri": "https://provider.bzzzick174.duckdns.org:8443"
+  },
+  {
     "owner": "akash10tgqesyq4ehchhzh224vy9h33c9mvpq7gws4at",
     "hostUri": "https://provider.akt.engineer:8443"
   },
@@ -212,10 +224,6 @@
     "hostUri": "https://provider.team-michel.com:8443"
   },
   {
-    "owner": "akash13rrswg86cw0muc9889zhv7mqfqdjjejfjp4vsa",
-    "hostUri": "https://provider.allcascloud.com.au:8443"
-  },
-  {
     "owner": "akash1evr5r8r8zgxddvhru3t0l8q079a94ew8hcgwdd",
     "hostUri": "https://provider.videokiska.ru:8443"
   },
@@ -236,7 +244,15 @@
     "hostUri": "https://provider.ahn4-na-4090.akash.pub:8443"
   },
   {
-    "owner": "akash13tnwp6mrcv6f8uykefg08ax8m4396eqdw34j6m",
-    "hostUri": "https://provider.akash.arkeios.win:8443"
+    "owner": "akash1mdmkdwpf97zh4dc78q0tl5qheygmcnkrks3g8d",
+    "hostUri": "https://provider.magnoliya.homes:8443"
+  },
+  {
+    "owner": "akash1s95p5lluzgjhmy2eaekeepat7z9qv9sh654nr8",
+    "hostUri": "https://provider.provider.nordic-compute.com:8443"
+  },
+  {
+    "owner": "akash12elggmrvalampxtw8em2kmmw4wq53nmfvetspr",
+    "hostUri": "https://provider.server-kitchen.com:8443"
   }
 ]
