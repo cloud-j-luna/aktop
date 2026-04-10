@@ -32,6 +32,10 @@
     "hostUri": "https://provider.dal.leet.haus:8443"
   },
   {
+    "owner": "akash17whuchjwdlm3l8z3pdzaw8sqyeelmxua54qejw",
+    "hostUri": "https://provider.solserver.eu:8443"
+  },
+  {
     "owner": "akash1ut3m97h62tty06qdq9lds85r34dxe3snjj0xfe",
     "hostUri": "https://provider.4090.aesservices.net:8443"
   },
@@ -80,10 +84,6 @@
     "hostUri": "https://provider.h6i-dedicated.eu-se-1.digitalfrontier.so:8443"
   },
   {
-    "owner": "akash18zskyywdy4ng50dd9yjen8daep0z585mc296h4",
-    "hostUri": "https://provider.ouroboroz.tech:8443"
-  },
-  {
     "owner": "akash1sjwuwre4qprcaa34f6324yz7m8nn0awvc75gp5",
     "hostUri": "https://provider.quanglong.org:8443"
   },
@@ -96,16 +96,8 @@
     "hostUri": "https://provider.pro6000.hou.aesservices.net:8443"
   },
   {
-    "owner": "akash1j65g8pwr8j2cxt5rkldnh8w84hyhkqysputjsd",
-    "hostUri": "https://provider.proxyua.top:8443"
-  },
-  {
     "owner": "akash1sevd2ymtty3dpq9ycxgkhuzzk4fe6mchqdwd4e",
     "hostUri": "https://provider.jjozzietech.com.au:8443"
-  },
-  {
-    "owner": "akash1r2yz5fzkk9gt0r3mk9u2c29q5mmtef050cryak",
-    "hostUri": "https://provider.gpu.subangle.com:8443"
   },
   {
     "owner": "akash1t5k2a687erc2mqwtnf6w9um3hr96gkc2f64v3p",
@@ -132,16 +124,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
-    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
-  },
-  {
     "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
     "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
   },
   {
-    "owner": "akash1n9u6dy42mca4wqdwuul460qr49dvdd25u4tw9h",
-    "hostUri": "https://provider.kristaphersreliablecomputeservices.com:8443"
+    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
+    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
   },
   {
     "owner": "akash1vg3gk6dynh9ys45tzjyedp0dl52s93kap75x3n",
@@ -168,10 +156,6 @@
     "hostUri": "https://provider.akash.teksupportservices.com:8443"
   },
   {
-    "owner": "akash106626l57hlnumm8cpkq2jhcd5y5ljvk4xqh6f7",
-    "hostUri": "https://provider.bzzzick174.duckdns.org:8443"
-  },
-  {
     "owner": "akash10tgqesyq4ehchhzh224vy9h33c9mvpq7gws4at",
     "hostUri": "https://provider.akt.engineer:8443"
   },
@@ -190,10 +174,6 @@
   {
     "owner": "akash1nyg5eftq6ttpm594gg4kynjaneh2n507v26w7g",
     "hostUri": "https://provider.dpcloud.online:8443"
-  },
-  {
-    "owner": "akash10pz64fnwtumpyukzj32kfvgyzygrcmg5nqa7w2",
-    "hostUri": "https://provider.4090.theworkpc.com:8443"
   },
   {
     "owner": "akash19zzh7whjt4vfwxd5wtj3tjtyatnpntfhldshd8",
@@ -244,15 +224,19 @@
     "hostUri": "https://provider.ahn4-na-4090.akash.pub:8443"
   },
   {
+    "owner": "akash1zjfumerjgqr003gtytzsgvukjgfcgcnxr22dle",
+    "hostUri": "https://provider.hubblue.net:8443"
+  },
+  {
     "owner": "akash1mdmkdwpf97zh4dc78q0tl5qheygmcnkrks3g8d",
     "hostUri": "https://provider.magnoliya.homes:8443"
   },
   {
-    "owner": "akash1s95p5lluzgjhmy2eaekeepat7z9qv9sh654nr8",
-    "hostUri": "https://provider.provider.nordic-compute.com:8443"
+    "owner": "akash14ds7ae83hchzeheanhtny5havamsrxcx0h9alv",
+    "hostUri": "https://provider.akash.dpoi.in:8443"
   },
   {
-    "owner": "akash12elggmrvalampxtw8em2kmmw4wq53nmfvetspr",
-    "hostUri": "https://provider.server-kitchen.com:8443"
+    "owner": "akash1s95p5lluzgjhmy2eaekeepat7z9qv9sh654nr8",
+    "hostUri": "https://provider.provider.nordic-compute.com:8443"
   }
 ]
