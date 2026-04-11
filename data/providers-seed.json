@@ -12,10 +12,6 @@
     "hostUri": "https://provider.europlots.com:8443"
   },
   {
-    "owner": "akash1tweev0k42guyv3a2jtgphmgfrl2h5y2884vh9d",
-    "hostUri": "https://provider.dcnorse.eu:8443"
-  },
-  {
     "owner": "akash15tl6v6gd0nte0syyxnv57zmmspgju4c3xfmdhk",
     "hostUri": "https://provider.hurricane.akash.pub:8443"
   },
@@ -94,6 +90,10 @@
   {
     "owner": "akash15axxrf84ajvqrg265fm27wsxyu7cvv25yqa5dk",
     "hostUri": "https://provider.pro6000.hou.aesservices.net:8443"
+  },
+  {
+    "owner": "akash1j65g8pwr8j2cxt5rkldnh8w84hyhkqysputjsd",
+    "hostUri": "https://provider.proxyua.top:8443"
   },
   {
     "owner": "akash1sevd2ymtty3dpq9ycxgkhuzzk4fe6mchqdwd4e",
@@ -176,6 +176,10 @@
     "hostUri": "https://provider.dpcloud.online:8443"
   },
   {
+    "owner": "akash10pz64fnwtumpyukzj32kfvgyzygrcmg5nqa7w2",
+    "hostUri": "https://provider.4090.theworkpc.com:8443"
+  },
+  {
     "owner": "akash19zzh7whjt4vfwxd5wtj3tjtyatnpntfhldshd8",
     "hostUri": "https://provider.cpu.dal.aes.akash.pub:8443"
   },
@@ -224,16 +228,8 @@
     "hostUri": "https://provider.ahn4-na-4090.akash.pub:8443"
   },
   {
-    "owner": "akash1zjfumerjgqr003gtytzsgvukjgfcgcnxr22dle",
-    "hostUri": "https://provider.hubblue.net:8443"
-  },
-  {
     "owner": "akash1mdmkdwpf97zh4dc78q0tl5qheygmcnkrks3g8d",
     "hostUri": "https://provider.magnoliya.homes:8443"
-  },
-  {
-    "owner": "akash14ds7ae83hchzeheanhtny5havamsrxcx0h9alv",
-    "hostUri": "https://provider.akash.dpoi.in:8443"
   },
   {
     "owner": "akash1s95p5lluzgjhmy2eaekeepat7z9qv9sh654nr8",
