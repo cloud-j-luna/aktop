@@ -132,6 +132,10 @@
     "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
   },
   {
+    "owner": "akash1n9u6dy42mca4wqdwuul460qr49dvdd25u4tw9h",
+    "hostUri": "https://provider.kristaphersreliablecomputeservices.com:8443"
+  },
+  {
     "owner": "akash1vg3gk6dynh9ys45tzjyedp0dl52s93kap75x3n",
     "hostUri": "https://provider.zanthem.cloud:8443"
   },
@@ -212,10 +216,6 @@
     "hostUri": "https://provider.videokiska.ru:8443"
   },
   {
-    "owner": "akash1flhr9uvnn88mfk4gaq0udmvl4q96s6kups2gup",
-    "hostUri": "https://provider.akash.skavenger.co.uk:8443"
-  },
-  {
     "owner": "akash1gzszd3xyf293l4cwq2pnys7j8elxpnmqpgl8sr",
     "hostUri": "https://provider.93.172.91.44.nip.io:8443"
   },
@@ -232,7 +232,15 @@
     "hostUri": "https://provider.magnoliya.homes:8443"
   },
   {
+    "owner": "akash14ds7ae83hchzeheanhtny5havamsrxcx0h9alv",
+    "hostUri": "https://provider.akash.dpoi.in:8443"
+  },
+  {
     "owner": "akash1s95p5lluzgjhmy2eaekeepat7z9qv9sh654nr8",
     "hostUri": "https://provider.provider.nordic-compute.com:8443"
+  },
+  {
+    "owner": "akash1xgwhu8s7umxcqn7905ellqxlvqgt4yzatk3f46",
+    "hostUri": "https://provider.1legion.cloud:8443"
   }
 ]
