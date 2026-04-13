@@ -124,12 +124,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
-    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
-  },
-  {
     "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
     "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
+    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
   },
   {
     "owner": "akash1n9u6dy42mca4wqdwuul460qr49dvdd25u4tw9h",
@@ -180,10 +180,6 @@
     "hostUri": "https://provider.dpcloud.online:8443"
   },
   {
-    "owner": "akash10pz64fnwtumpyukzj32kfvgyzygrcmg5nqa7w2",
-    "hostUri": "https://provider.4090.theworkpc.com:8443"
-  },
-  {
     "owner": "akash19zzh7whjt4vfwxd5wtj3tjtyatnpntfhldshd8",
     "hostUri": "https://provider.cpu.dal.aes.akash.pub:8443"
   },
@@ -200,10 +196,6 @@
     "hostUri": "https://provider.161.97.85.20.nip.io:8443"
   },
   {
-    "owner": "akash15fqlng4l9dmyrr2m57mkgm57ylhtuc8aeq54uc",
-    "hostUri": "https://provider.akashprovdl.duckdns.org:8443"
-  },
-  {
     "owner": "akash14w36hwrtuqqa3j92fa8ctcxlhjgvr3a0zpp7cj",
     "hostUri": "https://provider.akash.antonaccimattia.it:8443"
   },
@@ -212,12 +204,12 @@
     "hostUri": "https://provider.team-michel.com:8443"
   },
   {
-    "owner": "akash1evr5r8r8zgxddvhru3t0l8q079a94ew8hcgwdd",
-    "hostUri": "https://provider.videokiska.ru:8443"
+    "owner": "akash1c55p7d25ax6vtclhdrp3kmrfvjjyyvrcj5fxfa",
+    "hostUri": "https://provider.cudaforge.com:8443"
   },
   {
-    "owner": "akash1gzszd3xyf293l4cwq2pnys7j8elxpnmqpgl8sr",
-    "hostUri": "https://provider.93.172.91.44.nip.io:8443"
+    "owner": "akash1evr5r8r8zgxddvhru3t0l8q079a94ew8hcgwdd",
+    "hostUri": "https://provider.videokiska.ru:8443"
   },
   {
     "owner": "akash1p5qkxeu3hcxzx9nvfvva93pyvxcyqduly9udz9",
@@ -230,10 +222,6 @@
   {
     "owner": "akash1mdmkdwpf97zh4dc78q0tl5qheygmcnkrks3g8d",
     "hostUri": "https://provider.magnoliya.homes:8443"
-  },
-  {
-    "owner": "akash14ds7ae83hchzeheanhtny5havamsrxcx0h9alv",
-    "hostUri": "https://provider.akash.dpoi.in:8443"
   },
   {
     "owner": "akash1s95p5lluzgjhmy2eaekeepat7z9qv9sh654nr8",
