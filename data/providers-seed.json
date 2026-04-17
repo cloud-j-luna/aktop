@@ -52,12 +52,12 @@
     "hostUri": "https://provider.cap-test-compute.com:8443"
   },
   {
-    "owner": "akash1st7fqtuqk6hj06fkkavq0fxtw0w9sm4zzt3r5g",
-    "hostUri": "https://provider.rtgroup.com:8443"
+    "owner": "akash1swxj75e8tz2nuepnqdas787h3eqfmhyh8lak8g",
+    "hostUri": "https://provider.datanode.uk:8443"
   },
   {
-    "owner": "akash1zxypmqca2hq94awgkwa9usgh7ver37t49dj67m",
-    "hostUri": "https://provider.us-central1.mightyspace.pp.ua:8443"
+    "owner": "akash1st7fqtuqk6hj06fkkavq0fxtw0w9sm4zzt3r5g",
+    "hostUri": "https://provider.rtgroup.com:8443"
   },
   {
     "owner": "akash1xmjzu9dczlg9fa4v3pfvwzn7ty89r003laj4ac",
@@ -90,10 +90,6 @@
   {
     "owner": "akash15axxrf84ajvqrg265fm27wsxyu7cvv25yqa5dk",
     "hostUri": "https://provider.pro6000.hou.aesservices.net:8443"
-  },
-  {
-    "owner": "akash1j65g8pwr8j2cxt5rkldnh8w84hyhkqysputjsd",
-    "hostUri": "https://provider.proxyua.top:8443"
   },
   {
     "owner": "akash1sevd2ymtty3dpq9ycxgkhuzzk4fe6mchqdwd4e",
@@ -202,6 +198,10 @@
   {
     "owner": "akash1evr5r8r8zgxddvhru3t0l8q079a94ew8hcgwdd",
     "hostUri": "https://provider.videokiska.ru:8443"
+  },
+  {
+    "owner": "akash1shaxvh4ap2mmyr05p78kyeztsa9a88qf2yhwlu",
+    "hostUri": "https://provider.meraz-node.com:8443"
   },
   {
     "owner": "akash1gzszd3xyf293l4cwq2pnys7j8elxpnmqpgl8sr",
