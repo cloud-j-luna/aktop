@@ -136,10 +136,6 @@
     "hostUri": "https://provider.kristaphersreliablecomputeservices.com:8443"
   },
   {
-    "owner": "akash1csnxgjhxse9atc7c5k52d6nnkmearsmm9kdxxy",
-    "hostUri": "https://provider.zhab.systems:8443"
-  },
-  {
     "owner": "akash1pnae60m3nnnq89437kg892k50wjqx90zcysgzv",
     "hostUri": "https://provider.ahn2-na.akash.pub:8443"
   },
@@ -158,6 +154,10 @@
   {
     "owner": "akash1ek2p65eg2c8sgge3m04e9af00lppzsg3v6xx0x",
     "hostUri": "https://provider.gcnlab.fyi:8443"
+  },
+  {
+    "owner": "akash10tgqesyq4ehchhzh224vy9h33c9mvpq7gws4at",
+    "hostUri": "https://provider.akt.engineer:8443"
   },
   {
     "owner": "akash1yvj7nqqzk9v850x60933xhlk2ql5upp5344sla",
@@ -200,10 +200,6 @@
     "hostUri": "https://provider.akashprovdl.duckdns.org:8443"
   },
   {
-    "owner": "akash14w36hwrtuqqa3j92fa8ctcxlhjgvr3a0zpp7cj",
-    "hostUri": "https://provider.akash.antonaccimattia.it:8443"
-  },
-  {
     "owner": "akash1evr5r8r8zgxddvhru3t0l8q079a94ew8hcgwdd",
     "hostUri": "https://provider.videokiska.ru:8443"
   },
@@ -218,10 +214,6 @@
   {
     "owner": "akash1am3sv9ac6yq6a4s2hkkcn6sd6723fpkp3en08s",
     "hostUri": "https://provider.ahn4-na-4090.akash.pub:8443"
-  },
-  {
-    "owner": "akash1cfsc8qjhav0g3vv3l8jtm7mly7a0vxtrugrv7x",
-    "hostUri": "https://provider.hubblue.net:8443"
   },
   {
     "owner": "akash1mdmkdwpf97zh4dc78q0tl5qheygmcnkrks3g8d",
@@ -258,5 +250,9 @@
   {
     "owner": "akash1ta36ckrd7zy3l8h70cn53858fh60qevdlftfya",
     "hostUri": "https://provider.bamtech.io:8443"
+  },
+  {
+    "owner": "akash146u79puxvew6mwuzqntxvdzrzp9g9k7pdp24z2",
+    "hostUri": "https://provider.proxystart.dpdns.org:8443"
   }
 ]
