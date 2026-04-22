@@ -52,10 +52,6 @@
     "hostUri": "https://provider.datanode.uk:8443"
   },
   {
-    "owner": "akash1st7fqtuqk6hj06fkkavq0fxtw0w9sm4zzt3r5g",
-    "hostUri": "https://provider.rtgroup.com:8443"
-  },
-  {
     "owner": "akash1xmjzu9dczlg9fa4v3pfvwzn7ty89r003laj4ac",
     "hostUri": "https://provider.akash.tagus.host:8443"
   },
@@ -86,6 +82,10 @@
   {
     "owner": "akash15axxrf84ajvqrg265fm27wsxyu7cvv25yqa5dk",
     "hostUri": "https://provider.pro6000.hou.aesservices.net:8443"
+  },
+  {
+    "owner": "akash1nrpy6mahjk2ncgg7cklk6t9qfjxatmurt4y0y9",
+    "hostUri": "https://provider.serverai.app:8443"
   },
   {
     "owner": "akash1sevd2ymtty3dpq9ycxgkhuzzk4fe6mchqdwd4e",
@@ -136,8 +136,16 @@
     "hostUri": "https://provider.kristaphersreliablecomputeservices.com:8443"
   },
   {
+    "owner": "akash1csnxgjhxse9atc7c5k52d6nnkmearsmm9kdxxy",
+    "hostUri": "https://provider.zhab.systems:8443"
+  },
+  {
     "owner": "akash1pnae60m3nnnq89437kg892k50wjqx90zcysgzv",
     "hostUri": "https://provider.ahn2-na.akash.pub:8443"
+  },
+  {
+    "owner": "akash1m288d6872ey2342yllsumnx4hq407de22d4c4n",
+    "hostUri": "https://provider.us.lingxiao.software:8443"
   },
   {
     "owner": "akash17erkmem6xcugfnew2c0ujfqtet32j29ztk03jt",
@@ -168,10 +176,6 @@
     "hostUri": "https://provider.dpcloud.online:8443"
   },
   {
-    "owner": "akash10pz64fnwtumpyukzj32kfvgyzygrcmg5nqa7w2",
-    "hostUri": "https://provider.4090.theworkpc.com:8443"
-  },
-  {
     "owner": "akash19zzh7whjt4vfwxd5wtj3tjtyatnpntfhldshd8",
     "hostUri": "https://provider.cpu.dal.aes.akash.pub:8443"
   },
@@ -182,6 +186,10 @@
   {
     "owner": "akash1ggfvyhr9sar4uxjs4hth3p4kzrwk7lysnenj3g",
     "hostUri": "https://provider.cpu.phl.aes.akash.pub:8443"
+  },
+  {
+    "owner": "akash1egnh287qhxl9kdv093xd0dfjkwstyw2hd6c4rt",
+    "hostUri": "https://provider.voidcompute.net:8443"
   },
   {
     "owner": "akash1x2g8wfa429fukudgkclaag00d00z4rn846j7wq",
@@ -204,8 +212,8 @@
     "hostUri": "https://provider.ahn3-na-5090.akash.pub:8443"
   },
   {
-    "owner": "akash1cfsc8qjhav0g3vv3l8jtm7mly7a0vxtrugrv7x",
-    "hostUri": "https://provider.hubblue.net:8443"
+    "owner": "akash1am3sv9ac6yq6a4s2hkkcn6sd6723fpkp3en08s",
+    "hostUri": "https://provider.ahn4-na-4090.akash.pub:8443"
   },
   {
     "owner": "akash1mdmkdwpf97zh4dc78q0tl5qheygmcnkrks3g8d",
@@ -236,15 +244,19 @@
     "hostUri": "https://provider.box.hurated.com:8443"
   },
   {
-    "owner": "akash1pvskd94jtkph9vgqpf6ecg2as8pvck9w5a7wga",
-    "hostUri": "https://provider.cmolls.de:8443"
-  },
-  {
     "owner": "akash1ta36ckrd7zy3l8h70cn53858fh60qevdlftfya",
     "hostUri": "https://provider.bamtech.io:8443"
   },
   {
+    "owner": "akash1rja3y2ctj3tzmesvh0zfhzzx95rfjw405hwt8d",
+    "hostUri": "https://provider.pronto-ai.pp.ua:8443"
+  },
+  {
     "owner": "akash146u79puxvew6mwuzqntxvdzrzp9g9k7pdp24z2",
     "hostUri": "https://provider.proxystart.dpdns.org:8443"
+  },
+  {
+    "owner": "akash1kd3trhdjcnf5ndt6j2dmukzfclluwhs4868699",
+    "hostUri": "https://provider.mia1.oz0.de:8443"
   }
 ]
