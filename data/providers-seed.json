@@ -1,9 +1,5 @@
 [
   {
-    "owner": "akash1r8c0k55ppvtg9zexv2kgwq04sexgr3kfhjt9w4",
-    "hostUri": "https://provider.akashtestprovider.xyz:8443"
-  },
-  {
     "owner": "akash15ksejj7g4su7ljufsg0a8eglvkje94z8qsh68a",
     "hostUri": "https://provider.akash-palmito.org:8443"
   },
@@ -120,10 +116,6 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash1adyrcsp2ptwd83txgv555eqc0vhfufc37wx040",
-    "hostUri": "https://provider.airitdecomp.net:8443"
-  },
-  {
     "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
     "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
   },
@@ -176,10 +168,6 @@
     "hostUri": "https://provider.computehoster.dk:8443"
   },
   {
-    "owner": "akash1nyg5eftq6ttpm594gg4kynjaneh2n507v26w7g",
-    "hostUri": "https://provider.dpcloud.online:8443"
-  },
-  {
     "owner": "akash19zzh7whjt4vfwxd5wtj3tjtyatnpntfhldshd8",
     "hostUri": "https://provider.cpu.dal.aes.akash.pub:8443"
   },
@@ -194,6 +182,10 @@
   {
     "owner": "akash1x2g8wfa429fukudgkclaag00d00z4rn846j7wq",
     "hostUri": "https://provider.161.97.85.20.nip.io:8443"
+  },
+  {
+    "owner": "akash15fqlng4l9dmyrr2m57mkgm57ylhtuc8aeq54uc",
+    "hostUri": "https://provider.akashprovdl.duckdns.org:8443"
   },
   {
     "owner": "akash1evr5r8r8zgxddvhru3t0l8q079a94ew8hcgwdd",
@@ -212,8 +204,12 @@
     "hostUri": "https://provider.ahn4-na-4090.akash.pub:8443"
   },
   {
-    "owner": "akash19zvwl457t9raurv97rvjzzp7ga7cvuctaz7kpw",
-    "hostUri": "https://provider.airaai.net:8443"
+    "owner": "akash1xgwhu8s7umxcqn7905ellqxlvqgt4yzatk3f46",
+    "hostUri": "https://provider.1legion.cloud:8443"
+  },
+  {
+    "owner": "akash1spkxjxun044rt07n6aczt7tqt5ah3prjqnuyqe",
+    "hostUri": "https://provider.akash.balansapp.pl:8443"
   },
   {
     "owner": "akash1hj6ytu6vr0wwha7ju54wyt3643uh95ay6qlg4f",
@@ -226,5 +222,9 @@
   {
     "owner": "akash1kd3trhdjcnf5ndt6j2dmukzfclluwhs4868699",
     "hostUri": "https://provider.mia1.oz0.de:8443"
+  },
+  {
+    "owner": "akash1l4md2ku0u5cwq8j05732xsmkdykeq0tjyzsntv",
+    "hostUri": "https://provider.worker1.guna-ferrero.com:8443"
   }
 ]
