@@ -116,6 +116,10 @@
     "hostUri": "https://provider.0x0.sh:8443"
   },
   {
+    "owner": "akash1al463a2f6jvf506e73hx0329fwgwz66r7cpkhr",
+    "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
+  },
+  {
     "owner": "akash1adyrcsp2ptwd83txgv555eqc0vhfufc37wx040",
     "hostUri": "https://provider.airitdecomp.net:8443"
   },
@@ -146,10 +150,6 @@
   {
     "owner": "akash17erkmem6xcugfnew2c0ujfqtet32j29ztk03jt",
     "hostUri": "https://provider.h100.wdc.hh.akash.pub:8443"
-  },
-  {
-    "owner": "akash1vmy54rfhpxcjvemltv5vkjfxfdyf2nya4l7027",
-    "hostUri": "https://provider.akash.teksupportservices.com:8443"
   },
   {
     "owner": "akash1ek2p65eg2c8sgge3m04e9af00lppzsg3v6xx0x",
@@ -222,5 +222,9 @@
   {
     "owner": "akash1l4md2ku0u5cwq8j05732xsmkdykeq0tjyzsntv",
     "hostUri": "https://provider.worker1.guna-ferrero.com:8443"
+  },
+  {
+    "owner": "akash10xal9aj9q0ae2duqu8q26ryaccwztycp5rd5z9",
+    "hostUri": "https://provider.akash.ewsp.de:8443"
   }
 ]
