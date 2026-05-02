@@ -204,6 +204,10 @@
     "hostUri": "https://provider.1legion.cloud:8443"
   },
   {
+    "owner": "akash1spkxjxun044rt07n6aczt7tqt5ah3prjqnuyqe",
+    "hostUri": "https://provider.akash.balansapp.pl:8443"
+  },
+  {
     "owner": "akash19zvwl457t9raurv97rvjzzp7ga7cvuctaz7kpw",
     "hostUri": "https://provider.airaai.net:8443"
   },
@@ -212,16 +216,12 @@
     "hostUri": "https://provider.box.hurated.com:8443"
   },
   {
-    "owner": "akash1rja3y2ctj3tzmesvh0zfhzzx95rfjw405hwt8d",
-    "hostUri": "https://provider.pronto-ai.pp.ua:8443"
+    "owner": "akash146u79puxvew6mwuzqntxvdzrzp9g9k7pdp24z2",
+    "hostUri": "https://provider.proxystart.ru:8443"
   },
   {
     "owner": "akash1kd3trhdjcnf5ndt6j2dmukzfclluwhs4868699",
     "hostUri": "https://provider.mia1.oz0.de:8443"
-  },
-  {
-    "owner": "akash1l4md2ku0u5cwq8j05732xsmkdykeq0tjyzsntv",
-    "hostUri": "https://provider.worker1.guna-ferrero.com:8443"
   },
   {
     "owner": "akash10xal9aj9q0ae2duqu8q26ryaccwztycp5rd5z9",
