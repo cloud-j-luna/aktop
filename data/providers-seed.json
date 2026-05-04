@@ -112,10 +112,6 @@
     "hostUri": "https://provider.h4i-dedicated.eu-sw-2.digitalfrontier.so:8443"
   },
   {
-    "owner": "akash1ms8a7qa0fzehy6tvqgtegj8mvcg34l5qwya4h3",
-    "hostUri": "https://provider.0x0.sh:8443"
-  },
-  {
     "owner": "akash1al463a2f6jvf506e73hx0329fwgwz66r7cpkhr",
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
@@ -124,12 +120,12 @@
     "hostUri": "https://provider.airitdecomp.net:8443"
   },
   {
-    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
-    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
-  },
-  {
     "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
     "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
+    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
   },
   {
     "owner": "akash163g6c43m84shm9rv5eq3ueen5arnttjem7xnhr",
@@ -176,10 +172,6 @@
     "hostUri": "https://provider.cpu.phl.aes.akash.pub:8443"
   },
   {
-    "owner": "akash1egnh287qhxl9kdv093xd0dfjkwstyw2hd6c4rt",
-    "hostUri": "https://provider.voidcompute.net:8443"
-  },
-  {
     "owner": "akash1x2g8wfa429fukudgkclaag00d00z4rn846j7wq",
     "hostUri": "https://provider.161.97.85.20.nip.io:8443"
   },
@@ -216,6 +208,10 @@
     "hostUri": "https://provider.box.hurated.com:8443"
   },
   {
+    "owner": "akash1rja3y2ctj3tzmesvh0zfhzzx95rfjw405hwt8d",
+    "hostUri": "https://provider.pronto-ai.pp.ua:8443"
+  },
+  {
     "owner": "akash146u79puxvew6mwuzqntxvdzrzp9g9k7pdp24z2",
     "hostUri": "https://provider.proxystart.ru:8443"
   },
@@ -224,7 +220,15 @@
     "hostUri": "https://provider.mia1.oz0.de:8443"
   },
   {
+    "owner": "akash1l6pttfj4q27md5356rk2u8893fyh73l76ul29n",
+    "hostUri": "https://provider.r810cloud.site:8443"
+  },
+  {
     "owner": "akash10xal9aj9q0ae2duqu8q26ryaccwztycp5rd5z9",
     "hostUri": "https://provider.akash.ewsp.de:8443"
+  },
+  {
+    "owner": "akash130peft02zn65u7jvqn6mkattjyyqrpmvtevwa2",
+    "hostUri": "https://provider.packethost.de:8443"
   }
 ]
