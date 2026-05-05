@@ -226,9 +226,5 @@
   {
     "owner": "akash10xal9aj9q0ae2duqu8q26ryaccwztycp5rd5z9",
     "hostUri": "https://provider.akash.ewsp.de:8443"
-  },
-  {
-    "owner": "akash130peft02zn65u7jvqn6mkattjyyqrpmvtevwa2",
-    "hostUri": "https://provider.packethost.de:8443"
   }
 ]
