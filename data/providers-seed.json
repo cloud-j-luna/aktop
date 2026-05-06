@@ -112,20 +112,16 @@
     "hostUri": "https://provider.h4i-dedicated.eu-sw-2.digitalfrontier.so:8443"
   },
   {
-    "owner": "akash1al463a2f6jvf506e73hx0329fwgwz66r7cpkhr",
-    "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
-  },
-  {
     "owner": "akash1adyrcsp2ptwd83txgv555eqc0vhfufc37wx040",
     "hostUri": "https://provider.airitdecomp.net:8443"
   },
   {
-    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
-    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
-  },
-  {
     "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
     "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
+    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
   },
   {
     "owner": "akash163g6c43m84shm9rv5eq3ueen5arnttjem7xnhr",
@@ -200,7 +196,7 @@
     "hostUri": "https://provider.1legion.cloud:8443"
   },
   {
-    "owner": "akash19zvwl457t9raurv97rvjzzp7ga7cvuctaz7kpw",
+    "owner": "akash1xa8zqjp77mkel0vlp34h3fkf6yykz2drrchhl5",
     "hostUri": "https://provider.airaai.net:8443"
   },
   {
