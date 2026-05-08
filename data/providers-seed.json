@@ -68,10 +68,6 @@
     "hostUri": "https://58.111.97.208:8443"
   },
   {
-    "owner": "akash1aaul837r7en7hpk9wv2svg8u78fdq0t2j2e82z",
-    "hostUri": "https://provider.h6i-dedicated.eu-se-1.digitalfrontier.so:8443"
-  },
-  {
     "owner": "akash1sjwuwre4qprcaa34f6324yz7m8nn0awvc75gp5",
     "hostUri": "https://provider.quanglong.org:8443"
   },
@@ -200,6 +196,10 @@
     "hostUri": "https://provider.box.hurated.com:8443"
   },
   {
+    "owner": "akash1rja3y2ctj3tzmesvh0zfhzzx95rfjw405hwt8d",
+    "hostUri": "https://provider.pronto-ai.pp.ua:8443"
+  },
+  {
     "owner": "akash146u79puxvew6mwuzqntxvdzrzp9g9k7pdp24z2",
     "hostUri": "https://provider.proxystart.ru:8443"
   },
@@ -218,5 +218,9 @@
   {
     "owner": "akash1za80rru8csulj9z8lphmhflydt5ry2dapewrzg",
     "hostUri": "https://provider.crescence.zuos-it.nl:8443"
+  },
+  {
+    "owner": "akash1zqg8gja2m64qrzxrwpqvzf9tyn275uqukxy2sy",
+    "hostUri": "https://provider.yatycloud.com:8443"
   }
 ]
