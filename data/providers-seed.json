@@ -68,6 +68,10 @@
     "hostUri": "https://58.111.97.208:8443"
   },
   {
+    "owner": "akash1aaul837r7en7hpk9wv2svg8u78fdq0t2j2e82z",
+    "hostUri": "https://provider.h6i-dedicated.eu-se-1.digitalfrontier.so:8443"
+  },
+  {
     "owner": "akash1sjwuwre4qprcaa34f6324yz7m8nn0awvc75gp5",
     "hostUri": "https://provider.quanglong.org:8443"
   },
@@ -116,16 +120,20 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
-    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
-  },
-  {
     "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
     "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
   },
   {
+    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
+    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
+  },
+  {
     "owner": "akash163g6c43m84shm9rv5eq3ueen5arnttjem7xnhr",
     "hostUri": "https://provider.compute.brightleapapartments.co.uk:8443"
+  },
+  {
+    "owner": "akash1n9u6dy42mca4wqdwuul460qr49dvdd25u4tw9h",
+    "hostUri": "https://provider.kristaphersreliablecomputeservices.com:8443"
   },
   {
     "owner": "akash1csnxgjhxse9atc7c5k52d6nnkmearsmm9kdxxy",
@@ -168,6 +176,10 @@
     "hostUri": "https://provider.161.97.85.20.nip.io:8443"
   },
   {
+    "owner": "akash1cv6j2wvsrh2qc940e05j7l5zuun0p6zqyzlzc3",
+    "hostUri": "https://provider.akashprovdl.duckdns.org:8443"
+  },
+  {
     "owner": "akash1evr5r8r8zgxddvhru3t0l8q079a94ew8hcgwdd",
     "hostUri": "https://provider.videokiska.ru:8443"
   },
@@ -196,10 +208,6 @@
     "hostUri": "https://provider.box.hurated.com:8443"
   },
   {
-    "owner": "akash1rja3y2ctj3tzmesvh0zfhzzx95rfjw405hwt8d",
-    "hostUri": "https://provider.pronto-ai.pp.ua:8443"
-  },
-  {
     "owner": "akash146u79puxvew6mwuzqntxvdzrzp9g9k7pdp24z2",
     "hostUri": "https://provider.proxystart.ru:8443"
   },
@@ -214,6 +222,10 @@
   {
     "owner": "akash10xal9aj9q0ae2duqu8q26ryaccwztycp5rd5z9",
     "hostUri": "https://provider.akash.ewsp.de:8443"
+  },
+  {
+    "owner": "akash1552pcfc69swa76j4r048uj2jj0sms0mmd4y26t",
+    "hostUri": "https://provider.srv.tenzor.cloud:8443"
   },
   {
     "owner": "akash1za80rru8csulj9z8lphmhflydt5ry2dapewrzg",
