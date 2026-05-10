@@ -208,16 +208,16 @@
     "hostUri": "https://provider.box.hurated.com:8443"
   },
   {
+    "owner": "akash1rja3y2ctj3tzmesvh0zfhzzx95rfjw405hwt8d",
+    "hostUri": "https://provider.pronto-ai.pp.ua:8443"
+  },
+  {
     "owner": "akash146u79puxvew6mwuzqntxvdzrzp9g9k7pdp24z2",
     "hostUri": "https://provider.proxystart.ru:8443"
   },
   {
     "owner": "akash1kd3trhdjcnf5ndt6j2dmukzfclluwhs4868699",
     "hostUri": "https://provider.mia1.oz0.de:8443"
-  },
-  {
-    "owner": "akash1l6pttfj4q27md5356rk2u8893fyh73l76ul29n",
-    "hostUri": "https://provider.r810cloud.site:8443"
   },
   {
     "owner": "akash10xal9aj9q0ae2duqu8q26ryaccwztycp5rd5z9",
@@ -234,5 +234,13 @@
   {
     "owner": "akash1zqg8gja2m64qrzxrwpqvzf9tyn275uqukxy2sy",
     "hostUri": "https://provider.yatycloud.com:8443"
+  },
+  {
+    "owner": "akash19tp6w64zvdvdh26pv5lyf4f40llnqthgfy0t48",
+    "hostUri": "https://provider.akash.metz.live:8443"
+  },
+  {
+    "owner": "akash1z9nr23cgweu45g2jktfx95v7g2xp8qlsa3ys2x",
+    "hostUri": "https://provider.m3a.eu-n-3.digitalfrontier.network:8443"
   }
 ]
