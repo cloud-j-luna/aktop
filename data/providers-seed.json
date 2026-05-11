@@ -72,10 +72,6 @@
     "hostUri": "https://provider.h6i-dedicated.eu-se-1.digitalfrontier.so:8443"
   },
   {
-    "owner": "akash1sjwuwre4qprcaa34f6324yz7m8nn0awvc75gp5",
-    "hostUri": "https://provider.quanglong.org:8443"
-  },
-  {
     "owner": "akash16yr3wxt97ae045a06kr3ycde9srcgpg8syjxxm",
     "hostUri": "https://provider.zencloud.eu:8443"
   },
@@ -154,10 +150,6 @@
   {
     "owner": "akash1ek2p65eg2c8sgge3m04e9af00lppzsg3v6xx0x",
     "hostUri": "https://provider.gcnlab.fyi:8443"
-  },
-  {
-    "owner": "akash10tgqesyq4ehchhzh224vy9h33c9mvpq7gws4at",
-    "hostUri": "https://provider.akt.engineer:8443"
   },
   {
     "owner": "akash1e9g3gehfld9zec3qdj25dcvme87x34veptxdvj",
@@ -242,5 +234,9 @@
   {
     "owner": "akash1z9nr23cgweu45g2jktfx95v7g2xp8qlsa3ys2x",
     "hostUri": "https://provider.m3a.eu-n-3.digitalfrontier.network:8443"
+  },
+  {
+    "owner": "akash1cgduq296f3huw0rljsvvv8weygdal98gslasxy",
+    "hostUri": "https://provider.flyworkersdesign.shop:8443"
   }
 ]
