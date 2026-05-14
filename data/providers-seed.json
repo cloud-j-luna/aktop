@@ -48,10 +48,6 @@
     "hostUri": "https://provider.datanode.uk:8443"
   },
   {
-    "owner": "akash1st7fqtuqk6hj06fkkavq0fxtw0w9sm4zzt3r5g",
-    "hostUri": "https://provider.rtgroup.com:8443"
-  },
-  {
     "owner": "akash1xmjzu9dczlg9fa4v3pfvwzn7ty89r003laj4ac",
     "hostUri": "https://provider.akash.tagus.host:8443"
   },
@@ -88,7 +84,7 @@
     "hostUri": "https://provider.serverai.app:8443"
   },
   {
-    "owner": "akash1j65g8pwr8j2cxt5rkldnh8w84hyhkqysputjsd",
+    "owner": "akash1cvcfyadrm6gcghzspyhacw924c90lwnjkhcglm",
     "hostUri": "https://provider.proxyua.top:8443"
   },
   {
@@ -120,12 +116,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
-    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
-  },
-  {
     "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
     "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
+    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
   },
   {
     "owner": "akash163g6c43m84shm9rv5eq3ueen5arnttjem7xnhr",
@@ -156,6 +152,10 @@
     "hostUri": "https://provider.akt.engineer:8443"
   },
   {
+    "owner": "akash1yvj7nqqzk9v850x60933xhlk2ql5upp5344sla",
+    "hostUri": "https://provider.zepmoriq.ru:8443"
+  },
+  {
     "owner": "akash1e9g3gehfld9zec3qdj25dcvme87x34veptxdvj",
     "hostUri": "https://provider.computehoster.dk:8443"
   },
@@ -180,10 +180,6 @@
     "hostUri": "https://provider.videokiska.ru:8443"
   },
   {
-    "owner": "akash1shaxvh4ap2mmyr05p78kyeztsa9a88qf2yhwlu",
-    "hostUri": "https://provider.meraz-node.com:8443"
-  },
-  {
     "owner": "akash1p5qkxeu3hcxzx9nvfvva93pyvxcyqduly9udz9",
     "hostUri": "https://provider.ahn3-na-5090.akash.pub:8443"
   },
@@ -192,12 +188,12 @@
     "hostUri": "https://provider.ahn4-na-4090.akash.pub:8443"
   },
   {
-    "owner": "akash1cfsc8qjhav0g3vv3l8jtm7mly7a0vxtrugrv7x",
-    "hostUri": "https://provider.hubblue.net:8443"
-  },
-  {
     "owner": "akash1xgwhu8s7umxcqn7905ellqxlvqgt4yzatk3f46",
     "hostUri": "https://provider.1legion.cloud:8443"
+  },
+  {
+    "owner": "akash1spkxjxun044rt07n6aczt7tqt5ah3prjqnuyqe",
+    "hostUri": "https://provider.akash.balansapp.pl:8443"
   },
   {
     "owner": "akash1hj6ytu6vr0wwha7ju54wyt3643uh95ay6qlg4f",
@@ -236,6 +232,10 @@
     "hostUri": "https://provider.m3a.eu-n-3.digitalfrontier.network:8443"
   },
   {
+    "owner": "akash1tu6qscnuvsnv97v0fc2x65dukfx6zanalf7qqq",
+    "hostUri": "https://provider.ComstockBitcoin.com:8443"
+  },
+  {
     "owner": "akash1twk599cdskvwnfmeswvasaluhsv752hq9tqcwk",
     "hostUri": "https://provider.rewixi.tech:8443"
   },
@@ -244,15 +244,23 @@
     "hostUri": "https://provider.flyworkersdesign.shop:8443"
   },
   {
-    "owner": "akash10ttlnefhkfyvfpkgnq7trm68dw43hw6qaa4kvp",
-    "hostUri": "https://provider.protocoltitan.com:8443"
+    "owner": "akash1h5ddmwe52hne0acj0yta6y8y7utc0g6y8xsr8a",
+    "hostUri": "https://provider.akt1.dreday.xyz:8443"
   },
   {
     "owner": "akash1dss2w544t32s2s9yaed62wfru40g7frk84jtxx",
     "hostUri": "https://provider.provider2.flyworkersdesign.shop:8443"
   },
   {
+    "owner": "akash1k4mptq7ndyg8psyclgt497758kkkurf8wup3xu",
+    "hostUri": "https://provider.comstockbitcoin.com:8443"
+  },
+  {
     "owner": "akash1tt3wjmufpyeyzcn6en97jpfqjeytgya5ap3l7h",
     "hostUri": "https://provider.stalincenter.com.br:8443"
+  },
+  {
+    "owner": "akash1u03lp9ateas98ux984snldwmjx09mmnlvhfwh5",
+    "hostUri": "https://provider.akash.globalstocks.my:8443"
   }
 ]
