@@ -72,10 +72,6 @@
     "hostUri": "https://provider.h6i-dedicated.eu-se-1.digitalfrontier.so:8443"
   },
   {
-    "owner": "akash16yr3wxt97ae045a06kr3ycde9srcgpg8syjxxm",
-    "hostUri": "https://provider.zencloud.eu:8443"
-  },
-  {
     "owner": "akash15axxrf84ajvqrg265fm27wsxyu7cvv25yqa5dk",
     "hostUri": "https://provider.pro6000.hou.aesservices.net:8443"
   },
@@ -192,16 +188,16 @@
     "hostUri": "https://provider.box.hurated.com:8443"
   },
   {
+    "owner": "akash1rja3y2ctj3tzmesvh0zfhzzx95rfjw405hwt8d",
+    "hostUri": "https://provider.pronto-ai.pp.ua:8443"
+  },
+  {
     "owner": "akash1kd3trhdjcnf5ndt6j2dmukzfclluwhs4868699",
     "hostUri": "https://provider.mia1.oz0.de:8443"
   },
   {
     "owner": "akash10xal9aj9q0ae2duqu8q26ryaccwztycp5rd5z9",
     "hostUri": "https://provider.akash.ewsp.de:8443"
-  },
-  {
-    "owner": "akash1552pcfc69swa76j4r048uj2jj0sms0mmd4y26t",
-    "hostUri": "https://provider.srv.tenzor.cloud:8443"
   },
   {
     "owner": "akash1za80rru8csulj9z8lphmhflydt5ry2dapewrzg",
@@ -228,10 +224,6 @@
     "hostUri": "https://provider.flyworkersdesign.shop:8443"
   },
   {
-    "owner": "akash10ttlnefhkfyvfpkgnq7trm68dw43hw6qaa4kvp",
-    "hostUri": "https://provider.protocoltitan.com:8443"
-  },
-  {
     "owner": "akash1h5ddmwe52hne0acj0yta6y8y7utc0g6y8xsr8a",
     "hostUri": "https://provider.akt1.dreday.xyz:8443"
   },
@@ -250,5 +242,9 @@
   {
     "owner": "akash1u03lp9ateas98ux984snldwmjx09mmnlvhfwh5",
     "hostUri": "https://provider.akash.globalstocks.my:8443"
+  },
+  {
+    "owner": "akash17r6r9u364t49k7qdef52qtm6wm5mcn0lpzfgnv",
+    "hostUri": "https://provider.h100.siamaidol.com:8443"
   }
 ]
