@@ -72,6 +72,14 @@
     "hostUri": "https://provider.h6i-dedicated.eu-se-1.digitalfrontier.so:8443"
   },
   {
+    "owner": "akash1sjwuwre4qprcaa34f6324yz7m8nn0awvc75gp5",
+    "hostUri": "https://provider.quanglong.org:8443"
+  },
+  {
+    "owner": "akash16yr3wxt97ae045a06kr3ycde9srcgpg8syjxxm",
+    "hostUri": "https://provider.zencloud.eu:8443"
+  },
+  {
     "owner": "akash15axxrf84ajvqrg265fm27wsxyu7cvv25yqa5dk",
     "hostUri": "https://provider.pro6000.hou.aesservices.net:8443"
   },
@@ -224,6 +232,10 @@
     "hostUri": "https://provider.flyworkersdesign.shop:8443"
   },
   {
+    "owner": "akash10ttlnefhkfyvfpkgnq7trm68dw43hw6qaa4kvp",
+    "hostUri": "https://provider.protocoltitan.com:8443"
+  },
+  {
     "owner": "akash1h5ddmwe52hne0acj0yta6y8y7utc0g6y8xsr8a",
     "hostUri": "https://provider.akt1.dreday.xyz:8443"
   },
@@ -246,5 +258,17 @@
   {
     "owner": "akash17r6r9u364t49k7qdef52qtm6wm5mcn0lpzfgnv",
     "hostUri": "https://provider.h100.siamaidol.com:8443"
+  },
+  {
+    "owner": "akash1ulkq88ad0e9f98ctp873ekyzfw4rtj2qd5qyz0",
+    "hostUri": "https://provider.britzel.fr:8443"
+  },
+  {
+    "owner": "akash120zl2mphxf3tsgpdkmk5xqtyzzyn5llhdrw72q",
+    "hostUri": "https://provider.tickalphanodes.com:8443"
+  },
+  {
+    "owner": "akash1s3hq36mpas4nmkqasn7fgwhs9968cgl3u5esnw",
+    "hostUri": "https://provider.froggy-servers.com:8443"
   }
 ]
