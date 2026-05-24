@@ -72,8 +72,8 @@
     "hostUri": "https://provider.h6i-dedicated.eu-se-1.digitalfrontier.so:8443"
   },
   {
-    "owner": "akash1sjwuwre4qprcaa34f6324yz7m8nn0awvc75gp5",
-    "hostUri": "https://provider.quanglong.org:8443"
+    "owner": "akash16yr3wxt97ae045a06kr3ycde9srcgpg8syjxxm",
+    "hostUri": "https://provider.zencloud.eu:8443"
   },
   {
     "owner": "akash15axxrf84ajvqrg265fm27wsxyu7cvv25yqa5dk",
@@ -120,12 +120,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
-    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
-  },
-  {
     "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
     "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
+    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
   },
   {
     "owner": "akash163g6c43m84shm9rv5eq3ueen5arnttjem7xnhr",
@@ -166,10 +166,6 @@
   {
     "owner": "akash1yvj7nqqzk9v850x60933xhlk2ql5upp5344sla",
     "hostUri": "https://provider.zepmoriq.ru:8443"
-  },
-  {
-    "owner": "akash1e9g3gehfld9zec3qdj25dcvme87x34veptxdvj",
-    "hostUri": "https://provider.computehoster.dk:8443"
   },
   {
     "owner": "akash19zzh7whjt4vfwxd5wtj3tjtyatnpntfhldshd8",
@@ -228,10 +224,6 @@
     "hostUri": "https://provider.crescence.zuos-it.nl:8443"
   },
   {
-    "owner": "akash1zqg8gja2m64qrzxrwpqvzf9tyn275uqukxy2sy",
-    "hostUri": "https://provider.yatycloud.com:8443"
-  },
-  {
     "owner": "akash19tp6w64zvdvdh26pv5lyf4f40llnqthgfy0t48",
     "hostUri": "https://provider.akash.metz.live:8443"
   },
@@ -272,11 +264,19 @@
     "hostUri": "https://provider.provider-pro2.akash.one-hr.jp:8443"
   },
   {
-    "owner": "akash1a4qsujarw0jqrp6a8plfax9amydn8vuv6ryksx",
-    "hostUri": "https://provider.bulgaprovider.top:8443"
+    "owner": "akash1cxp9840mdm9qz64pkfrm3yxvkg8jgw4qjsyak8",
+    "hostUri": "https://provider.provider.akash-provider.com:8443"
+  },
+  {
+    "owner": "akash18qpzdm98usth3x5u9cl6v75hjen9s97mnqrmf4",
+    "hostUri": "https://provider.akash-provider.com:8443"
   },
   {
     "owner": "akash18r7cu0eax8uwcaneqh3ez8t8naufhsgc67n997",
     "hostUri": "https://provider.a100.test.akash.pub:8443"
+  },
+  {
+    "owner": "akash147asygjz0gwd7uyzylmw0nra46mtgrjfe9p0pk",
+    "hostUri": "https://provider.mallydev.xyz:8443"
   }
 ]
