@@ -224,6 +224,10 @@
     "hostUri": "https://provider.akash.ewsp.de:8443"
   },
   {
+    "owner": "akash1552pcfc69swa76j4r048uj2jj0sms0mmd4y26t",
+    "hostUri": "https://provider.srv.tenzor.cloud:8443"
+  },
+  {
     "owner": "akash1za80rru8csulj9z8lphmhflydt5ry2dapewrzg",
     "hostUri": "https://provider.crescence.zuos-it.nl:8443"
   },
@@ -240,20 +244,16 @@
     "hostUri": "https://provider.m3a.eu-n-3.digitalfrontier.network:8443"
   },
   {
-    "owner": "akash1tu6qscnuvsnv97v0fc2x65dukfx6zanalf7qqq",
-    "hostUri": "https://provider.ComstockBitcoin.com:8443"
-  },
-  {
-    "owner": "akash10ttlnefhkfyvfpkgnq7trm68dw43hw6qaa4kvp",
-    "hostUri": "https://provider.protocoltitan.com:8443"
-  },
-  {
     "owner": "akash1k4mptq7ndyg8psyclgt497758kkkurf8wup3xu",
     "hostUri": "https://provider.comstockbitcoin.com:8443"
   },
   {
     "owner": "akash1u03lp9ateas98ux984snldwmjx09mmnlvhfwh5",
     "hostUri": "https://provider.akash.globalstocks.my:8443"
+  },
+  {
+    "owner": "akash1k8wuz33w53vhfy3ne568rh6an7698t7ezl87rj",
+    "hostUri": "https://provider.gpu.cmolls.de:8443"
   },
   {
     "owner": "akash17r6r9u364t49k7qdef52qtm6wm5mcn0lpzfgnv",
@@ -268,12 +268,12 @@
     "hostUri": "https://provider.froggy-servers.com:8443"
   },
   {
-    "owner": "akash1srnkdmsrf90yyys3q5qdfzus3qvycxapttxq62",
-    "hostUri": "https://provider.provider-pro2.akash.one-hr.jp:8443"
-  },
-  {
     "owner": "akash1cxp9840mdm9qz64pkfrm3yxvkg8jgw4qjsyak8",
     "hostUri": "https://provider.provider.akash-provider.com:8443"
+  },
+  {
+    "owner": "akash19qjl3axw7hn348lfardhdf4e2z5nmjhlc005gu",
+    "hostUri": "https://provider.s-node.su:8443"
   },
   {
     "owner": "akash18qpzdm98usth3x5u9cl6v75hjen9s97mnqrmf4",
@@ -286,5 +286,9 @@
   {
     "owner": "akash18r7cu0eax8uwcaneqh3ez8t8naufhsgc67n997",
     "hostUri": "https://provider.a100.test.akash.pub:8443"
+  },
+  {
+    "owner": "akash1xzdz8rknpjeqnafv29cyjl8cnydm3e2v56v6zz",
+    "hostUri": "https://provider.ruzij.com:8443"
   }
 ]
