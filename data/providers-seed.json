@@ -24,10 +24,6 @@
     "hostUri": "https://provider.solserver.eu:8443"
   },
   {
-    "owner": "akash1ut3m97h62tty06qdq9lds85r34dxe3snjj0xfe",
-    "hostUri": "https://provider.4090.aesservices.net:8443"
-  },
-  {
     "owner": "akash1k94uya5rhrtj9rfw850az9aq2d6vdpjmtnlgd0",
     "hostUri": "https://provider.boogle.cloud:8443"
   },
@@ -124,12 +120,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
-    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
-  },
-  {
     "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
     "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
+    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
   },
   {
     "owner": "akash163g6c43m84shm9rv5eq3ueen5arnttjem7xnhr",
@@ -224,10 +220,6 @@
     "hostUri": "https://provider.akash.ewsp.de:8443"
   },
   {
-    "owner": "akash1552pcfc69swa76j4r048uj2jj0sms0mmd4y26t",
-    "hostUri": "https://provider.srv.tenzor.cloud:8443"
-  },
-  {
     "owner": "akash1za80rru8csulj9z8lphmhflydt5ry2dapewrzg",
     "hostUri": "https://provider.crescence.zuos-it.nl:8443"
   },
@@ -258,10 +250,6 @@
   {
     "owner": "akash17r6r9u364t49k7qdef52qtm6wm5mcn0lpzfgnv",
     "hostUri": "https://provider.h100.siamaidol.com:8443"
-  },
-  {
-    "owner": "akash120zl2mphxf3tsgpdkmk5xqtyzzyn5llhdrw72q",
-    "hostUri": "https://provider.tickalphanodes.com:8443"
   },
   {
     "owner": "akash1s3hq36mpas4nmkqasn7fgwhs9968cgl3u5esnw",
