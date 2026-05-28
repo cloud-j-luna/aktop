@@ -68,10 +68,6 @@
     "hostUri": "https://provider.h6i-dedicated.eu-se-1.digitalfrontier.so:8443"
   },
   {
-    "owner": "akash1sjwuwre4qprcaa34f6324yz7m8nn0awvc75gp5",
-    "hostUri": "https://provider.quanglong.org:8443"
-  },
-  {
     "owner": "akash16yr3wxt97ae045a06kr3ycde9srcgpg8syjxxm",
     "hostUri": "https://provider.zencloud.eu:8443"
   },
@@ -260,10 +256,6 @@
     "hostUri": "https://provider.provider.akash-provider.com:8443"
   },
   {
-    "owner": "akash19qjl3axw7hn348lfardhdf4e2z5nmjhlc005gu",
-    "hostUri": "https://provider.s-node.su:8443"
-  },
-  {
     "owner": "akash18qpzdm98usth3x5u9cl6v75hjen9s97mnqrmf4",
     "hostUri": "https://provider.akash-provider.com:8443"
   },
@@ -278,5 +270,9 @@
   {
     "owner": "akash1xzdz8rknpjeqnafv29cyjl8cnydm3e2v56v6zz",
     "hostUri": "https://provider.ruzij.com:8443"
+  },
+  {
+    "owner": "akash1n26asjy4htwhwjhhzusk80wrjhlpktcd8cf4nc",
+    "hostUri": "https://provider.akashvps.com:8443"
   }
 ]
