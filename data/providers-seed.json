@@ -68,6 +68,10 @@
     "hostUri": "https://provider.h6i-dedicated.eu-se-1.digitalfrontier.so:8443"
   },
   {
+    "owner": "akash1sjwuwre4qprcaa34f6324yz7m8nn0awvc75gp5",
+    "hostUri": "https://provider.quanglong.org:8443"
+  },
+  {
     "owner": "akash16yr3wxt97ae045a06kr3ycde9srcgpg8syjxxm",
     "hostUri": "https://provider.zencloud.eu:8443"
   },
