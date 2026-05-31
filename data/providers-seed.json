@@ -120,12 +120,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
-    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
-  },
-  {
     "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
     "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
+    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
   },
   {
     "owner": "akash163g6c43m84shm9rv5eq3ueen5arnttjem7xnhr",
@@ -262,6 +262,10 @@
   {
     "owner": "akash18qpzdm98usth3x5u9cl6v75hjen9s97mnqrmf4",
     "hostUri": "https://provider.akash-provider.com:8443"
+  },
+  {
+    "owner": "akash1m6usr35wjsdads7axwemwzp3gpjwpz2grhkrnf",
+    "hostUri": "https://provider.provider.189.27.196.49.nip.io:8443"
   },
   {
     "owner": "akash1a4qsujarw0jqrp6a8plfax9amydn8vuv6ryksx",
