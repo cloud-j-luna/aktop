@@ -116,16 +116,8 @@
     "hostUri": "https://provider.h4i-dedicated.eu-sw-2.digitalfrontier.so:8443"
   },
   {
-    "owner": "akash1al463a2f6jvf506e73hx0329fwgwz66r7cpkhr",
-    "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
-  },
-  {
     "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
     "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
-  },
-  {
-    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
-    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
   },
   {
     "owner": "akash163g6c43m84shm9rv5eq3ueen5arnttjem7xnhr",
@@ -176,7 +168,7 @@
     "hostUri": "https://provider.cpu.phl.aes.akash.pub:8443"
   },
   {
-    "owner": "akash1cv6j2wvsrh2qc940e05j7l5zuun0p6zqyzlzc3",
+    "owner": "akash15fqlng4l9dmyrr2m57mkgm57ylhtuc8aeq54uc",
     "hostUri": "https://provider.akashprovdl.duckdns.org:8443"
   },
   {
@@ -222,10 +214,6 @@
   {
     "owner": "akash1za80rru8csulj9z8lphmhflydt5ry2dapewrzg",
     "hostUri": "https://provider.crescence.zuos-it.nl:8443"
-  },
-  {
-    "owner": "akash1zqg8gja2m64qrzxrwpqvzf9tyn275uqukxy2sy",
-    "hostUri": "https://provider.yatycloud.com:8443"
   },
   {
     "owner": "akash19tp6w64zvdvdh26pv5lyf4f40llnqthgfy0t48",
@@ -280,7 +268,11 @@
     "hostUri": "https://provider.akashvps.com:8443"
   },
   {
-    "owner": "akash1yquqd08yqrnaveqka92zuupad3ld902yjcmkks",
-    "hostUri": "https://provider.irontechnyc.com:8443"
+    "owner": "akash1n9s870sunhn0j3pe6kmxwdfysq6d8hpdezykee",
+    "hostUri": "https://provider.4-scripts.ru:8443"
+  },
+  {
+    "owner": "akash1dgpnwrmdvdpt9ch4p6zhk3z4uzvttzdxn6gctd",
+    "hostUri": "https://provider.joycraft.fr:8443"
   }
 ]
