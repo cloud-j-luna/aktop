@@ -84,10 +84,6 @@
     "hostUri": "https://provider.serverai.app:8443"
   },
   {
-    "owner": "akash1cvcfyadrm6gcghzspyhacw924c90lwnjkhcglm",
-    "hostUri": "https://provider.proxyua.top:8443"
-  },
-  {
     "owner": "akash1sevd2ymtty3dpq9ycxgkhuzzk4fe6mchqdwd4e",
     "hostUri": "https://provider.jjozzietech.com.au:8443"
   },
@@ -114,6 +110,14 @@
   {
     "owner": "akash1hgulk6aekakqzc0v6wukrd3dy9n90f5gkl4ezk",
     "hostUri": "https://provider.h4i-dedicated.eu-sw-2.digitalfrontier.so:8443"
+  },
+  {
+    "owner": "akash1al463a2f6jvf506e73hx0329fwgwz66r7cpkhr",
+    "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
+    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
   },
   {
     "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
@@ -168,7 +172,7 @@
     "hostUri": "https://provider.cpu.phl.aes.akash.pub:8443"
   },
   {
-    "owner": "akash15fqlng4l9dmyrr2m57mkgm57ylhtuc8aeq54uc",
+    "owner": "akash1cv6j2wvsrh2qc940e05j7l5zuun0p6zqyzlzc3",
     "hostUri": "https://provider.akashprovdl.duckdns.org:8443"
   },
   {
@@ -270,9 +274,5 @@
   {
     "owner": "akash1n9s870sunhn0j3pe6kmxwdfysq6d8hpdezykee",
     "hostUri": "https://provider.4-scripts.ru:8443"
-  },
-  {
-    "owner": "akash1dgpnwrmdvdpt9ch4p6zhk3z4uzvttzdxn6gctd",
-    "hostUri": "https://provider.joycraft.fr:8443"
   }
 ]
