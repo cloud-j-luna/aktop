@@ -84,6 +84,10 @@
     "hostUri": "https://provider.serverai.app:8443"
   },
   {
+    "owner": "akash1cvcfyadrm6gcghzspyhacw924c90lwnjkhcglm",
+    "hostUri": "https://provider.proxyua.top:8443"
+  },
+  {
     "owner": "akash1sevd2ymtty3dpq9ycxgkhuzzk4fe6mchqdwd4e",
     "hostUri": "https://provider.jjozzietech.com.au:8443"
   },
@@ -220,6 +224,10 @@
     "hostUri": "https://provider.crescence.zuos-it.nl:8443"
   },
   {
+    "owner": "akash1zqg8gja2m64qrzxrwpqvzf9tyn275uqukxy2sy",
+    "hostUri": "https://provider.yatycloud.com:8443"
+  },
+  {
     "owner": "akash19tp6w64zvdvdh26pv5lyf4f40llnqthgfy0t48",
     "hostUri": "https://provider.akash.metz.live:8443"
   },
@@ -274,5 +282,9 @@
   {
     "owner": "akash1n9s870sunhn0j3pe6kmxwdfysq6d8hpdezykee",
     "hostUri": "https://provider.4-scripts.ru:8443"
+  },
+  {
+    "owner": "akash19f8ssf899vdl2tz4wqvczdr7u3adq8alh42tkr",
+    "hostUri": "https://provider.anchorfi.io:8443"
   }
 ]
