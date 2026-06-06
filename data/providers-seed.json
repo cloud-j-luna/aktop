@@ -12,16 +12,16 @@
     "hostUri": "https://provider.hurricane.akash.pub:8443"
   },
   {
-    "owner": "akash175llqyjvxfle9qwt740vm46772dzaznpzgm576",
-    "hostUri": "https://provider.cpu.aesservices.net:8443"
-  },
-  {
     "owner": "akash1kqzpqqhm39umt06wu8m4hx63v5hefhrfmjf9dj",
     "hostUri": "https://provider.dal.leet.haus:8443"
   },
   {
     "owner": "akash17whuchjwdlm3l8z3pdzaw8sqyeelmxua54qejw",
     "hostUri": "https://provider.solserver.eu:8443"
+  },
+  {
+    "owner": "akash1ut3m97h62tty06qdq9lds85r34dxe3snjj0xfe",
+    "hostUri": "https://provider.4090.aesservices.net:8443"
   },
   {
     "owner": "akash1k94uya5rhrtj9rfw850az9aq2d6vdpjmtnlgd0",
@@ -80,6 +80,10 @@
     "hostUri": "https://provider.serverai.app:8443"
   },
   {
+    "owner": "akash1cvcfyadrm6gcghzspyhacw924c90lwnjkhcglm",
+    "hostUri": "https://provider.proxyua.top:8443"
+  },
+  {
     "owner": "akash1sevd2ymtty3dpq9ycxgkhuzzk4fe6mchqdwd4e",
     "hostUri": "https://provider.jjozzietech.com.au:8443"
   },
@@ -108,12 +112,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
-    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
-  },
-  {
     "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
     "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
+    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
   },
   {
     "owner": "akash163g6c43m84shm9rv5eq3ueen5arnttjem7xnhr",
@@ -212,6 +216,10 @@
     "hostUri": "https://provider.crescence.zuos-it.nl:8443"
   },
   {
+    "owner": "akash1zqg8gja2m64qrzxrwpqvzf9tyn275uqukxy2sy",
+    "hostUri": "https://provider.yatycloud.com:8443"
+  },
+  {
     "owner": "akash19tp6w64zvdvdh26pv5lyf4f40llnqthgfy0t48",
     "hostUri": "https://provider.akash.metz.live:8443"
   },
@@ -270,5 +278,9 @@
   {
     "owner": "akash1c2zz8fl5syjzy0m6d44kltxuu8hlw9pumktvjq",
     "hostUri": "https://provider.akash.demoapps.win:8443"
+  },
+  {
+    "owner": "akash1l36sgkehkvg76s55lzrrhj942v9vpjt96g5ggp",
+    "hostUri": "https://provider.ahntest-na.akash.pub:8443"
   }
 ]
