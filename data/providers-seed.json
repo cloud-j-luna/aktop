@@ -84,6 +84,10 @@
     "hostUri": "https://provider.serverai.app:8443"
   },
   {
+    "owner": "akash1cvcfyadrm6gcghzspyhacw924c90lwnjkhcglm",
+    "hostUri": "https://provider.proxyua.top:8443"
+  },
+  {
     "owner": "akash1sevd2ymtty3dpq9ycxgkhuzzk4fe6mchqdwd4e",
     "hostUri": "https://provider.jjozzietech.com.au:8443"
   },
@@ -224,10 +228,6 @@
     "hostUri": "https://provider.comstockbitcoin.com:8443"
   },
   {
-    "owner": "akash1u03lp9ateas98ux984snldwmjx09mmnlvhfwh5",
-    "hostUri": "https://provider.akash.globalstocks.my:8443"
-  },
-  {
     "owner": "akash1k8wuz33w53vhfy3ne568rh6an7698t7ezl87rj",
     "hostUri": "https://provider.gpu.cmolls.de:8443"
   },
@@ -264,6 +264,10 @@
     "hostUri": "https://provider.akashvps.com:8443"
   },
   {
+    "owner": "akash1yuu2h955djsc3fc7vdpr6jpvw6mjrtx4hyjr2h",
+    "hostUri": "https://provider.akash.thresholds.trade:8443"
+  },
+  {
     "owner": "akash19f8ssf899vdl2tz4wqvczdr7u3adq8alh42tkr",
     "hostUri": "https://provider.anchorfi.io:8443"
   },
@@ -278,5 +282,13 @@
   {
     "owner": "akash1l36sgkehkvg76s55lzrrhj942v9vpjt96g5ggp",
     "hostUri": "https://provider.ahntest-na.akash.pub:8443"
+  },
+  {
+    "owner": "akash1r0whpzej3a496dvd5jreyfwzv507w9ljdg0the",
+    "hostUri": "https://provider.sg-1.skyzencloud.my.id:8443"
+  },
+  {
+    "owner": "akash1cm69aelltys6gwgkgm3nrdh9cncvfgkgrtkznp",
+    "hostUri": "https://provider.akash.netlink-internet.com.ar:8443"
   }
 ]
