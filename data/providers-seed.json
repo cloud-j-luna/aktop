@@ -68,6 +68,10 @@
     "hostUri": "https://provider.h6i-dedicated.eu-se-1.digitalfrontier.so:8443"
   },
   {
+    "owner": "akash18zskyywdy4ng50dd9yjen8daep0z585mc296h4",
+    "hostUri": "https://provider.ouroboroz.tech:8443"
+  },
+  {
     "owner": "akash1sjwuwre4qprcaa34f6324yz7m8nn0awvc75gp5",
     "hostUri": "https://provider.quanglong.org:8443"
   },
@@ -212,10 +216,6 @@
     "hostUri": "https://provider.akash.ewsp.de:8443"
   },
   {
-    "owner": "akash1za80rru8csulj9z8lphmhflydt5ry2dapewrzg",
-    "hostUri": "https://provider.crescence.zuos-it.nl:8443"
-  },
-  {
     "owner": "akash19tp6w64zvdvdh26pv5lyf4f40llnqthgfy0t48",
     "hostUri": "https://provider.akash.metz.live:8443"
   },
@@ -234,10 +234,6 @@
   {
     "owner": "akash17r6r9u364t49k7qdef52qtm6wm5mcn0lpzfgnv",
     "hostUri": "https://provider.h100.siamaidol.com:8443"
-  },
-  {
-    "owner": "akash1s4gvw29yj6stt33p27r9gpmkey6fjynn25mkdq",
-    "hostUri": "https://provider.marius-gpu.duckdns.org:8443"
   },
   {
     "owner": "akash1s3hq36mpas4nmkqasn7fgwhs9968cgl3u5esnw",
@@ -282,10 +278,6 @@
   {
     "owner": "akash1l36sgkehkvg76s55lzrrhj942v9vpjt96g5ggp",
     "hostUri": "https://provider.ahntest-na.akash.pub:8443"
-  },
-  {
-    "owner": "akash1r0whpzej3a496dvd5jreyfwzv507w9ljdg0the",
-    "hostUri": "https://provider.sg-1.skyzencloud.my.id:8443"
   },
   {
     "owner": "akash1cm69aelltys6gwgkgm3nrdh9cncvfgkgrtkznp",
