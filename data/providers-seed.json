@@ -24,10 +24,6 @@
     "hostUri": "https://provider.solserver.eu:8443"
   },
   {
-    "owner": "akash1ut3m97h62tty06qdq9lds85r34dxe3snjj0xfe",
-    "hostUri": "https://provider.4090.aesservices.net:8443"
-  },
-  {
     "owner": "akash1k94uya5rhrtj9rfw850az9aq2d6vdpjmtnlgd0",
     "hostUri": "https://provider.boogle.cloud:8443"
   },
@@ -36,8 +32,8 @@
     "hostUri": "https://provider.h200.atl.val.akash.pub:8443"
   },
   {
-    "owner": "akash15pkdkewzarpsx42t98vzf45h42hlq6ra8w96hr",
-    "hostUri": "https://provider.h100.ams.val.akash.pub:8443"
+    "owner": "akash1svfr9xarfkcxwdnx32nvl8cs9rfruu4nd56c4f",
+    "hostUri": "https://provider.h100.ams2.val.akash.pub:8443"
   },
   {
     "owner": "akash1uyajqdt598w8lrcwx2p49urudq6xartj9qs3ar",
@@ -86,10 +82,6 @@
   {
     "owner": "akash1nrpy6mahjk2ncgg7cklk6t9qfjxatmurt4y0y9",
     "hostUri": "https://provider.serverai.app:8443"
-  },
-  {
-    "owner": "akash1cvcfyadrm6gcghzspyhacw924c90lwnjkhcglm",
-    "hostUri": "https://provider.proxyua.top:8443"
   },
   {
     "owner": "akash1sevd2ymtty3dpq9ycxgkhuzzk4fe6mchqdwd4e",
@@ -185,7 +177,7 @@
   },
   {
     "owner": "akash1p5qkxeu3hcxzx9nvfvva93pyvxcyqduly9udz9",
-    "hostUri": "https://provider.ahn3-na-5090.akash.pub:8443"
+    "hostUri": "https://provider.ahn3-na.akash.pub:8443"
   },
   {
     "owner": "akash1am3sv9ac6yq6a4s2hkkcn6sd6723fpkp3en08s",
@@ -262,10 +254,6 @@
   {
     "owner": "akash1yuu2h955djsc3fc7vdpr6jpvw6mjrtx4hyjr2h",
     "hostUri": "https://provider.akash.thresholds.trade:8443"
-  },
-  {
-    "owner": "akash19f8ssf899vdl2tz4wqvczdr7u3adq8alh42tkr",
-    "hostUri": "https://provider.anchorfi.io:8443"
   },
   {
     "owner": "akash1ts88ayj8lg59ta8zvz0ekk099f8zrvezvm3kvc",
