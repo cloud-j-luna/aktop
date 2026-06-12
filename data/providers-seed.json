@@ -8,10 +8,6 @@
     "hostUri": "https://provider.europlots.com:8443"
   },
   {
-    "owner": "akash15tl6v6gd0nte0syyxnv57zmmspgju4c3xfmdhk",
-    "hostUri": "https://provider.hurricane.akash.pub:8443"
-  },
-  {
     "owner": "akash175llqyjvxfle9qwt740vm46772dzaznpzgm576",
     "hostUri": "https://provider.cpu.aesservices.net:8443"
   },
@@ -80,16 +76,8 @@
     "hostUri": "https://provider.serverai.app:8443"
   },
   {
-    "owner": "akash1cvcfyadrm6gcghzspyhacw924c90lwnjkhcglm",
-    "hostUri": "https://provider.proxyua.top:8443"
-  },
-  {
     "owner": "akash1sevd2ymtty3dpq9ycxgkhuzzk4fe6mchqdwd4e",
     "hostUri": "https://provider.jjozzietech.com.au:8443"
-  },
-  {
-    "owner": "akash1t5k2a687erc2mqwtnf6w9um3hr96gkc2f64v3p",
-    "hostUri": "https://provider.djs232-compute.com:8443"
   },
   {
     "owner": "akash15uc29tz7l7umw77rh7l5mh90jzq4h8kqc36vu0",
@@ -112,12 +100,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
-    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
-  },
-  {
     "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
     "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
+    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
   },
   {
     "owner": "akash163g6c43m84shm9rv5eq3ueen5arnttjem7xnhr",
@@ -152,10 +140,6 @@
     "hostUri": "https://provider.gcnlab.fyi:8443"
   },
   {
-    "owner": "akash10tgqesyq4ehchhzh224vy9h33c9mvpq7gws4at",
-    "hostUri": "https://provider.akt.engineer:8443"
-  },
-  {
     "owner": "akash192z48wsjwteectlrhg7rndl0gks3f89up8w03z",
     "hostUri": "https://provider.onenet.stream:8443"
   },
@@ -170,6 +154,10 @@
   {
     "owner": "akash1ggfvyhr9sar4uxjs4hth3p4kzrwk7lysnenj3g",
     "hostUri": "https://provider.cpu.phl.aes.akash.pub:8443"
+  },
+  {
+    "owner": "akash1cv6j2wvsrh2qc940e05j7l5zuun0p6zqyzlzc3",
+    "hostUri": "https://provider.akashprovdl.duckdns.org:8443"
   },
   {
     "owner": "akash1evr5r8r8zgxddvhru3t0l8q079a94ew8hcgwdd",
@@ -206,10 +194,6 @@
   {
     "owner": "akash10xal9aj9q0ae2duqu8q26ryaccwztycp5rd5z9",
     "hostUri": "https://provider.akash.ewsp.de:8443"
-  },
-  {
-    "owner": "akash19tp6w64zvdvdh26pv5lyf4f40llnqthgfy0t48",
-    "hostUri": "https://provider.akash.metz.live:8443"
   },
   {
     "owner": "akash1z9nr23cgweu45g2jktfx95v7g2xp8qlsa3ys2x",
@@ -254,10 +238,6 @@
   {
     "owner": "akash1yuu2h955djsc3fc7vdpr6jpvw6mjrtx4hyjr2h",
     "hostUri": "https://provider.akash.thresholds.trade:8443"
-  },
-  {
-    "owner": "akash19f8ssf899vdl2tz4wqvczdr7u3adq8alh42tkr",
-    "hostUri": "https://provider.anchorfi.io:8443"
   },
   {
     "owner": "akash1ts88ayj8lg59ta8zvz0ekk099f8zrvezvm3kvc",
