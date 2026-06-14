@@ -124,10 +124,6 @@
     "hostUri": "https://provider.compute.brightleapapartments.co.uk:8443"
   },
   {
-    "owner": "akash1n9u6dy42mca4wqdwuul460qr49dvdd25u4tw9h",
-    "hostUri": "https://provider.kristaphersreliablecomputeservices.com:8443"
-  },
-  {
     "owner": "akash1csnxgjhxse9atc7c5k52d6nnkmearsmm9kdxxy",
     "hostUri": "https://provider.zhab.systems:8443"
   },
@@ -166,6 +162,10 @@
   {
     "owner": "akash19zzh7whjt4vfwxd5wtj3tjtyatnpntfhldshd8",
     "hostUri": "https://provider.cpu.dal.aes.akash.pub:8443"
+  },
+  {
+    "owner": "akash1ggfvyhr9sar4uxjs4hth3p4kzrwk7lysnenj3g",
+    "hostUri": "https://provider.cpu.phl.aes.akash.pub:8443"
   },
   {
     "owner": "akash1cv6j2wvsrh2qc940e05j7l5zuun0p6zqyzlzc3",
@@ -208,6 +208,10 @@
     "hostUri": "https://provider.akash.ewsp.de:8443"
   },
   {
+    "owner": "akash19tp6w64zvdvdh26pv5lyf4f40llnqthgfy0t48",
+    "hostUri": "https://provider.akash.metz.live:8443"
+  },
+  {
     "owner": "akash1z9nr23cgweu45g2jktfx95v7g2xp8qlsa3ys2x",
     "hostUri": "https://provider.m3a.eu-n-3.digitalfrontier.network:8443"
   },
@@ -240,10 +244,6 @@
     "hostUri": "https://provider.bulgaprovider.top:8443"
   },
   {
-    "owner": "akash1xzdz8rknpjeqnafv29cyjl8cnydm3e2v56v6zz",
-    "hostUri": "https://provider.ruzij.com:8443"
-  },
-  {
     "owner": "akash1n26asjy4htwhwjhhzusk80wrjhlpktcd8cf4nc",
     "hostUri": "https://provider.akashvps.com:8443"
   },
@@ -266,5 +266,9 @@
   {
     "owner": "akash1cm69aelltys6gwgkgm3nrdh9cncvfgkgrtkznp",
     "hostUri": "https://provider.akash.netlink-internet.com.ar:8443"
+  },
+  {
+    "owner": "akash143cj82lceusmpxkhslkgspwqty53njpu6sspzh",
+    "hostUri": "https://provider.circecomputing.com:8443"
   }
 ]
