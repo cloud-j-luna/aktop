@@ -76,16 +76,8 @@
     "hostUri": "https://provider.serverai.app:8443"
   },
   {
-    "owner": "akash1cvcfyadrm6gcghzspyhacw924c90lwnjkhcglm",
-    "hostUri": "https://provider.proxyua.top:8443"
-  },
-  {
     "owner": "akash1sevd2ymtty3dpq9ycxgkhuzzk4fe6mchqdwd4e",
     "hostUri": "https://provider.jjozzietech.com.au:8443"
-  },
-  {
-    "owner": "akash1t5k2a687erc2mqwtnf6w9um3hr96gkc2f64v3p",
-    "hostUri": "https://provider.djs232-compute.com:8443"
   },
   {
     "owner": "akash15uc29tz7l7umw77rh7l5mh90jzq4h8kqc36vu0",
@@ -182,10 +174,6 @@
   {
     "owner": "akash1xgwhu8s7umxcqn7905ellqxlvqgt4yzatk3f46",
     "hostUri": "https://provider.1legion.cloud:8443"
-  },
-  {
-    "owner": "akash1hj6ytu6vr0wwha7ju54wyt3643uh95ay6qlg4f",
-    "hostUri": "https://provider.box.hurated.com:8443"
   },
   {
     "owner": "akash13gc7ce63e9fjj0skgfkvt82wwk9xry59kjqcvr",
