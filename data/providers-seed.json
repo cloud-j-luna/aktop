@@ -140,10 +140,6 @@
     "hostUri": "https://provider.akt.engineer:8443"
   },
   {
-    "owner": "akash192z48wsjwteectlrhg7rndl0gks3f89up8w03z",
-    "hostUri": "https://provider.onenet.stream:8443"
-  },
-  {
     "owner": "akash1yvj7nqqzk9v850x60933xhlk2ql5upp5344sla",
     "hostUri": "https://provider.zepmoriq.ru:8443"
   },
@@ -214,14 +210,6 @@
   {
     "owner": "akash1s3hq36mpas4nmkqasn7fgwhs9968cgl3u5esnw",
     "hostUri": "https://provider.froggy-servers.com:8443"
-  },
-  {
-    "owner": "akash1cxp9840mdm9qz64pkfrm3yxvkg8jgw4qjsyak8",
-    "hostUri": "https://provider.provider.akash-provider.com:8443"
-  },
-  {
-    "owner": "akash18qpzdm98usth3x5u9cl6v75hjen9s97mnqrmf4",
-    "hostUri": "https://provider.akash-provider.com:8443"
   },
   {
     "owner": "akash18r7cu0eax8uwcaneqh3ez8t8naufhsgc67n997",
