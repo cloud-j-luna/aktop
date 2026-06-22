@@ -56,10 +56,6 @@
     "hostUri": "https://provider.h6i-dedicated.eu-se-1.digitalfrontier.so:8443"
   },
   {
-    "owner": "akash1sjwuwre4qprcaa34f6324yz7m8nn0awvc75gp5",
-    "hostUri": "https://provider.quanglong.org:8443"
-  },
-  {
     "owner": "akash16yr3wxt97ae045a06kr3ycde9srcgpg8syjxxm",
     "hostUri": "https://provider.zencloud.eu:8443"
   },
@@ -196,6 +192,10 @@
     "hostUri": "https://provider.comstockbitcoin.com:8443"
   },
   {
+    "owner": "akash10ttlnefhkfyvfpkgnq7trm68dw43hw6qaa4kvp",
+    "hostUri": "https://provider.protocoltitan.com:8443"
+  },
+  {
     "owner": "akash1k8wuz33w53vhfy3ne568rh6an7698t7ezl87rj",
     "hostUri": "https://provider.gpu.cmolls.de:8443"
   },
@@ -234,9 +234,5 @@
   {
     "owner": "akash143cj82lceusmpxkhslkgspwqty53njpu6sspzh",
     "hostUri": "https://provider.circecomputing.com:8443"
-  },
-  {
-    "owner": "akash1xsfcqwjcy5c2tzcyydf5rf0n8n5tp43tad7w2j",
-    "hostUri": "https://provider.officecoup.com:8443"
   }
 ]
