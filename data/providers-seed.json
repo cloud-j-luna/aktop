@@ -208,10 +208,6 @@
     "hostUri": "https://provider.froggy-servers.com:8443"
   },
   {
-    "owner": "akash18r7cu0eax8uwcaneqh3ez8t8naufhsgc67n997",
-    "hostUri": "https://provider.a100.test.akash.pub:8443"
-  },
-  {
     "owner": "akash1n26asjy4htwhwjhhzusk80wrjhlpktcd8cf4nc",
     "hostUri": "https://provider.akashvps.com:8443"
   },
@@ -234,5 +230,13 @@
   {
     "owner": "akash143cj82lceusmpxkhslkgspwqty53njpu6sspzh",
     "hostUri": "https://provider.circecomputing.com:8443"
+  },
+  {
+    "owner": "akash1qcjrmusclhr9w8hsect9gcfr44a2s48j6rhg0u",
+    "hostUri": "https://provider.akash.mercamicro.es:8443"
+  },
+  {
+    "owner": "akash1vlumtjqwatc9zenzrke8gegx08yzgy62lj3jf9",
+    "hostUri": "https://provider.akashcloud.net:8443"
   }
 ]
