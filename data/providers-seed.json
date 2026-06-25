@@ -60,6 +60,10 @@
     "hostUri": "https://provider.quanglong.org:8443"
   },
   {
+    "owner": "akash16yr3wxt97ae045a06kr3ycde9srcgpg8syjxxm",
+    "hostUri": "https://provider.zencloud.eu:8443"
+  },
+  {
     "owner": "akash15axxrf84ajvqrg265fm27wsxyu7cvv25yqa5dk",
     "hostUri": "https://provider.pro6000.hou.aesservices.net:8443"
   },
@@ -238,5 +242,13 @@
   {
     "owner": "akash1vlumtjqwatc9zenzrke8gegx08yzgy62lj3jf9",
     "hostUri": "https://provider.akashcloud.net:8443"
+  },
+  {
+    "owner": "akash13zrdys29nmfkd7fs93hmvkvj8d89p4a0lz67e4",
+    "hostUri": "https://provider.a100.dal.aes.akash.pub:8443"
+  },
+  {
+    "owner": "akash1nu08pwlhtu0g6ufj6txqjw4jwl08yhtefl0wvg",
+    "hostUri": "https://provider.a100.dal2.aes.akash.pub:8443"
   }
 ]
