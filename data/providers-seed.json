@@ -40,6 +40,10 @@
     "hostUri": "https://provider.datanode.uk:8443"
   },
   {
+    "owner": "akash1st7fqtuqk6hj06fkkavq0fxtw0w9sm4zzt3r5g",
+    "hostUri": "https://provider.rtgroup.com:8443"
+  },
+  {
     "owner": "akash1xmjzu9dczlg9fa4v3pfvwzn7ty89r003laj4ac",
     "hostUri": "https://provider.akash.tagus.host:8443"
   },
@@ -92,12 +96,16 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
+    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
+    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
+  },
+  {
     "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
     "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
   },
   {
-    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
-    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
+    "owner": "akash1n9u6dy42mca4wqdwuul460qr49dvdd25u4tw9h",
+    "hostUri": "https://provider.kristaphersreliablecomputeservices.com:8443"
   },
   {
     "owner": "akash1csnxgjhxse9atc7c5k52d6nnkmearsmm9kdxxy",
@@ -196,10 +204,6 @@
     "hostUri": "https://provider.protocoltitan.com:8443"
   },
   {
-    "owner": "akash1k8wuz33w53vhfy3ne568rh6an7698t7ezl87rj",
-    "hostUri": "https://provider.gpu.cmolls.de:8443"
-  },
-  {
     "owner": "akash17r6r9u364t49k7qdef52qtm6wm5mcn0lpzfgnv",
     "hostUri": "https://provider.h100.siamaidol.com:8443"
   },
@@ -240,6 +244,10 @@
     "hostUri": "https://provider.akashcloud.net:8443"
   },
   {
+    "owner": "akash1ceagxmu65n0hvjmcww8g0nwuavnmz2u38dvjpq",
+    "hostUri": "https://provider.sam-akash.duckdns.org:8443"
+  },
+  {
     "owner": "akash13zrdys29nmfkd7fs93hmvkvj8d89p4a0lz67e4",
     "hostUri": "https://provider.a100.dal.aes.akash.pub:8443"
   },
@@ -250,5 +258,9 @@
   {
     "owner": "akash1wh2wy9wg9apyae5sktvhv0qmdnu0dyk3xwjgf8",
     "hostUri": "https://provider.akash.728faka.xyz:8443"
+  },
+  {
+    "owner": "akash1cplrc80kruzm97q4ugmuusanewsus66ktzqwtr",
+    "hostUri": "https://provider.dgx-servers.rule42.ai:8443"
   }
 ]
