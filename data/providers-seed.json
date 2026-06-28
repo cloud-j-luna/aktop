@@ -56,10 +56,6 @@
     "hostUri": "https://provider.h6i-dedicated.eu-se-1.digitalfrontier.so:8443"
   },
   {
-    "owner": "akash1sjwuwre4qprcaa34f6324yz7m8nn0awvc75gp5",
-    "hostUri": "https://provider.quanglong.org:8443"
-  },
-  {
     "owner": "akash16yr3wxt97ae045a06kr3ycde9srcgpg8syjxxm",
     "hostUri": "https://provider.zencloud.eu:8443"
   },
@@ -96,12 +92,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
-    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
-  },
-  {
     "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
     "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
+    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
   },
   {
     "owner": "akash1n9u6dy42mca4wqdwuul460qr49dvdd25u4tw9h",
@@ -170,10 +166,6 @@
   {
     "owner": "akash1hj6ytu6vr0wwha7ju54wyt3643uh95ay6qlg4f",
     "hostUri": "https://provider.box.hurated.com:8443"
-  },
-  {
-    "owner": "akash13gc7ce63e9fjj0skgfkvt82wwk9xry59kjqcvr",
-    "hostUri": "https://provider.cmolls.de:8443"
   },
   {
     "owner": "akash1rja3y2ctj3tzmesvh0zfhzzx95rfjw405hwt8d",
