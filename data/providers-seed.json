@@ -168,6 +168,10 @@
     "hostUri": "https://provider.1legion.cloud:8443"
   },
   {
+    "owner": "akash13gc7ce63e9fjj0skgfkvt82wwk9xry59kjqcvr",
+    "hostUri": "https://provider.cmolls.de:8443"
+  },
+  {
     "owner": "akash1rja3y2ctj3tzmesvh0zfhzzx95rfjw405hwt8d",
     "hostUri": "https://provider.pronto-ai.pp.ua:8443"
   },
@@ -246,5 +250,9 @@
   {
     "owner": "akash1tw88d3vu45y22h774z3vd3anhwe7l798cl32g7",
     "hostUri": "https://provider.toneheals.com:8443"
+  },
+  {
+    "owner": "akash13dxpy78m8k2pkn08zps0y03t9llh7shnmldt82",
+    "hostUri": "https://provider.gryfcluster1.net:8443"
   }
 ]
