@@ -204,10 +204,6 @@
     "hostUri": "https://provider.froggy-servers.com:8443"
   },
   {
-    "owner": "akash1n26asjy4htwhwjhhzusk80wrjhlpktcd8cf4nc",
-    "hostUri": "https://provider.akashvps.com:8443"
-  },
-  {
     "owner": "akash1ts88ayj8lg59ta8zvz0ekk099f8zrvezvm3kvc",
     "hostUri": "https://provider.node1.kastoro.org:8443"
   },
@@ -254,5 +250,9 @@
   {
     "owner": "akash13dxpy78m8k2pkn08zps0y03t9llh7shnmldt82",
     "hostUri": "https://provider.gryfcluster1.net:8443"
+  },
+  {
+    "owner": "akash1mddj3syqpsw4ptrxfzgly6dg7x9a43pn42q2tw",
+    "hostUri": "https://provider.raicloud.ca:8443"
   }
 ]
