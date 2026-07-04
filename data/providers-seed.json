@@ -100,12 +100,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
-    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
-  },
-  {
     "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
     "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
+    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
   },
   {
     "owner": "akash1csnxgjhxse9atc7c5k52d6nnkmearsmm9kdxxy",
@@ -246,10 +246,6 @@
   {
     "owner": "akash1tw88d3vu45y22h774z3vd3anhwe7l798cl32g7",
     "hostUri": "https://provider.toneheals.com:8443"
-  },
-  {
-    "owner": "akash13dxpy78m8k2pkn08zps0y03t9llh7shnmldt82",
-    "hostUri": "https://provider.gryfcluster1.net:8443"
   },
   {
     "owner": "akash1mddj3syqpsw4ptrxfzgly6dg7x9a43pn42q2tw",
