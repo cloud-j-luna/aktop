@@ -240,10 +240,6 @@
     "hostUri": "https://provider.a100.dal2.aes.akash.pub:8443"
   },
   {
-    "owner": "akash1cplrc80kruzm97q4ugmuusanewsus66ktzqwtr",
-    "hostUri": "https://provider.dgx-servers.rule42.ai:8443"
-  },
-  {
     "owner": "akash1tw88d3vu45y22h774z3vd3anhwe7l798cl32g7",
     "hostUri": "https://provider.toneheals.com:8443"
   },
