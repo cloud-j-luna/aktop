@@ -92,6 +92,10 @@
     "hostUri": "https://provider.wx-spot.de:8443"
   },
   {
+    "owner": "akash1erl805eenh9e2ju9c48cnkd4ee9sh46ran9t7m",
+    "hostUri": "https://provider.akt.sies.com.gt:8443"
+  },
+  {
     "owner": "akash1hgulk6aekakqzc0v6wukrd3dy9n90f5gkl4ezk",
     "hostUri": "https://provider.h4i-dedicated.eu-sw-2.digitalfrontier.so:8443"
   },
