@@ -104,12 +104,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
-    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
-  },
-  {
     "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
     "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
+    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
   },
   {
     "owner": "akash1csnxgjhxse9atc7c5k52d6nnkmearsmm9kdxxy",
@@ -152,10 +152,6 @@
     "hostUri": "https://provider.cpu.phl.aes.akash.pub:8443"
   },
   {
-    "owner": "akash1cv6j2wvsrh2qc940e05j7l5zuun0p6zqyzlzc3",
-    "hostUri": "https://provider.akashprovdl.duckdns.org:8443"
-  },
-  {
     "owner": "akash1evr5r8r8zgxddvhru3t0l8q079a94ew8hcgwdd",
     "hostUri": "https://provider.videokiska.ru:8443"
   },
@@ -172,8 +168,8 @@
     "hostUri": "https://provider.1legion.cloud:8443"
   },
   {
-    "owner": "akash13gc7ce63e9fjj0skgfkvt82wwk9xry59kjqcvr",
-    "hostUri": "https://provider.cmolls.de:8443"
+    "owner": "akash1pvskd94jtkph9vgqpf6ecg2as8pvck9w5a7wga",
+    "hostUri": "https://provider.akash.cmolls.de:8443"
   },
   {
     "owner": "akash1rja3y2ctj3tzmesvh0zfhzzx95rfjw405hwt8d",
@@ -214,10 +210,6 @@
   {
     "owner": "akash1l36sgkehkvg76s55lzrrhj942v9vpjt96g5ggp",
     "hostUri": "https://provider.ahntest-na.akash.pub:8443"
-  },
-  {
-    "owner": "akash143cj82lceusmpxkhslkgspwqty53njpu6sspzh",
-    "hostUri": "https://provider.circecomputing.com:8443"
   },
   {
     "owner": "akash1qcjrmusclhr9w8hsect9gcfr44a2s48j6rhg0u",
