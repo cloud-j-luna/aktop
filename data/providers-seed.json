@@ -4,10 +4,6 @@
     "hostUri": "https://provider.akash-palmito.org:8443"
   },
   {
-    "owner": "akash18ga02jzaq8cw52anyhzkwta5wygufgu6zsz6xc",
-    "hostUri": "https://provider.europlots.com:8443"
-  },
-  {
     "owner": "akash15tl6v6gd0nte0syyxnv57zmmspgju4c3xfmdhk",
     "hostUri": "https://provider.hurricane.akash.pub:8443"
   },
@@ -30,6 +26,10 @@
   {
     "owner": "akash15pkdkewzarpsx42t98vzf45h42hlq6ra8w96hr",
     "hostUri": "https://provider.h100.ams.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash1svfr9xarfkcxwdnx32nvl8cs9rfruu4nd56c4f",
+    "hostUri": "https://provider.h100.ams2.val.akash.pub:8443"
   },
   {
     "owner": "akash1uyajqdt598w8lrcwx2p49urudq6xartj9qs3ar",
@@ -104,12 +104,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
-    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
-  },
-  {
     "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
     "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
+    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
   },
   {
     "owner": "akash1csnxgjhxse9atc7c5k52d6nnkmearsmm9kdxxy",
@@ -210,10 +210,6 @@
   {
     "owner": "akash1l36sgkehkvg76s55lzrrhj942v9vpjt96g5ggp",
     "hostUri": "https://provider.ahntest-na.akash.pub:8443"
-  },
-  {
-    "owner": "akash143cj82lceusmpxkhslkgspwqty53njpu6sspzh",
-    "hostUri": "https://provider.circecomputing.com:8443"
   },
   {
     "owner": "akash1qcjrmusclhr9w8hsect9gcfr44a2s48j6rhg0u",
