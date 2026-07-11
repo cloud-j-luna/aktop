@@ -4,6 +4,10 @@
     "hostUri": "https://provider.akash-palmito.org:8443"
   },
   {
+    "owner": "akash18ga02jzaq8cw52anyhzkwta5wygufgu6zsz6xc",
+    "hostUri": "https://provider.europlots.com:8443"
+  },
+  {
     "owner": "akash15tl6v6gd0nte0syyxnv57zmmspgju4c3xfmdhk",
     "hostUri": "https://provider.hurricane.akash.pub:8443"
   },
@@ -140,10 +144,6 @@
     "hostUri": "https://provider.akt.engineer:8443"
   },
   {
-    "owner": "akash1yvj7nqqzk9v850x60933xhlk2ql5upp5344sla",
-    "hostUri": "https://provider.zepmoriq.ru:8443"
-  },
-  {
     "owner": "akash19zzh7whjt4vfwxd5wtj3tjtyatnpntfhldshd8",
     "hostUri": "https://provider.cpu.dal.aes.akash.pub:8443"
   },
@@ -186,10 +186,6 @@
   {
     "owner": "akash1z9nr23cgweu45g2jktfx95v7g2xp8qlsa3ys2x",
     "hostUri": "https://provider.m3a.eu-n-3.digitalfrontier.network:8443"
-  },
-  {
-    "owner": "akash1k4mptq7ndyg8psyclgt497758kkkurf8wup3xu",
-    "hostUri": "https://provider.comstockbitcoin.com:8443"
   },
   {
     "owner": "akash17r6r9u364t49k7qdef52qtm6wm5mcn0lpzfgnv",
