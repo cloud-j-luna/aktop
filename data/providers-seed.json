@@ -96,10 +96,6 @@
     "hostUri": "https://provider.wx-spot.de:8443"
   },
   {
-    "owner": "akash1erl805eenh9e2ju9c48cnkd4ee9sh46ran9t7m",
-    "hostUri": "https://provider.akt.sies.com.gt:8443"
-  },
-  {
     "owner": "akash1hgulk6aekakqzc0v6wukrd3dy9n90f5gkl4ezk",
     "hostUri": "https://provider.h4i-dedicated.eu-sw-2.digitalfrontier.so:8443"
   },
@@ -108,12 +104,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
-    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
-  },
-  {
     "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
     "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
+    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
   },
   {
     "owner": "akash1csnxgjhxse9atc7c5k52d6nnkmearsmm9kdxxy",
@@ -226,10 +222,6 @@
   {
     "owner": "akash1nu08pwlhtu0g6ufj6txqjw4jwl08yhtefl0wvg",
     "hostUri": "https://provider.a100.dal2.aes.akash.pub:8443"
-  },
-  {
-    "owner": "akash1tw88d3vu45y22h774z3vd3anhwe7l798cl32g7",
-    "hostUri": "https://provider.toneheals.com:8443"
   },
   {
     "owner": "akash1cc8v5yx9pznr0v87f3y0lltu3hp2yzp25tfvgu",
