@@ -88,10 +88,6 @@
     "hostUri": "https://provider.jjozzietech.com.au:8443"
   },
   {
-    "owner": "akash15uc29tz7l7umw77rh7l5mh90jzq4h8kqc36vu0",
-    "hostUri": "https://provider.metz.live:8443"
-  },
-  {
     "owner": "akash1d97kkwrhhxyqpr8k7rj0360jtnsw6dftmslvuq",
     "hostUri": "https://provider.wx-spot.de:8443"
   },
@@ -104,12 +100,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
-    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
-  },
-  {
     "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
     "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
+    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
   },
   {
     "owner": "akash1csnxgjhxse9atc7c5k52d6nnkmearsmm9kdxxy",
@@ -180,16 +176,8 @@
     "hostUri": "https://provider.mia1.oz0.de:8443"
   },
   {
-    "owner": "akash19tp6w64zvdvdh26pv5lyf4f40llnqthgfy0t48",
-    "hostUri": "https://provider.akash.metz.live:8443"
-  },
-  {
     "owner": "akash1z9nr23cgweu45g2jktfx95v7g2xp8qlsa3ys2x",
     "hostUri": "https://provider.m3a.eu-n-3.digitalfrontier.network:8443"
-  },
-  {
-    "owner": "akash17r6r9u364t49k7qdef52qtm6wm5mcn0lpzfgnv",
-    "hostUri": "https://provider.h100.siamaidol.com:8443"
   },
   {
     "owner": "akash1s3hq36mpas4nmkqasn7fgwhs9968cgl3u5esnw",
@@ -198,10 +186,6 @@
   {
     "owner": "akash1ts88ayj8lg59ta8zvz0ekk099f8zrvezvm3kvc",
     "hostUri": "https://provider.node1.kastoro.org:8443"
-  },
-  {
-    "owner": "akash1c2zz8fl5syjzy0m6d44kltxuu8hlw9pumktvjq",
-    "hostUri": "https://provider.akash.demoapps.win:8443"
   },
   {
     "owner": "akash1l36sgkehkvg76s55lzrrhj942v9vpjt96g5ggp",
@@ -225,7 +209,7 @@
   },
   {
     "owner": "akash1cc8v5yx9pznr0v87f3y0lltu3hp2yzp25tfvgu",
-    "hostUri": "https://skitterproject.ddns.net:8443"
+    "hostUri": "https://provider.skitterproject.duckdns.org:8443"
   },
   {
     "owner": "akash1mddj3syqpsw4ptrxfzgly6dg7x9a43pn42q2tw",
@@ -234,6 +218,10 @@
   {
     "owner": "akash1dudfnsqwfecytfqxwvnfc7eqc5ca429zfkhwyd",
     "hostUri": "https://provider.onenode.dev:8443"
+  },
+  {
+    "owner": "akash1r6awsxcp72rlwm39a903zgllqdueql8xwrc9hc",
+    "hostUri": "https://provider.aakaasha.com:8443"
   },
   {
     "owner": "akash1cg7nnkwy8yzulr6x5egn7n06pgthz5wu5auvvv",
