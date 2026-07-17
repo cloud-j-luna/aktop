@@ -4,6 +4,10 @@
     "hostUri": "https://provider.akash-palmito.org:8443"
   },
   {
+    "owner": "akash1qk9dg3kr3jx6q5l2uf7g7mm8st2mr8ylfakepy",
+    "hostUri": "https://provider.akashmining.com:8443"
+  },
+  {
     "owner": "akash18ga02jzaq8cw52anyhzkwta5wygufgu6zsz6xc",
     "hostUri": "https://provider.europlots.com:8443"
   },
@@ -34,10 +38,6 @@
   {
     "owner": "akash1svfr9xarfkcxwdnx32nvl8cs9rfruu4nd56c4f",
     "hostUri": "https://provider.h100.ams2.val.akash.pub:8443"
-  },
-  {
-    "owner": "akash1uyajqdt598w8lrcwx2p49urudq6xartj9qs3ar",
-    "hostUri": "https://provider.akash01.mrt3.it:8443"
   },
   {
     "owner": "akash1v4mngfecem3xz0lqyr054na5g49andmyvnyykk",
@@ -180,6 +180,10 @@
     "hostUri": "https://provider.m3a.eu-n-3.digitalfrontier.network:8443"
   },
   {
+    "owner": "akash17r6r9u364t49k7qdef52qtm6wm5mcn0lpzfgnv",
+    "hostUri": "https://provider.h100.siamaidol.com:8443"
+  },
+  {
     "owner": "akash1s3hq36mpas4nmkqasn7fgwhs9968cgl3u5esnw",
     "hostUri": "https://provider.froggy-servers.com:8443"
   },
@@ -208,10 +212,6 @@
     "hostUri": "https://provider.a100.dal2.aes.akash.pub:8443"
   },
   {
-    "owner": "akash1cc8v5yx9pznr0v87f3y0lltu3hp2yzp25tfvgu",
-    "hostUri": "https://provider.skitterproject.duckdns.org:8443"
-  },
-  {
     "owner": "akash1mddj3syqpsw4ptrxfzgly6dg7x9a43pn42q2tw",
     "hostUri": "https://provider.raicloud.ca:8443"
   },
@@ -234,5 +234,9 @@
   {
     "owner": "akash143m6954tvzh98m97g35f8xrwfagn0ze5tz43jq",
     "hostUri": "https://provider.oregon.skyfall.cz:8443"
+  },
+  {
+    "owner": "akash1xtl2mgr3g67yeyqkk4jvfahv67225wrv6wrd74",
+    "hostUri": "https://provider.worker.automathique.com:8443"
   }
 ]
