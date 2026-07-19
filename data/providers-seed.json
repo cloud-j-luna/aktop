@@ -88,6 +88,10 @@
     "hostUri": "https://provider.jjozzietech.com.au:8443"
   },
   {
+    "owner": "akash15uc29tz7l7umw77rh7l5mh90jzq4h8kqc36vu0",
+    "hostUri": "https://provider.metz.live:8443"
+  },
+  {
     "owner": "akash1d97kkwrhhxyqpr8k7rj0360jtnsw6dftmslvuq",
     "hostUri": "https://provider.wx-spot.de:8443"
   },
@@ -100,12 +104,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
-    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
-  },
-  {
     "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
     "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
+    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
   },
   {
     "owner": "akash1csnxgjhxse9atc7c5k52d6nnkmearsmm9kdxxy",
@@ -176,6 +180,10 @@
     "hostUri": "https://provider.mia1.oz0.de:8443"
   },
   {
+    "owner": "akash19tp6w64zvdvdh26pv5lyf4f40llnqthgfy0t48",
+    "hostUri": "https://provider.akash.metz.live:8443"
+  },
+  {
     "owner": "akash1z9nr23cgweu45g2jktfx95v7g2xp8qlsa3ys2x",
     "hostUri": "https://provider.m3a.eu-n-3.digitalfrontier.network:8443"
   },
@@ -226,14 +234,6 @@
   {
     "owner": "akash1cg7nnkwy8yzulr6x5egn7n06pgthz5wu5auvvv",
     "hostUri": "https://provider.cpu.lax.lsn.akash.pub:8443"
-  },
-  {
-    "owner": "akash13yfp2rsfvyylsu0j3kdntzhlhpxkgqnnaulajn",
-    "hostUri": "https://provider.skyfall.cz:8443"
-  },
-  {
-    "owner": "akash143m6954tvzh98m97g35f8xrwfagn0ze5tz43jq",
-    "hostUri": "https://provider.oregon.skyfall.cz:8443"
   },
   {
     "owner": "akash1xtl2mgr3g67yeyqkk4jvfahv67225wrv6wrd74",
