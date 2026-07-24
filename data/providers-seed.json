@@ -104,10 +104,6 @@
     "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
   },
   {
-    "owner": "akash1csnxgjhxse9atc7c5k52d6nnkmearsmm9kdxxy",
-    "hostUri": "https://provider.zhab.systems:8443"
-  },
-  {
     "owner": "akash1pnae60m3nnnq89437kg892k50wjqx90zcysgzv",
     "hostUri": "https://provider.ahn2-na.akash.pub:8443"
   },
@@ -186,6 +182,10 @@
   {
     "owner": "akash1s3hq36mpas4nmkqasn7fgwhs9968cgl3u5esnw",
     "hostUri": "https://provider.froggy-servers.com:8443"
+  },
+  {
+    "owner": "akash18r7cu0eax8uwcaneqh3ez8t8naufhsgc67n997",
+    "hostUri": "https://provider.a100.test.akash.pub:8443"
   },
   {
     "owner": "akash1ts88ayj8lg59ta8zvz0ekk099f8zrvezvm3kvc",
