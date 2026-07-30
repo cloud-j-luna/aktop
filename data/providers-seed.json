@@ -32,6 +32,10 @@
     "hostUri": "https://provider.boogle.cloud:8443"
   },
   {
+    "owner": "akash1lsqphmdf25rdm87zuhekeydv9pvtdzuqmwxlqg",
+    "hostUri": "https://provider.h100.hou2.dd.akash.pub:8443"
+  },
+  {
     "owner": "akash1eskq5dpjl2lffykc56vuj3je4pkxshd0apxq4v",
     "hostUri": "https://provider.h200.atl.val.akash.pub:8443"
   },
@@ -98,6 +102,10 @@
   {
     "owner": "akash1hgulk6aekakqzc0v6wukrd3dy9n90f5gkl4ezk",
     "hostUri": "https://provider.h4i-dedicated.eu-sw-2.digitalfrontier.so:8443"
+  },
+  {
+    "owner": "akash1e45mtd0w0suj9878nftf2czcjl0jc0jlkkpkya",
+    "hostUri": "https://sp1.latamdatacenter.com.br:8443"
   },
   {
     "owner": "akash1al463a2f6jvf506e73hx0329fwgwz66r7cpkhr",
@@ -218,5 +226,21 @@
   {
     "owner": "akash1xtl2mgr3g67yeyqkk4jvfahv67225wrv6wrd74",
     "hostUri": "https://provider.worker.automathique.com:8443"
+  },
+  {
+    "owner": "akash1x3j2knlhhdq5qtay2fg54e74lq5p65j3tzkd5x",
+    "hostUri": "https://provider.devilops.net:8443"
+  },
+  {
+    "owner": "akash1hauc7vvjp6k7fdjvpxq5r04gj70ekkfpmx6z6m",
+    "hostUri": "https://provider.globalrad.cloud:8443"
+  },
+  {
+    "owner": "akash1ghslew4fezsmumxllt7w54u0z4cm9jvyed4seq",
+    "hostUri": "https://provider.node1.bxdinference.sbs:8443"
+  },
+  {
+    "owner": "akash15nq4w02nzqzl708t2gqcfe77y63h9ye6wvjs05",
+    "hostUri": "https://provider.taranode.taracompute.com:8443"
   }
 ]
