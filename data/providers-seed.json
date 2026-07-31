@@ -112,12 +112,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
-    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
-  },
-  {
     "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
     "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
+    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
   },
   {
     "owner": "akash1pnae60m3nnnq89437kg892k50wjqx90zcysgzv",
@@ -130,10 +130,6 @@
   {
     "owner": "akash1vmy54rfhpxcjvemltv5vkjfxfdyf2nya4l7027",
     "hostUri": "https://provider.akash.teksupportservices.com:8443"
-  },
-  {
-    "owner": "akash1ek2p65eg2c8sgge3m04e9af00lppzsg3v6xx0x",
-    "hostUri": "https://provider.gcnlab.fyi:8443"
   },
   {
     "owner": "akash1yvj7nqqzk9v850x60933xhlk2ql5upp5344sla",
@@ -208,10 +204,6 @@
     "hostUri": "https://provider.a100.dal2.aes.akash.pub:8443"
   },
   {
-    "owner": "akash1mddj3syqpsw4ptrxfzgly6dg7x9a43pn42q2tw",
-    "hostUri": "https://provider.raicloud.ca:8443"
-  },
-  {
     "owner": "akash1dudfnsqwfecytfqxwvnfc7eqc5ca429zfkhwyd",
     "hostUri": "https://provider.onenode.dev:8443"
   },
@@ -229,18 +221,22 @@
   },
   {
     "owner": "akash1x3j2knlhhdq5qtay2fg54e74lq5p65j3tzkd5x",
-    "hostUri": "https://provider.devilops.net:8443"
+    "hostUri": "https://provider.happy-client.com:8443"
   },
   {
     "owner": "akash1hauc7vvjp6k7fdjvpxq5r04gj70ekkfpmx6z6m",
     "hostUri": "https://provider.globalrad.cloud:8443"
   },
   {
-    "owner": "akash1ghslew4fezsmumxllt7w54u0z4cm9jvyed4seq",
-    "hostUri": "https://provider.node1.bxdinference.sbs:8443"
-  },
-  {
     "owner": "akash15nq4w02nzqzl708t2gqcfe77y63h9ye6wvjs05",
     "hostUri": "https://provider.taranode.taracompute.com:8443"
+  },
+  {
+    "owner": "akash1ey526y06y22t9z5djxtk4gh0eydzlwzm9wull2",
+    "hostUri": "https://provider.devilops.net:8443"
+  },
+  {
+    "owner": "akash1ucc36zddedvmjynav5r036406jwms0wnh4df7p",
+    "hostUri": "https://provider.vpsstorages.com:8443"
   }
 ]
