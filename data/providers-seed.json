@@ -108,12 +108,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
-    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
-  },
-  {
     "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
     "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
+    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
   },
   {
     "owner": "akash1pnae60m3nnnq89437kg892k50wjqx90zcysgzv",
@@ -156,10 +156,6 @@
     "hostUri": "https://provider.pronto-ai.pp.ua:8443"
   },
   {
-    "owner": "akash1kd3trhdjcnf5ndt6j2dmukzfclluwhs4868699",
-    "hostUri": "https://provider.mia1.oz0.de:8443"
-  },
-  {
     "owner": "akash19tp6w64zvdvdh26pv5lyf4f40llnqthgfy0t48",
     "hostUri": "https://provider.akash.metz.live:8443"
   },
@@ -174,10 +170,6 @@
   {
     "owner": "akash1s3hq36mpas4nmkqasn7fgwhs9968cgl3u5esnw",
     "hostUri": "https://provider.froggy-servers.com:8443"
-  },
-  {
-    "owner": "akash1a4qsujarw0jqrp6a8plfax9amydn8vuv6ryksx",
-    "hostUri": "https://provider.bulgaprovider.top:8443"
   },
   {
     "owner": "akash1ts88ayj8lg59ta8zvz0ekk099f8zrvezvm3kvc",
