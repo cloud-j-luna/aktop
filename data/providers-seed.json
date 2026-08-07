@@ -8,6 +8,10 @@
     "hostUri": "https://provider.europlots.com:8443"
   },
   {
+    "owner": "akash1nasszfxnglxrp3rul28gqm2nh0sj560fr65p9v",
+    "hostUri": "https://provider.akash-compute.openshift.eu:8443"
+  },
+  {
     "owner": "akash15tl6v6gd0nte0syyxnv57zmmspgju4c3xfmdhk",
     "hostUri": "https://provider.hurricane.akash.pub:8443"
   },
@@ -30,10 +34,6 @@
   {
     "owner": "akash1k94uya5rhrtj9rfw850az9aq2d6vdpjmtnlgd0",
     "hostUri": "https://provider.boogle.cloud:8443"
-  },
-  {
-    "owner": "akash1lsqphmdf25rdm87zuhekeydv9pvtdzuqmwxlqg",
-    "hostUri": "https://provider.h100.hou2.dd.akash.pub:8443"
   },
   {
     "owner": "akash1eskq5dpjl2lffykc56vuj3je4pkxshd0apxq4v",
@@ -102,10 +102,6 @@
   {
     "owner": "akash1hgulk6aekakqzc0v6wukrd3dy9n90f5gkl4ezk",
     "hostUri": "https://provider.h4i-dedicated.eu-sw-2.digitalfrontier.so:8443"
-  },
-  {
-    "owner": "akash1e45mtd0w0suj9878nftf2czcjl0jc0jlkkpkya",
-    "hostUri": "https://provider.sp1.latamdatacenter.com.br:8443"
   },
   {
     "owner": "akash1al463a2f6jvf506e73hx0329fwgwz66r7cpkhr",
@@ -228,11 +224,19 @@
     "hostUri": "https://provider.vpsstorages.com:8443"
   },
   {
+    "owner": "akash1qguussvx77f6f3g8akza9crxkr7g8kv55maca4",
+    "hostUri": "https://provider.dgx-node-ro-2026.duckdns.org:8443"
+  },
+  {
     "owner": "akash102p9c26txvq33w46jprx3r5xy8h5elsmxstprp",
     "hostUri": "https://provider.sagarxdk.com:8443"
   },
   {
     "owner": "akash1vqqdrxce0dc8p0jatwm9np4kfyfq6ucjjl6z2h",
     "hostUri": "https://provider.hosting-today.com:8443"
+  },
+  {
+    "owner": "akash1ka7u5c0uv86jhp2t5ufhfny3duhylhmpu4kxak",
+    "hostUri": "https://provider.bxdinference.sbs:8443"
   }
 ]
