@@ -36,6 +36,10 @@
     "hostUri": "https://provider.boogle.cloud:8443"
   },
   {
+    "owner": "akash1lsqphmdf25rdm87zuhekeydv9pvtdzuqmwxlqg",
+    "hostUri": "https://provider.h100.hou2.dd.akash.pub:8443"
+  },
+  {
     "owner": "akash1eskq5dpjl2lffykc56vuj3je4pkxshd0apxq4v",
     "hostUri": "https://provider.h200.atl.val.akash.pub:8443"
   },
@@ -54,10 +58,6 @@
   {
     "owner": "akash1st7fqtuqk6hj06fkkavq0fxtw0w9sm4zzt3r5g",
     "hostUri": "https://provider.rtgroup.com:8443"
-  },
-  {
-    "owner": "akash1xmjzu9dczlg9fa4v3pfvwzn7ty89r003laj4ac",
-    "hostUri": "https://provider.akash.tagus.host:8443"
   },
   {
     "owner": "akash1l9fumzf7f0shvl8vag9v3mkwgexn7agpx40elv",
@@ -238,5 +238,9 @@
   {
     "owner": "akash1ka7u5c0uv86jhp2t5ufhfny3duhylhmpu4kxak",
     "hostUri": "https://provider.bxdinference.sbs:8443"
+  },
+  {
+    "owner": "akash10wu85lzfpmfpxvt8ewxgqzw839wvk8a87efe6f",
+    "hostUri": "https://provider.ahn5-na.akash.pub:8443"
   }
 ]
