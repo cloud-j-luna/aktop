@@ -36,6 +36,10 @@
     "hostUri": "https://provider.boogle.cloud:8443"
   },
   {
+    "owner": "akash1lsqphmdf25rdm87zuhekeydv9pvtdzuqmwxlqg",
+    "hostUri": "https://provider.h100.hou2.dd.akash.pub:8443"
+  },
+  {
     "owner": "akash1eskq5dpjl2lffykc56vuj3je4pkxshd0apxq4v",
     "hostUri": "https://provider.h200.atl.val.akash.pub:8443"
   },
@@ -68,20 +72,12 @@
     "hostUri": "https://provider.quanglong.org:8443"
   },
   {
-    "owner": "akash16yr3wxt97ae045a06kr3ycde9srcgpg8syjxxm",
-    "hostUri": "https://provider.zencloud.eu:8443"
-  },
-  {
     "owner": "akash15axxrf84ajvqrg265fm27wsxyu7cvv25yqa5dk",
     "hostUri": "https://provider.pro6000.hou.aesservices.net:8443"
   },
   {
     "owner": "akash1nrpy6mahjk2ncgg7cklk6t9qfjxatmurt4y0y9",
     "hostUri": "https://provider.serverai.app:8443"
-  },
-  {
-    "owner": "akash1cvcfyadrm6gcghzspyhacw924c90lwnjkhcglm",
-    "hostUri": "https://provider.proxyua.top:8443"
   },
   {
     "owner": "akash1sevd2ymtty3dpq9ycxgkhuzzk4fe6mchqdwd4e",
@@ -98,10 +94,6 @@
   {
     "owner": "akash1hgulk6aekakqzc0v6wukrd3dy9n90f5gkl4ezk",
     "hostUri": "https://provider.h4i-dedicated.eu-sw-2.digitalfrontier.so:8443"
-  },
-  {
-    "owner": "akash1al463a2f6jvf506e73hx0329fwgwz66r7cpkhr",
-    "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
     "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
