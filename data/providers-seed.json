@@ -192,6 +192,10 @@
     "hostUri": "https://provider.onenode.dev:8443"
   },
   {
+    "owner": "akash1r6awsxcp72rlwm39a903zgllqdueql8xwrc9hc",
+    "hostUri": "https://provider.aakaasha.com:8443"
+  },
+  {
     "owner": "akash1cg7nnkwy8yzulr6x5egn7n06pgthz5wu5auvvv",
     "hostUri": "https://provider.cpu.lax.lsn.akash.pub:8443"
   },
@@ -230,5 +234,9 @@
   {
     "owner": "akash10wu85lzfpmfpxvt8ewxgqzw839wvk8a87efe6f",
     "hostUri": "https://provider.ahn5-na.akash.pub:8443"
+  },
+  {
+    "owner": "akash10en88gxvsv0ulsv4z3mh4lkwypkfgh8wslzw7x",
+    "hostUri": "https://provider.codestan.fi:8443"
   }
 ]
