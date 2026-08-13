@@ -48,6 +48,10 @@
     "hostUri": "https://provider.h100.ams2.val.akash.pub:8443"
   },
   {
+    "owner": "akash1ep3hhmg8ylmght29k65hmedvwxdame56uakuqa",
+    "hostUri": "https://provider.akash01.mrt3.it:8443"
+  },
+  {
     "owner": "akash1swxj75e8tz2nuepnqdas787h3eqfmhyh8lak8g",
     "hostUri": "https://provider.datanode.uk:8443"
   },
