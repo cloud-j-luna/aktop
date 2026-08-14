@@ -36,6 +36,10 @@
     "hostUri": "https://provider.boogle.cloud:8443"
   },
   {
+    "owner": "akash1lsqphmdf25rdm87zuhekeydv9pvtdzuqmwxlqg",
+    "hostUri": "https://provider.h100.hou2.dd.akash.pub:8443"
+  },
+  {
     "owner": "akash1eskq5dpjl2lffykc56vuj3je4pkxshd0apxq4v",
     "hostUri": "https://provider.h200.atl.val.akash.pub:8443"
   },
@@ -228,10 +232,6 @@
     "hostUri": "https://provider.sagarxdk.com:8443"
   },
   {
-    "owner": "akash1vqqdrxce0dc8p0jatwm9np4kfyfq6ucjjl6z2h",
-    "hostUri": "https://provider.hosting-today.com:8443"
-  },
-  {
     "owner": "akash1ka7u5c0uv86jhp2t5ufhfny3duhylhmpu4kxak",
     "hostUri": "https://provider.bxdinference.sbs:8443"
   },
@@ -242,5 +242,9 @@
   {
     "owner": "akash10en88gxvsv0ulsv4z3mh4lkwypkfgh8wslzw7x",
     "hostUri": "https://provider.codestan.fi:8443"
+  },
+  {
+    "owner": "akash16rzlh944ggmz4ae50smqsw5ktfungqfafx4jlt",
+    "hostUri": "https://provider.beplaystore.com:8443"
   }
 ]
