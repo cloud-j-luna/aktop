@@ -20,10 +20,6 @@
     "hostUri": "https://provider.cpu.aesservices.net:8443"
   },
   {
-    "owner": "akash1kqzpqqhm39umt06wu8m4hx63v5hefhrfmjf9dj",
-    "hostUri": "https://provider.dal.leet.haus:8443"
-  },
-  {
     "owner": "akash1m3eada72k5md56ywp48ef7yjpxmfajwe063nke",
     "hostUri": "https://provider.a100.hou.dd.akash.pub:8443"
   },
@@ -200,10 +196,6 @@
     "hostUri": "https://provider.onenode.dev:8443"
   },
   {
-    "owner": "akash1r6awsxcp72rlwm39a903zgllqdueql8xwrc9hc",
-    "hostUri": "https://provider.aakaasha.com:8443"
-  },
-  {
     "owner": "akash1cg7nnkwy8yzulr6x5egn7n06pgthz5wu5auvvv",
     "hostUri": "https://provider.cpu.lax.lsn.akash.pub:8443"
   },
@@ -244,7 +236,7 @@
     "hostUri": "https://provider.codestan.fi:8443"
   },
   {
-    "owner": "akash16rzlh944ggmz4ae50smqsw5ktfungqfafx4jlt",
-    "hostUri": "https://provider.beplaystore.com:8443"
+    "owner": "akash1lcuzrxd87qgya5eg2k9lfv7vg74wy4rqc20hxw",
+    "hostUri": "https://provider.akash.minupilv.com:8443"
   }
 ]
