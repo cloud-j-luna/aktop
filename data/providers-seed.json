@@ -100,10 +100,6 @@
     "hostUri": "https://provider.wx-spot.de:8443"
   },
   {
-    "owner": "akash1hgulk6aekakqzc0v6wukrd3dy9n90f5gkl4ezk",
-    "hostUri": "https://provider.h4i-dedicated.eu-sw-2.digitalfrontier.so:8443"
-  },
-  {
     "owner": "akash1al463a2f6jvf506e73hx0329fwgwz66r7cpkhr",
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
