@@ -100,6 +100,10 @@
     "hostUri": "https://provider.wx-spot.de:8443"
   },
   {
+    "owner": "akash1hgulk6aekakqzc0v6wukrd3dy9n90f5gkl4ezk",
+    "hostUri": "https://provider.h4i-dedicated.eu-sw-2.digitalfrontier.so:8443"
+  },
+  {
     "owner": "akash1al463a2f6jvf506e73hx0329fwgwz66r7cpkhr",
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
@@ -234,5 +238,13 @@
   {
     "owner": "akash1lcuzrxd87qgya5eg2k9lfv7vg74wy4rqc20hxw",
     "hostUri": "https://provider.akash.minupilv.com:8443"
+  },
+  {
+    "owner": "akash1p0wsxml490q5a7z2zuxmwug0yfehuyd7c5eqy3",
+    "hostUri": "https://provider.akash.radianceteam.com:8443"
+  },
+  {
+    "owner": "akash1wcuwjuu59t22xp56a40jg3dty64xlyp4wkqcwd",
+    "hostUri": "https://provider.tee.pro6000.hou.aes.akash.pub:8443"
   }
 ]
