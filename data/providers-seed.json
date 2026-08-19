@@ -76,10 +76,6 @@
     "hostUri": "https://provider.zencloud.eu:8443"
   },
   {
-    "owner": "akash15axxrf84ajvqrg265fm27wsxyu7cvv25yqa5dk",
-    "hostUri": "https://provider.pro6000.hou.aesservices.net:8443"
-  },
-  {
     "owner": "akash1nrpy6mahjk2ncgg7cklk6t9qfjxatmurt4y0y9",
     "hostUri": "https://provider.serverai.app:8443"
   },
@@ -246,5 +242,9 @@
   {
     "owner": "akash1wcuwjuu59t22xp56a40jg3dty64xlyp4wkqcwd",
     "hostUri": "https://provider.tee.pro6000.hou.aes.akash.pub:8443"
+  },
+  {
+    "owner": "akash1uezxmc39c9uky9plqdvmnzp7yfwpyamjtq9g2w",
+    "hostUri": "https://provider.pro6000.hou.aes.akash.pub:8443"
   }
 ]
