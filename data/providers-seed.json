@@ -88,12 +88,12 @@
     "hostUri": "https://provider.h4i-dedicated.eu-sw-2.digitalfrontier.so:8443"
   },
   {
-    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
-    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
-  },
-  {
     "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
     "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
+    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
   },
   {
     "owner": "akash1pnae60m3nnnq89437kg892k50wjqx90zcysgzv",
@@ -240,7 +240,11 @@
     "hostUri": "https://provider.node.ygx.in:8443"
   },
   {
-    "owner": "akash1qh95nd2v85naejzz825hc8yn6aur9qzw9pzwj4",
-    "hostUri": "https://provider.gpu.aslogisticllc.com:8443"
+    "owner": "akash1xfj5y67j03lj3zalxg59l4f5ed73yrnulp8kae",
+    "hostUri": "https://provider.primexgen.space:8443"
+  },
+  {
+    "owner": "akash1ywsgzuyecq7z7zc7krhvvhp4jd3d2xcus5z3p0",
+    "hostUri": "https://provider.depin-lab.org:8443"
   }
 ]
