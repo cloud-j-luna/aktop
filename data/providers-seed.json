@@ -8,6 +8,10 @@
     "hostUri": "https://provider.europlots.com:8443"
   },
   {
+    "owner": "akash1nasszfxnglxrp3rul28gqm2nh0sj560fr65p9v",
+    "hostUri": "https://provider.akash-compute.openshift.eu:8443"
+  },
+  {
     "owner": "akash15tl6v6gd0nte0syyxnv57zmmspgju4c3xfmdhk",
     "hostUri": "https://provider.hurricane.akash.pub:8443"
   },
@@ -224,15 +228,23 @@
     "hostUri": "https://provider.pro6000.hou.aes.akash.pub:8443"
   },
   {
-    "owner": "akash1nvqp59cyvr5wa2zlcalxdyp8cr8kampsqguqts",
-    "hostUri": "https://provider.purpleskyinfotech.com:8443"
-  },
-  {
     "owner": "akash15ws0k4rdkkd4dm34lp9jjjufrgzfjc5avamwje",
     "hostUri": "https://provider.node.ygx.in:8443"
   },
   {
-    "owner": "akash1xfj5y67j03lj3zalxg59l4f5ed73yrnulp8kae",
-    "hostUri": "https://provider.primexgen.space:8443"
+    "owner": "akash1ywsgzuyecq7z7zc7krhvvhp4jd3d2xcus5z3p0",
+    "hostUri": "https://provider.depin-lab.org:8443"
+  },
+  {
+    "owner": "akash1v0f04wr3tkh9uf43q9eqfd0whpfeu8qevlq99h",
+    "hostUri": "https://provider.ithub.udg.kiev.ua:8443"
+  },
+  {
+    "owner": "akash16a7k9al3r02j6jz3pgmuu3m6q66yx4h4xhw0yu",
+    "hostUri": "https://provider.kesselrun.space:8443"
+  },
+  {
+    "owner": "akash1qp62xdhxrn4n7fs07scstryyt87pydg4ve849v",
+    "hostUri": "https://provider.b300.test.akash.pub:8443"
   }
 ]
