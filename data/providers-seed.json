@@ -28,10 +28,6 @@
     "hostUri": "https://provider.boogle.cloud:8443"
   },
   {
-    "owner": "akash1lsqphmdf25rdm87zuhekeydv9pvtdzuqmwxlqg",
-    "hostUri": "https://provider.h100.hou2.dd.akash.pub:8443"
-  },
-  {
     "owner": "akash1eskq5dpjl2lffykc56vuj3je4pkxshd0apxq4v",
     "hostUri": "https://provider.h200.atl.val.akash.pub:8443"
   },
@@ -96,12 +92,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
-    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
-  },
-  {
     "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
     "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
+    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
   },
   {
     "owner": "akash1pnae60m3nnnq89437kg892k50wjqx90zcysgzv",
@@ -198,10 +194,6 @@
   {
     "owner": "akash1ucc36zddedvmjynav5r036406jwms0wnh4df7p",
     "hostUri": "https://provider.vpsstorages.com:8443"
-  },
-  {
-    "owner": "akash1ka7u5c0uv86jhp2t5ufhfny3duhylhmpu4kxak",
-    "hostUri": "https://provider.bxdinference.sbs:8443"
   },
   {
     "owner": "akash10wu85lzfpmfpxvt8ewxgqzw839wvk8a87efe6f",
