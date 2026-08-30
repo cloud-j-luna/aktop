@@ -236,11 +236,11 @@
     "hostUri": "https://provider.b300.test.akash.pub:8443"
   },
   {
-    "owner": "akash1cjmca75vng3w5a7vrzqhmz2rf5ccy7nr6mcs43",
-    "hostUri": "https://malna.ddns.net:8443"
-  },
-  {
     "owner": "akash1tlsc0yhw6lwqxtkhwqvhg074l0vf8ty7xag4l5",
     "hostUri": "https://provider.pipeforge.tech:8443"
+  },
+  {
+    "owner": "akash1jv7w99p4uqnys72ty8863jmfxaz3gtxag39lew",
+    "hostUri": "https://provider.ajmcomfort.com:8443"
   }
 ]
