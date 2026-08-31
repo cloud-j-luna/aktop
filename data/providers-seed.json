@@ -4,10 +4,6 @@
     "hostUri": "https://provider.akash-palmito.org:8443"
   },
   {
-    "owner": "akash1nasszfxnglxrp3rul28gqm2nh0sj560fr65p9v",
-    "hostUri": "https://provider.akash-compute.openshift.eu:8443"
-  },
-  {
     "owner": "akash15tl6v6gd0nte0syyxnv57zmmspgju4c3xfmdhk",
     "hostUri": "https://provider.hurricane.akash.pub:8443"
   },
@@ -26,6 +22,10 @@
   {
     "owner": "akash1k94uya5rhrtj9rfw850az9aq2d6vdpjmtnlgd0",
     "hostUri": "https://provider.boogle.cloud:8443"
+  },
+  {
+    "owner": "akash1lsqphmdf25rdm87zuhekeydv9pvtdzuqmwxlqg",
+    "hostUri": "https://provider.h100.hou2.dd.akash.pub:8443"
   },
   {
     "owner": "akash1eskq5dpjl2lffykc56vuj3je4pkxshd0apxq4v",
@@ -238,9 +238,5 @@
   {
     "owner": "akash1tlsc0yhw6lwqxtkhwqvhg074l0vf8ty7xag4l5",
     "hostUri": "https://provider.pipeforge.tech:8443"
-  },
-  {
-    "owner": "akash1jv7w99p4uqnys72ty8863jmfxaz3gtxag39lew",
-    "hostUri": "https://provider.ajmcomfort.com:8443"
   }
 ]
