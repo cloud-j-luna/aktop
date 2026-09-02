@@ -24,10 +24,6 @@
     "hostUri": "https://provider.boogle.cloud:8443"
   },
   {
-    "owner": "akash1lsqphmdf25rdm87zuhekeydv9pvtdzuqmwxlqg",
-    "hostUri": "https://provider.h100.hou2.dd.akash.pub:8443"
-  },
-  {
     "owner": "akash1eskq5dpjl2lffykc56vuj3je4pkxshd0apxq4v",
     "hostUri": "https://provider.h200.atl.val.akash.pub:8443"
   },
@@ -82,6 +78,10 @@
   {
     "owner": "akash1d97kkwrhhxyqpr8k7rj0360jtnsw6dftmslvuq",
     "hostUri": "https://provider.wx-spot.de:8443"
+  },
+  {
+    "owner": "akash1erl805eenh9e2ju9c48cnkd4ee9sh46ran9t7m",
+    "hostUri": "https://provider.sies.com.gt:8443"
   },
   {
     "owner": "akash1hgulk6aekakqzc0v6wukrd3dy9n90f5gkl4ezk",
@@ -190,10 +190,6 @@
   {
     "owner": "akash15nq4w02nzqzl708t2gqcfe77y63h9ye6wvjs05",
     "hostUri": "https://provider.taranode.taracompute.com:8443"
-  },
-  {
-    "owner": "akash1ucc36zddedvmjynav5r036406jwms0wnh4df7p",
-    "hostUri": "https://provider.vpsstorages.com:8443"
   },
   {
     "owner": "akash10wu85lzfpmfpxvt8ewxgqzw839wvk8a87efe6f",
