@@ -24,6 +24,10 @@
     "hostUri": "https://provider.boogle.cloud:8443"
   },
   {
+    "owner": "akash1lsqphmdf25rdm87zuhekeydv9pvtdzuqmwxlqg",
+    "hostUri": "https://provider.h100.hou2.dd.akash.pub:8443"
+  },
+  {
     "owner": "akash1eskq5dpjl2lffykc56vuj3je4pkxshd0apxq4v",
     "hostUri": "https://provider.h200.atl.val.akash.pub:8443"
   },
@@ -230,5 +234,9 @@
   {
     "owner": "akash1tlsc0yhw6lwqxtkhwqvhg074l0vf8ty7xag4l5",
     "hostUri": "https://provider.pipeforge.tech:8443"
+  },
+  {
+    "owner": "akash1dd2ehpql0u85raxuca4wmvj0fcfn82d0u7uzsw",
+    "hostUri": "https://provider.poolab.org:8443"
   }
 ]
