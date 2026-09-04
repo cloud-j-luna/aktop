@@ -156,10 +156,6 @@
     "hostUri": "https://provider.h100.siamaidol.com:8443"
   },
   {
-    "owner": "akash1s3hq36mpas4nmkqasn7fgwhs9968cgl3u5esnw",
-    "hostUri": "https://provider.froggy-servers.com:8443"
-  },
-  {
     "owner": "akash1ts88ayj8lg59ta8zvz0ekk099f8zrvezvm3kvc",
     "hostUri": "https://provider.node1.kastoro.org:8443"
   },
@@ -170,6 +166,10 @@
   {
     "owner": "akash1qcjrmusclhr9w8hsect9gcfr44a2s48j6rhg0u",
     "hostUri": "https://provider.akash.mercamicro.es:8443"
+  },
+  {
+    "owner": "akash13zrdys29nmfkd7fs93hmvkvj8d89p4a0lz67e4",
+    "hostUri": "https://provider.a100.dal.aes.akash.pub:8443"
   },
   {
     "owner": "akash1nu08pwlhtu0g6ufj6txqjw4jwl08yhtefl0wvg",
@@ -188,12 +188,12 @@
     "hostUri": "https://provider.worker.automathique.com:8443"
   },
   {
-    "owner": "akash1hauc7vvjp6k7fdjvpxq5r04gj70ekkfpmx6z6m",
-    "hostUri": "https://provider.globalrad.cloud:8443"
-  },
-  {
     "owner": "akash15nq4w02nzqzl708t2gqcfe77y63h9ye6wvjs05",
     "hostUri": "https://provider.taranode.taracompute.com:8443"
+  },
+  {
+    "owner": "akash1lyfvzxj8y5awnxry84tv3gfk0w7lwk8e74hk8c",
+    "hostUri": "https://provider.ssd.akash.firmyfirmam.cz:8443"
   },
   {
     "owner": "akash10wu85lzfpmfpxvt8ewxgqzw839wvk8a87efe6f",
@@ -238,5 +238,13 @@
   {
     "owner": "akash1dd2ehpql0u85raxuca4wmvj0fcfn82d0u7uzsw",
     "hostUri": "https://provider.poolab.org:8443"
+  },
+  {
+    "owner": "akash13skl054w9xapl0s8feq0am3fcu9xxqz7t6e74u",
+    "hostUri": "https://provider.konsrv.com:8443"
+  },
+  {
+    "owner": "akash1662umvp057h0zun3fr0v0zv74r8tkc5zjegzv2",
+    "hostUri": "https://provider.wbackdown.com:8443"
   }
 ]
