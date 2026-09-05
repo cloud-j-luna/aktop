@@ -84,10 +84,6 @@
     "hostUri": "https://provider.wx-spot.de:8443"
   },
   {
-    "owner": "akash1erl805eenh9e2ju9c48cnkd4ee9sh46ran9t7m",
-    "hostUri": "https://provider.sies.com.gt:8443"
-  },
-  {
     "owner": "akash1hgulk6aekakqzc0v6wukrd3dy9n90f5gkl4ezk",
     "hostUri": "https://provider.h4i-dedicated.eu-sw-2.digitalfrontier.so:8443"
   },
@@ -192,6 +188,10 @@
     "hostUri": "https://provider.taranode.taracompute.com:8443"
   },
   {
+    "owner": "akash1ucc36zddedvmjynav5r036406jwms0wnh4df7p",
+    "hostUri": "https://provider.vpsstorages.com:8443"
+  },
+  {
     "owner": "akash1lyfvzxj8y5awnxry84tv3gfk0w7lwk8e74hk8c",
     "hostUri": "https://provider.ssd.akash.firmyfirmam.cz:8443"
   },
@@ -244,7 +244,11 @@
     "hostUri": "https://provider.konsrv.com:8443"
   },
   {
-    "owner": "akash1662umvp057h0zun3fr0v0zv74r8tkc5zjegzv2",
+    "owner": "akash132cjg59xd4nhrul358gtjxytwkwqcqhu4rxfjc",
     "hostUri": "https://provider.wbackdown.com:8443"
+  },
+  {
+    "owner": "akash1le4tpaukk39d2zl3nvgtwh4x087wrjq4g6k93x",
+    "hostUri": "https://provider.archpriest.duckdns.org:8443"
   }
 ]
