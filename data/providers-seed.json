@@ -20,6 +20,10 @@
     "hostUri": "https://provider.a100.hou2.dd.akash.pub:8443"
   },
   {
+    "owner": "akash1l5awxk9m3dmgu7zrhruvkrvvtln2yt94p9rpx5",
+    "hostUri": "https://provider.majac.uk:8443"
+  },
+  {
     "owner": "akash1k94uya5rhrtj9rfw850az9aq2d6vdpjmtnlgd0",
     "hostUri": "https://provider.boogle.cloud:8443"
   },
@@ -192,6 +196,10 @@
     "hostUri": "https://provider.taranode.taracompute.com:8443"
   },
   {
+    "owner": "akash1ucc36zddedvmjynav5r036406jwms0wnh4df7p",
+    "hostUri": "https://provider.vpsstorages.com:8443"
+  },
+  {
     "owner": "akash1lyfvzxj8y5awnxry84tv3gfk0w7lwk8e74hk8c",
     "hostUri": "https://provider.ssd.akash.firmyfirmam.cz:8443"
   },
@@ -242,13 +250,5 @@
   {
     "owner": "akash13skl054w9xapl0s8feq0am3fcu9xxqz7t6e74u",
     "hostUri": "https://provider.konsrv.com:8443"
-  },
-  {
-    "owner": "akash1f2wzlt5xhv7k94sq2ye7qhfavx3h4yuv3etkpj",
-    "hostUri": "https://2500tb.duckdns.org:8443"
-  },
-  {
-    "owner": "akash1le4tpaukk39d2zl3nvgtwh4x087wrjq4g6k93x",
-    "hostUri": "https://provider.archpriest.duckdns.org:8443"
   }
 ]
