@@ -4,6 +4,10 @@
     "hostUri": "https://provider.akash-palmito.org:8443"
   },
   {
+    "owner": "akash1nasszfxnglxrp3rul28gqm2nh0sj560fr65p9v",
+    "hostUri": "https://provider.akash-compute.openshift.eu:8443"
+  },
+  {
     "owner": "akash15tl6v6gd0nte0syyxnv57zmmspgju4c3xfmdhk",
     "hostUri": "https://provider.hurricane.akash.pub:8443"
   },
@@ -96,12 +100,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
-    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
-  },
-  {
     "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
     "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
+    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
   },
   {
     "owner": "akash1pnae60m3nnnq89437kg892k50wjqx90zcysgzv",
@@ -228,6 +232,10 @@
     "hostUri": "https://provider.node.ygx.in:8443"
   },
   {
+    "owner": "akash1v0f04wr3tkh9uf43q9eqfd0whpfeu8qevlq99h",
+    "hostUri": "https://provider.ithub.udg.kiev.ua:8443"
+  },
+  {
     "owner": "akash1qp62xdhxrn4n7fs07scstryyt87pydg4ve849v",
     "hostUri": "https://provider.b300.test.akash.pub:8443"
   },
@@ -246,5 +254,9 @@
   {
     "owner": "akash1le4tpaukk39d2zl3nvgtwh4x087wrjq4g6k93x",
     "hostUri": "https://provider.archpriest.duckdns.org:8443"
+  },
+  {
+    "owner": "akash15pc6ynt3y62t8zr59e6q0dcwsqdjuhe8vynuqq",
+    "hostUri": "https://provider.akash.seedroom.tech:8443"
   }
 ]
