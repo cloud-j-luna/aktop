@@ -76,10 +76,6 @@
     "hostUri": "https://provider.serverai.app:8443"
   },
   {
-    "owner": "akash1cvcfyadrm6gcghzspyhacw924c90lwnjkhcglm",
-    "hostUri": "https://provider.proxyua.top:8443"
-  },
-  {
     "owner": "akash1sevd2ymtty3dpq9ycxgkhuzzk4fe6mchqdwd4e",
     "hostUri": "https://provider.jjozzietech.com.au:8443"
   },
@@ -100,12 +96,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
-    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
-  },
-  {
     "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
     "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
+    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
   },
   {
     "owner": "akash1pnae60m3nnnq89437kg892k50wjqx90zcysgzv",
@@ -240,16 +236,8 @@
     "hostUri": "https://provider.b300.test.akash.pub:8443"
   },
   {
-    "owner": "akash1tlsc0yhw6lwqxtkhwqvhg074l0vf8ty7xag4l5",
-    "hostUri": "https://provider.pipeforge.tech:8443"
-  },
-  {
     "owner": "akash1dd2ehpql0u85raxuca4wmvj0fcfn82d0u7uzsw",
     "hostUri": "https://provider.poolab.org:8443"
-  },
-  {
-    "owner": "akash13skl054w9xapl0s8feq0am3fcu9xxqz7t6e74u",
-    "hostUri": "https://provider.konsrv.com:8443"
   },
   {
     "owner": "akash1le4tpaukk39d2zl3nvgtwh4x087wrjq4g6k93x",
