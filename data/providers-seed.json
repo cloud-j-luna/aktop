@@ -208,10 +208,6 @@
     "hostUri": "https://provider.codestan.fi:8443"
   },
   {
-    "owner": "akash1lcuzrxd87qgya5eg2k9lfv7vg74wy4rqc20hxw",
-    "hostUri": "https://provider.akash.minupilv.com:8443"
-  },
-  {
     "owner": "akash1p0wsxml490q5a7z2zuxmwug0yfehuyd7c5eqy3",
     "hostUri": "https://provider.akash.radianceteam.com:8443"
   },
