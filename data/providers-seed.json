@@ -28,10 +28,6 @@
     "hostUri": "https://provider.boogle.cloud:8443"
   },
   {
-    "owner": "akash1lsqphmdf25rdm87zuhekeydv9pvtdzuqmwxlqg",
-    "hostUri": "https://provider.h100.hou2.dd.akash.pub:8443"
-  },
-  {
     "owner": "akash1eskq5dpjl2lffykc56vuj3je4pkxshd0apxq4v",
     "hostUri": "https://provider.h200.atl.val.akash.pub:8443"
   },
@@ -42,6 +38,10 @@
   {
     "owner": "akash1svfr9xarfkcxwdnx32nvl8cs9rfruu4nd56c4f",
     "hostUri": "https://provider.h100.ams2.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash1swxj75e8tz2nuepnqdas787h3eqfmhyh8lak8g",
+    "hostUri": "https://provider.datanode.uk:8443"
   },
   {
     "owner": "akash1l9fumzf7f0shvl8vag9v3mkwgexn7agpx40elv",
@@ -88,12 +88,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
-    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
-  },
-  {
     "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
     "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
+    "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
   },
   {
     "owner": "akash1pnae60m3nnnq89437kg892k50wjqx90zcysgzv",
@@ -134,10 +134,6 @@
   {
     "owner": "akash1rja3y2ctj3tzmesvh0zfhzzx95rfjw405hwt8d",
     "hostUri": "https://provider.pronto-ai.pp.ua:8443"
-  },
-  {
-    "owner": "akash19tp6w64zvdvdh26pv5lyf4f40llnqthgfy0t48",
-    "hostUri": "https://provider.akash.metz.live:8443"
   },
   {
     "owner": "akash1z9nr23cgweu45g2jktfx95v7g2xp8qlsa3ys2x",
@@ -210,6 +206,10 @@
   {
     "owner": "akash15ws0k4rdkkd4dm34lp9jjjufrgzfjc5avamwje",
     "hostUri": "https://provider.node.ygx.in:8443"
+  },
+  {
+    "owner": "akash1v0f04wr3tkh9uf43q9eqfd0whpfeu8qevlq99h",
+    "hostUri": "https://provider.ithub.udg.kiev.ua:8443"
   },
   {
     "owner": "akash1qp62xdhxrn4n7fs07scstryyt87pydg4ve849v",
