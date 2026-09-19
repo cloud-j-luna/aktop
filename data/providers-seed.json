@@ -64,10 +64,6 @@
     "hostUri": "https://provider.zencloud.eu:8443"
   },
   {
-    "owner": "akash1nrpy6mahjk2ncgg7cklk6t9qfjxatmurt4y0y9",
-    "hostUri": "https://provider.serverai.app:8443"
-  },
-  {
     "owner": "akash1cvcfyadrm6gcghzspyhacw924c90lwnjkhcglm",
     "hostUri": "https://provider.proxyua.top:8443"
   },
@@ -92,12 +88,12 @@
     "hostUri": "https://provider.5090.mel.val.akash.pub:8443"
   },
   {
-    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
-    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
-  },
-  {
     "owner": "akash12v6dhc8awlwhv438jjyw80eguhgtm735mfv3fx",
     "hostUri": "https://provider.a100.dsm.val.akash.pub:8443"
+  },
+  {
+    "owner": "akash1ta6d9l4ujhj6ztvveyjuyr3zha3te3txz5nr5d",
+    "hostUri": "https://provider.a100.kci.val.akash.pub:8443"
   },
   {
     "owner": "akash1pnae60m3nnnq89437kg892k50wjqx90zcysgzv",
@@ -172,10 +168,6 @@
     "hostUri": "https://provider.akash.mercamicro.es:8443"
   },
   {
-    "owner": "akash13zrdys29nmfkd7fs93hmvkvj8d89p4a0lz67e4",
-    "hostUri": "https://provider.a100.dal.aes.akash.pub:8443"
-  },
-  {
     "owner": "akash1nu08pwlhtu0g6ufj6txqjw4jwl08yhtefl0wvg",
     "hostUri": "https://provider.a100.dal2.aes.akash.pub:8443"
   },
@@ -224,12 +216,12 @@
     "hostUri": "https://provider.ithub.udg.kiev.ua:8443"
   },
   {
-    "owner": "akash1dd2ehpql0u85raxuca4wmvj0fcfn82d0u7uzsw",
-    "hostUri": "https://provider.poolab.org:8443"
+    "owner": "akash1qp62xdhxrn4n7fs07scstryyt87pydg4ve849v",
+    "hostUri": "https://provider.b300.test.akash.pub:8443"
   },
   {
-    "owner": "akash1le4tpaukk39d2zl3nvgtwh4x087wrjq4g6k93x",
-    "hostUri": "https://provider.archpriest.duckdns.org:8443"
+    "owner": "akash1dd2ehpql0u85raxuca4wmvj0fcfn82d0u7uzsw",
+    "hostUri": "https://provider.poolab.org:8443"
   },
   {
     "owner": "akash15pc6ynt3y62t8zr59e6q0dcwsqdjuhe8vynuqq",
